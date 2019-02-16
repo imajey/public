@@ -1,0 +1,283 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Single phase induction motor</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/Understanding-Anti-lock-Braking-System.html">
+     <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+    header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}
+    .row .col-1{margin-left:0;margin-right: 0;}  
+    }
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}   
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+    <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+   <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+  
+<header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+    <div class="res">
+    <center>
+    
+    <h1>Understanding Anti-lock Braking System</h1>
+       <div class="post-date">February 13, 2019</div>
+        <amp-youtube width="611" height="411" data-videoid="98DXe3uKwfc" layout="responsive"></amp-youtube>
+        
+         <p>Nowadays an anti lock braking system is used in almost all modern vehicles. This system prevents accidents like this, where you lose control of the steering as you apply the brakes. With ABS you will be able to steer the vehicle properly and it also reduces the braking distance.
+         </p>
+          <div class="row">
+            <div class="col-1"><amp-img src="Anti-lock-Braking/image1.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:1A </h5></div>
+            <div class="col-1"><amp-img src="Anti-lock-Braking/image2.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:1B </h5></div>
+        </div>
+        <p> What is ABS? How is it able to prevent accidents due to the braking? We will explore these questions in this video. </p>
+        <h2>Understand principles of braking</h2>
+        <p>To properly understand ABS we first need to understand the principles of steering and braking. When you press the brake pedal, the brake pads on the wheel discs will be activated and press against the discs, and this will stop the rotation of the wheels. As the wheels stop, this causes slippage between the road and wheels and the vehicle stops due to this friction.
+</p>
+       
+        <amp-img src="Anti-lock-Braking/brake-pad.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img><h5>Fig:2</h5>
+        <h2>Steering mechanism</h2>
+        <p>Now, let’s understand the steering mechanism. The whole steering mechanism is dependent on the simple principle of the wheels rolling. The wheels will always try to avoid slipping on the road, so this means that the velocity of the wheel at the contact point will always be zero</p>
+        <amp-img src="Anti-lock-Braking/concept-of-rolling.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:3</h5>
+        <p>The wheels have two kinds of motion. They rotate on their axis and also they move along in the direction of the car. Due to these two kinds of motion, they have two kinds of velocity, translational and rotational. The wheels have two kinds of motion. They rotate on their axis and also they move along in the direction of the car. Due to these two kinds of motion, they have two kinds of velocity, translational and rotational. For non-slip rolling conditions, the sum of the translational and rotational velocities at the contact point should be zero. Just keep this simple principle in mind, and you will very easily be able to understand the steering mechanism.</p>
+        <div class="row">
+            <div class="col-1"><amp-img src="Anti-lock-Braking/top-rotational-velocity.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:4A </h5></div>
+            <div class="col-1"><amp-img src="Anti-lock-Braking/steering-mechanism.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:4B </h5></div>
+        </div>
+        <p>In an automobile, all four wheels should be rolling at all times to avoid the vehicle slipping. In fact, this simple rolling principle is the reason why your car turns when you turn the front wheels. Let’s examine this. 
+        </p>
+        
+        <amp-img src="Anti-lock-Braking/car-turn.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+         <h5>Fig:5</h5>
+        <h2>Translation velocity and Rotational velocity</h2> 
+        <p>Assume a hypothetical condition in which, even after turning the wheels, the car carries straight on. In this case, the rolling velocity will be inclined as shown, and the translation velocity remains straight. Therefore if you add up these two velocities, the resultant velocity will not be zero.This will cause the car to slip. </p>
+        <amp-img src="Anti-lock-Braking/transitional-an-rotational-velocity.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:6</h5>
+        <p>The only way to avoid this is by making the translation velocity also incline. This is possible only when the whole car makes a turn as shown. When the car makes a turn, at the instantaneous center shown, the all four wheels can satisfy the condition of rolling.From this snapshot, you can clearly see how the velocity at the contact point of all four wheels becomes zero.This will cause the car to slip. 
+        </p>
+    <div class="row">
+            <div class="col-1"><amp-img src="Anti-lock-Braking/car-make-%20a-turn.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:7</h5></div>
+            <div class="col-1"><amp-img src="Anti-lock-Braking/contact-point-of-four-wheels.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img><h5>Fig:8</h5></div>
+        </div>
+        <h2>Analyz Steering mechanism</h2>
+        <p>Now, let’s analyze the steering mechanism at the time of braking. Due to the brake pads being activated, the wheels stop spinning. Even though the wheels are turned, since they are not rotating, there will be no rotational velocity at all. </p>
+        
+        <amp-img src="Anti-lock-Braking/wheel's-stop-spinning.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img><h5>Fig:9</h5>
+        
+        <p>In this case the vehicle does not need to turn, as this has become like a normal case of braking. The vehicle will no longer react to the driver’s changes to the steering and will slide in a straight line, which can cause an accident. 
+        </p>
+        
+        <amp-img src="Anti-lock-Braking/accident.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img><h5>Fig:10</h5>
+        
+        <h2>Instability issue</h2>
+        <p>Apart from losing control of the steering, cars without ABS face another big issue, braking on surfaces with different levels of traction. When the left and right wheels are on different traction surfaces, applying the brakes will generate different frictional forces on the wheels. This will produce torque and the car will go into an uncontrollable spin. Let us see how ABS solves these issues.  
+        </p>
+        <amp-img src="Anti-lock-Braking/car-uncontrollable%20spin.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img><h5>Fig:11</h5>
+        <h2>Anti-lock braking system</h2>
+        <p>An anti lock braking system is very simple. What ABS does is to prevent the wheels from completely locking up. The ABS system includes speed sensors attached to all of the wheels. When the sensors detect that a wheel is about to lock up, a modulator unit partially releases the brake pad on that wheel. This way the wheels will be allowed to spin intermittently during braking. 
+       </p>
+        <amp-img src="Anti-lock-Braking/speed-sensor-and-modulator-unit.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img><h5>Fig:12</h5>
+        
+        <p>You can immediately see the effect of this intermittent wheel rotation on steering. Here, the wheels will have a rotational velocity component. This will definitely allow the steering to function, and driver will be able steer the vehicle even during the braking.</p>
+       
+         <div class="row">
+            <div class="col-1"><amp-img src="Anti-lock-Braking/intermittent-rotational-velocity.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:13A</h5></div>
+            <div class="col-1"><amp-img src="Anti-lock-Braking/steer-the-vehicle-during-braking.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img><h5>Fig:13B</h5></div>
+        </div>
+        
+        <p>But, the big question here is: How does the action of intermittently releasing the brakes reduce the braking distance? To get an answer to this question we first need to understand how the coefficient of friction between a tire and the road varies with respect to slip. 
+       </p>
+       
+        <p>In perfect rolling conditions, the value of the frictional coefficient is nearly zero. However when the wheel is 100% slipping, sliding friction comes into play. You can expect the frictional values for other levels of slip to vary like this, but since rubber is a complex material, which has strange behaviors during braking, the frictional coefficient between the tire and the road varies as shown with respect to slip. It has a peak value at around 12% of slip ratio, and below and above this the frictional coefficient reduces. 
+      </p>
+       
+        <div class="row">
+            <div class="col-1"><amp-img src="Anti-lock-Braking/sliding-friction.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:14A</h5></div>
+            <div class="col-1"><amp-img src="Anti-lock-Braking/frictional-coefficient-between-tire-and-road.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img><h5>Fig:14B</h5></div>
+        </div>
+        
+        <h2>Braking without ABS</h2>
+        <p>During braking without ABS, the frictional coefficient, which comes in to effect, is predominantly sliding friction. However, in ABS braking, the clever algorithm adjusts the brake pressure to keep the slip ratio near to 12%, where the frictional value is at the maximum. This significantly reduces the braking distance. 
+      </p>
+       
+        <a href="Anti-lock-Braking/braking-without-ABS.jpg" target="_blank"><amp-img src="Anti-lock-Braking/braking-without-ABS.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img></a><h5>Fig:15</h5>
+        <h2>Electronic braking distribution</h2>
+        <p>Now, back to the huge instability issue of the cars. By intelligent electronic brakeforce distribution, which is a subsystem of modern ABS one can overcome this issue very easily. In EBD, yaw rate of the car and the relative slip of each wheel is measured. Just by reducing the brake pressure on the wheels with higher grip, we will be able to reduce the frictional force produced by these wheels. This will keep the yaw torque and the whole car under control. </p>
+        
+        <a href="Anti-lock-Braking/yaw-rate-of-the-car.jpg" target="_blank"> <amp-img src="Anti-lock-Braking/yaw-rate-of-the-car.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img></a><h5>Fig:16</h5>
+        
+        <p>We hope, this video gave you a clear conceptual overview of the workings of ABS, and please don’t forget to support us on Patreon. Thank you!
+      </p>
+        
+        
+        
+        </center>  <br>
+     </div>
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",  
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+
+ <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+ <div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+      
+</body>
+</html>

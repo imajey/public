@@ -1,0 +1,235 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Working of Centrifugal Pumps</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+       <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+      <link rel="canonical" href="https://learnengineering.org/Working-of-Centrifugal-Pumps.html">
+    <style amp-custom>
+    html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+   h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+   <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+
+  <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+     <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<div class="res">
+    <center>
+        <h1>Working of Centrifugal Pumps</h1>
+         <div class="post-date">January 17, 2014</div>
+         <p>Centrifugal pumps are the most preferred hydraulic pumps used in domestic and industrial world. In this video we will have a conceptual overview of the working of centrifugal pumps.</p>
+         
+     <amp-youtube width="611" height="411" data-videoid="BaEHVpKc-1Q" layout="responsive"></amp-youtube>
+        <p>A detailed webpage version of the video is given below.</p>
+        
+        <h2>Impeller – The Heart of Centrifugal Pumps</h2>
+        
+         <p>Centrifugal pumps are used to induce flow or raise pressure of a liquid. Its working is simple. At the heart of the system lies impeller. It has a series of curved vanes fitted inside the shroud plates. The impeller is always immersed in the water. When the impeller is made to rotate, it makes the fluid surrounding it also rotate. This imparts centrifugal force to the water particles, and water moves radially out. In Fig.1 this process is illustrated.rotating</p>
+         <amp-img src="Centrifugal-pump/impeller_centrifugal_pump.jpg" width="780" height="230" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 Impeller_centrifugal_pump</h5>
+        <p>Since the rotational mechanical energy is transferred to the fluid, at the discharge side of the impeller, both the pressure and kinetic energy of the water will rise.<br>
+        At the suction side, water is getting displaced, so a negative pressure will be induced at the eye. Such a low pressure helps to suck fresh water stream into the system again, and this process continues.</p>
+        <amp-img src="Centrifugal-pump/sction-of-centrifugal-pump.png" width="381" height="300" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:2 Negative pressure created by displacement of water from the eye helps to suckfresh stream of water</h5>
+        <p>From foregoing discussions it is clear that, the negative pressure at the eye of the impeller helps to maintain the flow in the system. If no water is present initially, the negative pressure developed by the rotating air, at the eye will be negligibly small to suck fresh stream of water. As a result the impeller will rotate without sucking and discharging any water content. So the pump should be initially filled with water before starting it. This process is known as priming.
+        The impeller is fitted inside a casing. As a result the water moves out will be collected inside it, and will move in the same direction of rotation of the impeller, to the discharge nozzle.This is shown in the Fig.3.</p>
+       <amp-img src="Centrifugal-pump/int_flow_water_flow_discharge.jpg" width="210" height="300" class="img-responsive" layout="intrinsic"></amp-img> 
+        <h5>Fig:3 Water which leaves the impeller gets collected inside the casing, flow direction is also marked</h5>
+        <h2>Use of the Casing</h2>
+        <p>From the illustrations of the pump so far, one speciality of the casing is clear. It has an increasing area along the flow direction. Such increasing area will help to accommodate newly added water stream, and will also help to reduce the exit flow velocity. Reduction in the flow velocity will result in increase in the static pressure, which is required to overcome the resistance of pumping system.</p>
+        <h2>Impeller Design</h2>
+        <p>As we have discussed earlier impeller is the most vital part of a centrifugal pump. Successful impellers have been developed with many years of analysis and developmental work. Fig.4 shows one of such impeller with its one shroud plate removed for better view of vanes.
+        These vanes are backward curved. Backward curved vanes have the blade angle less than 90 degree. Backward curved vanes are the most preferred vane type in the industry due to its self stabilizing power consumption characteristics. This means with increase in flow rate power consumption of the pump stabilizes after a limit. Forward and radial blades are less common in the industry. The eye configuration of the impeller shown is state of the art. This vane is extracted from a Kirloskar pump model. Such projecting eye section induces better swirl of flow and guarantees high negative pressure at the suction.</p>
+       <amp-img src="Centrifugal-pump/vane_details_backward.jpg" width="320" height="230" class="img-responsive" layout="intrinsic"></amp-img>   
+        <h5>Fig.4: More details of vanes inside the impeller</h5>
+        <h2>NPSH – Overcoming the problem of Cavitation</h2>
+        <p>If pressure at the suction side of impeller goes below vapor pressure of the water, a dangerous phenomenon could happen. Water will start to boil forming vapor bubbles. These bubbles will move along with the flow and will break in a high pressure region. Upon breaking the bubbles will send high impulsive shock waves and spoil impeller material overtime. This phenomenon is known as cavitation. More the suction head, lesser should be the pressure at suction side to lift the water. This fact puts a limit to the maximum suction head a pump can have.</p>
+         <amp-img src="Centrifugal-pump/Cavitation_Centrifugal-Pump.jpg" width="659" height="246" class="img-responsive" layout="intrinsic"></amp-img>   
+        <h5>Fig:5 Low pressure at the suction side can cause cavitation; More the suction head,lesser is the suction pressure required</h5>
+        <p>However Cavitation can be completely avoided by careful pump selection. The term NPSH (Net Positive Suction Head) helps the designer to choose the right pump which will completely avoid Cavitation. NPSH is defined as follows.</p>
+        <h3>NPSH = <span>&#40;</span>P<span>&#8725;</span>pg+V<sup>2</sup><span>&#8725;2g</span> &#41;<sub>suction - P<sub>V</sub>
+            <span>&#8725;</span> pg </sub></h3>
+        <p>Where Pv is vapor pressure of water</p>
+        <p>V is speed of water at suction side</p>
+        
+        <p>For a given pumping system it will have an NPSH called ‘Available NPSH’. Pump manufacturer will specify the minimum NPSH required for each pump for its safe operation, known as ‘Required NPSH’. If the pump needs to work without Cavitation the ‘Available NPSH’ should be greater than ‘Required NPSH’.</p>
+        <h3>NPSH<sub>Actual</sub> > NPSH<sub>Required</sub></h3>
+        <h2>Types of Impeller</h2>
+        <p>The impeller type we have used for the discussion so far is called as an enclosed type. Here vanes are closed from both the ends with shroud plates. Other types of impeller which are used in industry are Semi open and open impellers. If the working fluid is cloggy in nature it is preferred to use an open kind of impeller. But they are slightly less efficient.</p>
+        <amp-img src="Centrifugal-pump/kind-of-impellers.jpg" width="722" height="228" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:6 Kind of impellers used in centrifugal pumps : Enclosed, Semi-Open and Open</h5>
+        <h2>Mechanical Design Aspects</h2>
+        <p>The mechanical design of centrifugal pump is always challenging. A shaft is used to connect between the impeller and motor. Since water pressure inside the casing is huge, a proper sealing arrangement is imperative in arresting the water leakage through the shaft casing clearance. Mechanical seal or stuffing box based mechanism is used for this purpose.</p>
+          <amp-img src="Centrifugal-pump/gland_sealing_centrigual_pump.jpg" width="321" height="230" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:7 In this figure gland sealing is provided in order to arrest the water leakage</h5> 
+        <p>Impeller is mounted on the bearings. But at the suction side of impeller it is not advisable to fit a bearing, since it will block the flow. As a result the bearings have to be fitted at the other end. This means impeller is mounted like a cantilever. For high flow rate pumps, a bearing housing with cooling oil is necessary for improving the life of the bearings.</p>
+        <amp-img src="Centrifugal-pump/bearing_centrifugal-pumps.jpg" width="749" height="237" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:8 Both the bearings of the pump are fitted in the same side; A proper cooling arrangement improves life of such bearings</h5>
+        
+        </center><br>
+        </div>
+        <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+<div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>  
+    </body>
+</html>

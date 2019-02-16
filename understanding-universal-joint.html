@@ -1,0 +1,249 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>understanding universal joint</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/understanding-universal-joint.html">
+    <style amp-custom>
+    html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+  <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+
+ <header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+
+<!---->
+   <div class="res">
+    <center>
+        <h1>Understanding Universal Joint</h1>
+         <div class="post-date">February 9, 2017 </div>
+         <p>Invention of universal joints dates back many centuries. Even though the universal joint’s mechanism seems simple, the physics behind this mechanism are rather complicated and interesting. In most of the literature, readers who are trying to understand the physics behind universal joints are bombarded with complex mathematical relationships. In this page we will understand the working of universal joints in a simple yet logical manner.</p>
+         
+         
+         
+        <amp-youtube width="611" height="411" data-videoid="LCMZz6YhbOQ" layout="responsive"></amp-youtube>
+        
+        <p>A detailed webpage version of the video is given below.</p>
+        <h2>Why Universal Joints are used ?</h2>
+        <p>Universal joints also known as Hooke’s joints are commonly used to transfer mechanical power between 2 shafts when their axes are at an angle to each other. The way power is transmitted in a rear wheel drive (RWD) vehicle might have got your attention. They use universal joints. As you can see from the Fig.1, two universal joints are required to transmit power from the engine to differential.</p>
+        <amp-img src="Understanding-Universal-Joint/use_universal_joint.jpg"  width="600" height="269" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1 Use_universal_joint</h5>
+        <h2>The Basic Parts</h2>
+        <p>The universal joint has 3 basic parts, two yokes and a cross. The yokes are connected through a cross as shown. With this arrangement, the output shaft can be turned to a wide range of angles. Now, let’s consider different power transmitting scenarios.</p>
+      <amp-img src="Understanding-Universal-Joint/parts_universal_joint.jpg"  width="600" height="248" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:2 The_basic_parts_universal_joint</h5>
+        <h2>The Shafts Connected Straight</h2>
+        <p>In the first case, the input and output shaft are connected in a straight line. In this case, motion is really simple. The input shaft will turn the cross, and the cross will turn the output shaft. It is clear that both the input and output shafts will turn at the same speed.</p>
+              <amp-img src="Understanding-Universal-Joint/straight_motion.jpg"  width="600" height="281" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 Universal joint under a straight motion</h5>
+        <h2>The Shafts are at an Angle</h2>
+        <p>Now, let’s see what happens if the axes are at an angle. Assume that the input shaft is moving at a constant speed.</p>
+        <h2>The Spin of the Cross</h2>
+        <p>When the shafts are at an angle the motion is quite different. To understand why, just note the behavior of the red and green ends of the cross. You can see that the green ends, which are connected to the input shaft, turn along a vertical plane, while the red ends, which are connected to the output shaft, have to move along a different plane.</p>
+        <amp-img src="Understanding-Universal-Joint/spinning_axis.jpg"  width="600" height="279" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:4 The ends of universal joint turn in different planes</h5>
+        <p>To make the red ends move along the inclined plane, the cross has to spin along the axis connecting the green ends. If you observe the mark on the cross, you can see this phenomenon.</p>
+        <amp-img src="Understanding-Universal-Joint/spinning_axis.jpg"  width="600" height="279" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:5 The shaft connecting the green ends should spin to accomplish this movement</h5>
+        <p>To make the cross spin concept clearer, just imagine what happens when the spin of the green axis is halted. Such a hypothetical motion is depicted in the following figure.</p>
+        <amp-img src="Understanding-Universal-Joint/Hypothetical_motion.jpg"  width="600" height="277" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:6 hypothetical movement to illustrate the need of cross spin</h5>
+        <p>It is clear that, such a situation is impossible. This means without this spin, the motion of the inclined hook joint is impossible.</p>
+        <h2>The effect of Cross Spin</h2>
+        <p>The spin of the cross makes a huge difference in the speed of the output shaft. The cross has 2 kinds of motion: rotation and spin. It is clear that, when the cross is spinning as well as rotating, the velocity of the output shaft will have an added effect. You can see here that, for the first 90 degrees of the input shaft rotation, the green axis spins to its maximum angle. The forward spin aids and changes the output shaft rotation as shown in the graph. The output angle will get an added effect during this period.</p>
+        <amp-img src="Understanding-Universal-Joint/Forward_spin.jpg"  width="600" height="341" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:5 Forward spin of the shaft during the first 90 degrees</h5>
+        <amp-img src="Understanding-Universal-Joint/Dispalcement_graph_first_half.jpg"  width="450" height="257" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig.8:Angular displacement of the output shaft during the first 90 degrees</h5>
+        <p>But for the next 90 degrees, it should spin back to the initial zero position. The reverse spin will have an opposite effect on the output shaft rotation. So the motion of the output shaft will look as shown in the Fig.10.</p>
+        <amp-img src="Understanding-Universal-Joint/Reverse_spin_universal.jpg"  width="600" height="341" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:10 Angular displacement of the output shaft during 180 degrees turn</h5>
+        <p>Just by taking a simple time differential of this displacement graph we can find out speed of the output shaft. This is shown in the following graph.</p>
+        <amp-img src="Understanding-Universal-Joint/velocity_variaion_universal_joint.jpg"  width="500" height="215" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:11 Variation of output shaft speed with angle</h5>
+        <p>It is clear that, the output shaft has a fluctuating speed. More the angle between the shafts more will be the speed fluctuation.</p>
+        <h2>Double Universal Joint</h2>
+        <p>This means, the universal joint is not a constant velocity joint. This jerky rotation makes the universal joint useless in its original form. But you can make it a constant velocity joint by incorporating one more joint, as shown. If a constant velocity input gives fluctuating output, a fluctuating input will give a constant velocity output. Thus, the double universal joint acts as a constant velocity joint. You can see a similar arrangement in rear wheel driven automobiles (Fig.1). You can see that the drive shaft is fitted between two universal joints. So the speed output at the second universal joint will be same as the input.</p>
+        <amp-img src="Understanding-Universal-Joint/Constant_Velocity_Joint.jpg"  width="500" height="255" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:12 Use of double university joint in eliminating jerky motion</h5>
+        <h2>Constant Velocity Joints</h2>
+        <p>The double universal joint described in the previous session is a constant velocity joint. However more efficient constant velocity joint designs, they do not require an intermediate shaft have evolved over time. Some of the popular CV joints are listed below.</p>
+        <ul style="text-align:justify">
+            <li style="list-style-type:disc;">Tracta joints</li>
+            <li style="list-style-type:disc;">Rzeppa joints</li>
+            <li style="list-style-type:disc;">Weiss joints</li>
+            <li style="list-style-type:disc;">Tripod joints</li>
+            <li style="list-style-type:disc;">Thompson coupling</li>
+                
+        </ul>
+        
+        
+        </center><br>
+    </div>
+      <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+<div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+       
+    </body>
+</html>

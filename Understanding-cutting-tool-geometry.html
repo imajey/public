@@ -1,0 +1,224 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Understanding cutting tool geometry</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/Understanding-cutting-tool-geometry.html">
+    <style amp-custom>
+     html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+   <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+  <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+    <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+<div class="res">
+    <center>
+        <h1>Understanding Cutting Tool Geometry</h1>
+         <div class="post-date">October 24, 2015</div>
+         <p>The selection of proper cutting tool geometry is of the utmost importance when doing an effective cutting. In this video, we will provide a clear explanation of the cutting process and tool geometry related to single point cutting tool.</p>
+         <amp-youtube width="611" height="411" data-videoid="bUrp8JMRwx4" layout="responsive"></amp-youtube>
+         
+        
+        <p>A detailed webpage version of the video is given below.</p>
+        <h2>The Basic Cutting Operation</h2>
+        <p>To remove a metal chip from a work piece, you have to cut along at least 2 surfaces. Cutting along just one surface will not guarantee chip removal. This is clearly shown in the figure below.</p>
+        <amp-img src="Understanding-Cutting-Tool-Geometry/basic_cutting_principle.jpg" width="635" height="300" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1 To remove a piece of metal from the work piece you have cut through 2 surfaces</h5>
+        <p>For this purpose, cutting tools are provided with 2 cutting edges, a main cutting edge and an auxiliary cutting edge. The main cutting edge cuts the main portion of the chip, while the auxiliary cutting edge cuts the second surface and removes the material</p>
+       <amp-img src="Understanding-Cutting-Tool-Geometry/main_auxiliary_cutting_edges.jpg" width="447" height="280" layout="intrinsic" class="img-responsive"></amp-img>  
+        <h5>Fig:2 A close-up view of main and auxiliary cutting edges</h5>
+        <h2>Single Point Cutting Tool – Tool Geometry Details</h2>
+        <p>The single point cutting tool has many geometrical parameters to make the cutting process more smooth and efficient. These geometrical parameters also help to enhance the tool life by a great extent. All these details are discussed in this session.</p>
+        <h2>Nose Radius</h2>
+        <p>You can see the smooth corner between the main and auxiliary cutting edges; this corner is known as the nose of the tool. The radius of the nose greatly affects the surface finish of the operation and the strength of the tool. Sharp nose always produces scratches on the work piece. A blunt nose as shown in the figure eliminates these scratches and gives a good surface finish. Moreover the risk of nose breakage is greatly reduced in a tool with an appropriate nose radius.</p>
+        <amp-img src="Understanding-Cutting-Tool-Geometry/nose_and_rake_angle.jpg" width="467" height="280" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 Nose, Rake angle and relief angle make the cutting operation more efficient</h5>
+        <h2>Rake Angle</h2>
+        <p>Material removal by the main cutting edge is easier when the material’s flowing surface is at an angle, as shown. This angle is known as the rake angle of the tool, more specifically as the back rake angle. The back rake angle greatly affects the chip thickness and the force of the cutting. The rake angle can be positive, zero or negative . A positive rake angle greatly reduces the cutting force . Due to this reason most of the cutting operations are done with a positive rake angle.</p>
+        <h2>Relief Angle</h2>
+                   
+        <p>To avoid the rubbing of the cutting tool with the work piece, a relief angle is provided as shown. The relief angle greatly reduces the tool wear. Please remember that the relief angle has to be positive always.</p>
+        <h2>Side Rake and Relief Angle</h2>
+        
+        <p>Similar rake and relief angles are also given to the auxiliary cutting edge. To get a better view of the angles a cross-sectional shape is shown in the figure below.</p>
+          <amp-img src="Understanding-Cutting-Tool-Geometry/side_rake_relief_angles.jpg" width="417" height="240" layout="intrinsic" class="img-responsive"></amp-img>      
+        <h5>Fig:4 Auxiliary cutting edge is also provided with rake and relief angles</h5>      
+        <h2>End and Side Cutting Edge Angle</h2>
+        <p>Now, let’s have a look at the tool’s initial position. You can see that the cutting edges form angles, as shown. They are called end and side cutting edge angles.</p>
+         <amp-img src="Understanding-Cutting-Tool-Geometry/side_end_cutting_edge_angles.jpg" width="547" height="194" layout="intrinsic" class="img-responsive"></amp-img>  
+        <h5>Fig:5 Fig.5 A view of side and end cutting edge angles</h5>   
+        <h2>The Tool Signature</h2>
+        <p>These 7 parameters together, completely define the geometry of a tool. These 7 parameters together known as the signature of a tool.</p>
+           <amp-img src="Understanding-Cutting-Tool-Geometry/Tool_nomenclature.jpg" width="595" height="318" layout="intrinsic" class="img-responsive"></amp-img>  
+        <h5>Fig:6 The 7 parameters discussed so far is known as tool signature</h5>
+        <p>There are different international standards available to represent the the tool signature. However all those standards are interchangeable.</p>
+        </center><br>
+    </div>
+        <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+        
+   <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+    </body>
+</html>

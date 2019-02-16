@@ -1,0 +1,283 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>How does a Transformer work</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+             <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+          <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+       <link rel="canonical" href="https://learnengineering.org/How-does-a-Transformer work.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}     
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+      <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+
+       <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+  <header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+       
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<br>
+    <div class="res">
+    <center>
+    
+    <h1>How does a Transformer work ?</h1>
+        <div class="post-date">November 11, 2014</div>
+        <p>Transformers are capable of receiving AC power at one voltage and delivering it at another voltage. In this article, we will go through the working and construction of a 3 phase transformer by starting from its simplest form. We will also understand what is power transformer and how it is constructed.</p> 
+         
+    <amp-youtube width="611"
+      height="411"
+      layout="responsive"
+      data-videoid="vh_aCAHThTQ">
+    </amp-youtube>
+    <br>
+        <p>A detailed webpage version of the video is given below.</p>
+        
+        <h2>Why Transformers are used ?</h2>
+        
+        <p>Transformers are ubiquitous devices. They are used to either step-up the A.C voltage or to step-down it. But, why should we do this voltage transformation ?. It is a science fact that a stepped-up voltage is associated with a reduced current. A reduced current leads to low eddy current energy loss. In this way, transformers help achieve better transmission efficiency while transferring the power over longer distances.</p>
+        <amp-img src="Transformer/Electrical_Transformer.jpg"  width="330" height="240" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 Transformers help in step-up or step-down the voltage</h5>
+        <p>this in turn increases the transmission efficiency..</p>
+        <p>After the electrical power has transmitted to the desired spot, the voltage can be reduced to the desired level, using a step-down transformer.</p>
+        <h2>The Basic Working Principle</h2>
+        <p>The basic working principle of a transformer is simple, electromagnetic induction. According to this principle, a varying magnetic flux associated with a loop will induce an electromotive force across it.
+        Such a fluctuating magnetic field can easily be produced by a coil and an alternating E.M.F (EP) system. A current carrying conductor produces a magnetic field around it. The magnetic field produced by a coil will be as shown in the first part of Fig.2. With the fluctuating nature of the alternating current, the magnetic field associated with the coil will also fluctuate.<br>
+        This magnetic flux can be effectively linked to a secondary winding with the help of a core made up of a ferromagnetic material. The linked magnetic flux is shown in the second part of Fig.2. This fluctuating magnetic field will induce an E.M.F in the secondary coils due to electromagnetic induction. The induced E.M.F is denoted by ES.</p>    
+        <amp-img src="Transformer/Working_Principle.jpg"  width="713" height="270" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:2 AC current in a coil produces a fluctuating magnetic field</h5>
+        
+        <p>this magnetic field can effectively linked to a secondary coil with the help of a core.<br>Since the turns are arranged in a series, the net E.M.F induced across the winding will be sum of the individual E.M.Fs (eS) induced in each turn. Ns represents, number of turns at the secondary winding.</p>
+        <p>E<sub>S</sub> = e<sub>S</sub> <span>&#215;</span> N<sub>S</sub></p>
+        <p>Since the same magnetic flux is passing through the primary and secondary coils, the EMF per turn for both the primary and secondary coils will be the same.</p>
+        <p>e<sub>S</sub> = e<sub>P</sub></p>
+        <p>The E.M.F per turn for the primary coil is related to the applied input voltage as shown.</p>
+        <p>e<sub>p</sub>= E<sub>P</sub>/ N<sub>P</sub></p>
+        <p>By rearraging the above equations, it can be established that, the induced E.M.F at the secondary coil is expressed as follows.</p>
+        <p>E<sub>S</sub> = E<sub>P</sub>/ N<sub>P</sub> <span>&#215</span> N<sub>S</sub></p>
+        <p>This simply means that with fewer turns in the secondary than in primary, one can lower the voltage. Such transformers are known as step-down transformers. For the reverse case, one can increase the voltage (step-up transformer).
+         <br>
+        But since energy is conserved, the primary and secondary currents have to obey the following relationship.</p>
+        <p>I<sub>P</sub>E<sub>P</sub> = I<sub>S</sub>E<sub>S</sub></p>
+        <h2>3 Phase Transformer</h2>
+        <p>Three phase transformers use 3 such single-phase transformers, as shown in the figure below.</p>
+        <amp-img src="Transformer/Single_Three_Phase_Transformer.jpg" width="464" height="230" class="img-responsive"layout="intrinsic"></amp-img>   
+        <h5>Fig:3  A 3phase transformer can be considerred as three independent single phase transformers</h5>   
+        <p>It is clear from Fig.3 that, independent 3 phase transformer will require a huge amount of core material and results in a bulky design. As a result practical 3 phase transformers use a slightly different coil configuration. To make it more economical the design illustrated in Fig.4 is used. Here, the primary and secondary coils sit concentrically. Three such concentric pairs are used in 3 phase transformer.</p>
+          <amp-img src="Transformer/3Phase_Transformer_Winding.png" width="341" height="250" class="img-responsive"layout="intrinsic"></amp-img>        
+        <h5>Fig:4 HV and LV windings are placed concentrically in 3 phase transformers</h5>
+        <p>The concentric windings are made to sit on three transformer core limbs as shown in the Fig.9. We will learn more about the core constriction in the coming sessions.</p>
+        <h2>Power Transformer – Construction Features</h2>
+        <p>The transformers which are used in high voltage applications are referred as ‘Power Transformers’. They handle voltage in the range of 33 to 400 kV. The winding of a power transformer is quite different from that of a low voltage transformer (Distribution Transformer). We will explore the construction and connection details of the power transformer winding in this session.</p>
+        <h2>Winding type</h2>
+        <p>The power transformers generally employ a special kind of winding, known as a disc-type winding, where separate disc windings are connected in series , through outer and inner cross-overs.</p>
+        <amp-img src="Transformer/Power_Transformer_Winding.jpg" width="748" height="217" class="img-responsive"layout="intrinsic"></amp-img>
+        <h5>Fig:5 The separated out disks are shown in the first part of the figure</h5>  
+        <p>The way discs are connected together is shown in the 2nd and 3rd part of the figure.
+         <br>
+         The first part of Fig.5 shows the separated out discs. In the second and third part of the figure, the inner and outer cross-overs are shown.</p>
+        <h2>Winding Connection</h2>
+        <p>The low-voltage windings of a power transformer are connected in a delta configuration and the high-voltage windings are connected in a star configuration. The winding connections are shown in the Fig. 6 and Fig.7 respectively.</p>
+        <amp-img src="Transformer/Low_Voltage_Winding_Connection.png" width="347" height="230" class="img-responsive"layout="intrinsic"></amp-img>
+        <h5>Fig:5 The low voltage winding is connected in a Delta configuration</h5>
+        <p>The delta connection in low voltage windings result in 3 terminals to connect the electrical power. This is marked as ‘R’,’Y’ and ‘B’ in the Fig.6.</p>
+         <amp-img src="Transformer/HV_Winding_Connection.png" width="417" height="280" class="img-responsive"layout="intrinsic"></amp-img>
+        <h5>Fig:7 The high voltage windings are connected in a Star configuration</h5>
+        <p>
+            On the contrary, the star connection in high voltage transformer results in 4 terminals to connect the electric power.This is marked as ‘r’,’y’,’b’ and ‘n’ in the Fig.7. Thus, if you tap the electrical power between any pair of the phase wires the voltage further rises to root 3 times. This voltage is known as ‘line voltage’. This also means that, from a 3 phase step-up transformer we can draw 4 output wires; 3 phase power wires and one neutral. If you draw power between a neutral and phase wire, that is know as ‘phase voltage’.<br>
+
+           High voltage insulated bushings are required to bring out the electrical energy. It is clear from the Fig.8 that, the bushings at the high voltage side are quite bigger compared to the low voltage bushings.
+        </p>
+        <amp-img src="Transformer/HV_LV_Bushings.jpg" width="380" height="350" class="img-responsive"layout="intrinsic"></amp-img>
+        <h5>Fig:8 Insulated bushings are required for smooth transfer of electrical power</h5>
+        <h2>The Core Construction</h2>
+        <p>The core of the transformer is made of thin, insulted, steel laminations. Such steel laminations are stacked together, as shown in the Fig.9, to form 3 phase limbs. The purpose of thin laminations is to reduce energy loss due to eddy current formation. Pleas note here that, the separated out layer blocks in the first part of Fig.9 is a stacked layer of much thinner steel laminations. The thickness of each steel laminations varies from 0.25 – 0.5 mm.</p>
+        <amp-img src="Transformer/Core_Construction.jpg" width="606" height="280" class="img-responsive"layout="intrinsic"></amp-img>
+        <h5>Fig:9 The core is made of thin insulated steel laminations;</h5>
+        <p>Such laminations are stacked together to form 3 phase limbs</p>
+        <p>The low voltage windings usually sit near the core. If HV windings were placed near to the cored, due to the winding’s high voltage, a huge amount of insulation material would be required between the winding and core. Thus by placing the LV winding near to the core, we can save a good amount of insulation material.<br>
+        The output voltage of a transformer will undergo minor fluctuations due to the reasons like load variation and change in power input supply. A tapping mechanism in the secondary coil helps in regulating the output voltage to the specified limit. The tapping mechanism simply changes the number of active coils in the transformer action, thus controls the output voltage. Since more number of turns are there in the HV windings, voltage fine tuning can be more accurately controlled by providing the tapping on the HV side. This is another reason why HV windings are not placed near to the core. If they were placed near to the core, movement of tapping mechanism would have been more difficult, causing the tapping design more complex.</p>
+        <h2>Energy losses in a Transformer</h2>
+        <p>Various kinds of energy loss happen while transferring power from the primary to secondary coil. Following are the major source of energy losses.</p>
+        <ul style="text-align:justify">
+            <li style="list-style-type:disc;">Eddy current loss</li>
+            <li style="list-style-type:disc;">Hysteresis loss</li>
+            <li style="list-style-type:disc;">I2R loss</li>
+        </ul>
+        <p>All these energy loss are dissipated as heat, so a proper cooling mechanism is necessary to keep the core and winding temperature of the transformer below a specified limit.</p>
+        <amp-img src="Transformer/Radiator_Fins.jpg" width="389" height="270" class="img-responsive"layout="intrinsic"></amp-img>
+        <h5>Fig.10 Coolant oil circulation in the transformer is depicted in this figure</h5>
+        <p>Usually the transformer is immersed in a cooling oil to dissipate the heat. The oil dissipates the heat via natural convection. It is clear from the Fig. 10 that, hot oil at the bottom of the tank rises to the top by natural convection (Buoyancy Force). This hot fluid is passed in to the fins, which are fitted outside of the transformer, via fin top pipe. The oil liberates heat when it passes through the fins and it gets cooled down. The low temperature oil naturally sinks to the bottom and enters the transformer through fin bottom pipe. Thus a circular motion of the oil is created in the transformer.</p>
+        <h2>Use of the Conservator Tank</h2>
+        <p>Oil in the tank will expand as it absorbs the heat. A conservator tank helps to accommodate for this volume change. As can been seen in Fig.11, there is a free space above the oil, in the conservator tank. When the oil expands, this space shrinks and accommodate for the volume rise.</p>
+        <amp-img src="Transformer/Conser_Tank_Oil.jpg" width="351" height="230" class="img-responsive"layout="intrinsic"></amp-img>
+        <h5>Fig:11 The conservator tank, which is fitted on the top of the transformer helps to accommadate for the volume change of the cooling oil</h5>
+        <p>To know more on different types of transformer cores and windings please check the other articles.</p>
+        <br>
+        </center>  
+     </div>
+     
+
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+
+ <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+</body>
+</html>

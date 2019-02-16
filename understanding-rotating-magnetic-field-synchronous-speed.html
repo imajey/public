@@ -1,0 +1,228 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>understanding rotating field synchronous speed</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/understanding-rotating-field-synchronous-speed.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}   
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+    <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+
+  <header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+     <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+    <div class="res">
+    <center>
+    
+    <h1>Understanding Rotating Magnetic Field & Synchronous Speed</h1>
+       <div class="post-date">August 19, 2013</div>
+        <p>Whether synchronous or induction, 3 phase electric machines use rotating magnetic field for its operation. In this article we will understand how rotating magnetic field is produced in a 3 phase machine. We will also come across concept of synchronous speed and number of poles on a electrical machine.</p>
+        
+        <amp-youtube width="611" height="411" data-videoid="8XF-11MQGQ0" layout="responsive"></amp-youtube>
+        <p>Detailed description of the video lecture is given following article.</p>
+        <h2>A Simplified 3 Phase Winding</h2>
+        <p>To understand concept of rotating magnetic field for 3 phase machines consider the simplified winding shown below. It has got just 3 coils. They are placed 120 degree apart.</p>
+        
+        <amp-img src="Rotating-magnetic-field/simple_wind.jpg" width="245" height="210" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1 A simplified 3 phase winding</h5>
+        <p>For this special arrangement magnetic field produced by 3 phase A.C current flowing through it will be as shown at a particular instant. These currents are at 120 degree phase difference with each other. You can compare it with magnetic field produced by a single wire carrying current.</p>
+        <amp-img src="Rotating-magnetic-field/simple_winding_magnetic_field_around_conductor.jpg" width="485" height="230" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:2 Magnetic field produced by simplified winding and a single wire</h5>
+        <p>Since the AC current in coil varies with time, corresponding magnetic field produced by them will also vary. Following figure shows how magnetic field varies, as current in coil varies.</p>
+        <amp-img src="Rotating-magnetic-field/Rotating_magnetic_field.jpg" width="778" height="234" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 Variation of magnetic field around the winding with time</h5>
+        <p>Corresponding current values at 3 instances in each winding can be noted from following figure.</p>
+        <amp-img src="Rotating-magnetic-field/ac_current.jpg" width="306" height="230" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:4 Variation of 3 phase AC current with time</h5>
+        <p>You can note from these 3 instances that orientation of magnetic field changes with current, but its magnitude remains same. Or it is a magnetic field of uniform strength rotating. Speed of rotation of magnetic field is known as synchronous speed.</p>
+        <h2>How to Quantify Synchronous Speed</h2>
+        <p>The big question, how to quantify synchronous speed?
+        The simplified winding case had just two magnetic poles. You can note that, magnetic flux is able to rotate through 2 poles when current take one complete revolution. So for 2 pole case synchronous speed is same as frequency of AC current.</p>
+        <h3 style="font-weight:550;">W<sub>s</sub> = 2<span>&#8508;</span><span>&#402;</span></h3>     
+        <p>Here is a case of winding that will produce 4 poles.</p>
+         <amp-img src="Rotating-magnetic-field/4_pole_winding.jpg" width="379" height="260" layout="intrinsic" class="img-responsive">
+        </amp-img>   
+        <h5>Fig:5 A winding that will produce 4 poles</h5>    
+        <p>For the 4 pole system magnetic field will again rotate through 2 poles for full revolution of current. As a result in this case magnetic flux will rotate only half the revolution. So you can note that speed of magnetic field has become half this time. So for general P pole system, synchronous speed is given by following equation.</p>
+        
+        <h3 style="">W<sub>s</sub> = 4<span>&#8508;</span><span>&#402;</span> <span>&#8725;</span>P</h3>    
+        <h2>Variations in Number of Poles</h2>
+        <p>In an actual motor there can be 2 to 14 poles. This motor is having 10 poles.</p>
+        <amp-img src="Rotating-magnetic-field/10_pole_motor_winding.jpg" width="219" height="250" layout="intrinsic" class="img-responsive">
+        </amp-img>  
+        <h5>Fig.6 A motor winding that will produce 10 poles</h5>
+        <p>So for a 60 Hertz power supply magnetic field will rotate at 75.36 rad/sec.
+Rotating magnetic field can make the rotor rotate for induction as well as synchronous motor. Speed of rotation of rotor is a strong function of synchronous speed. So it is quite important to select a motor with suitable number of pole, which will match rotational speed requirement.</p>    
+     <br>
+        </center>  
+     </div>
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+<div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+      
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>How does an electric car work</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+       <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+          <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+         <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/How does an electric car work?.html">
+    <style amp-custom>
+    html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /********SCROLL TO TOP*******/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}  
+   
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+    <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+   <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+<header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+     
+     <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_1.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+        
+    <div class="res">
+    <center>
+     <h1>How does an electric car work?</h1>
+        <div class="post-date">December 15, 2017</div>
+         <p>Electric cars are making big waves in the automobile world. These noise-free, pollution-free and high-performance vehicles are expected to make their I.C. engine counterparts obsolete by 2025. In fact the first cars made were purely electrical. This article will unveil the hidden technologies behind the Tesla Model S, which recently became the world’s fastest accelerating production car. Tesla Model S P100D achieved 60mph speed in 2.28 seconds. We will see how electric cars have achieved superior performance by analyzing the technology behind the induction motor, inverter, lithium ion battery power source, and above all, the synchronized vehicle mechanism, in a logical, step-by-step manner.</p>
+        
+    <amp-youtube width="611"
+      height="411"
+      layout="responsive"
+      data-videoid="3SAxXUIre28">
+    </amp-youtube>
+       
+        <h2>An Introduction to Electric cars</h2>
+        
+        <h2>Induction Motor -Tesla Car’s power house</h2>
+        <p>The powerhouse of the Tesla car is an invention made by the great scientist Nikola Tesla around 100 years back. The induction motor has two main parts, the stator and the rotor. You can see the construction details of the motor in Fig:1A. The rotor is simply a collection of conducting bars short circuited by end rings. A 3 phase AC power input is given to the stator. The 3-phase alternating current in the coils produces a rotating magnetic field (RMF). The Tesla motor produces a 4-pole magnetic field. This rotating magnetic field then induces current on the rotor bars to make it turn. In an induction motor, the rotor always lags behind the RMF. An induction motor has neither brushes nor a permanent magnet. At the same time, it is robust and powerful.</p>
+        <p>The beauty of an induction motor is that, its speed depends on the frequency of the A.C power supply. So just by varying the frequency of the power supply, we will be able to alter the drive wheel speed. This simple fact makes electric car speed control easy and reliable. The motor supply is from a variable frequency drive, which in turn controls motor speed. The motor speed can range from 0 to 18000 rpm.</p>
+        
+         <div class="row">
+            <div class="col-1"><amp-img src="Electric-car/induction_motor_efficiency_graph.jpg"  width="700" height="722" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:1A Induction motor efficiency graph</h5></div>
+            <div class="col-1"><amp-img src="Electric-car/induction_engine_efficiency_graph.jpg"  width="700" height="722" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:1B Induction engine efficiency graph</h5></div>
+        </div>
+        
+        
+        <p>This is the most sizable advantage electric cars have when compared to internal combustion cars. An internal combustion engine produces usable torque and power output only within a limited speed range. This is clear from the graph of Fig:1B. Therefore, directly connecting the engine rotation to the drive wheel is not a clever idea. A transmission must be introduced to vary the drive wheel speed. On the other hand, an induction motor will work efficiently in any speed range. Thus, no speed varying transmission is needed for an electric car. Moreover, an I.C engine does not produce direct rotational motion. The linear motion of the piston has to be converted to rotational motion.This causes major problems for mechanical balancing. Not only is the internal combustion engine not self-started like an induction motor, further the power output of an I.C. engine is always uneven. Many accessories are needed to solve these issues. On the other hand, you will have direct rotational motion and uniform power output with an induction motor. Many components in the I.C engine can be avoided here. As a result of these factors, high response rate and power- to-weight ratio comes naturally to an induction motor, resulting in superior vehicle performance.</p>
+        
+        <h2>The main internal parts – Battery, Inverter and Induction motor</h2>
+        
+        <p>But from where does the motor receive power? It’s from a battery pack. The battery produces D.C power, so before supplying it to a motor, it has to be converted to AC. An inverter is used for this purpose. This power electronic device also controls the A.C power frequency, thus controlling the motor speed. Moreover, the inverter can even vary the amplitude of the A.C power, which in turn will control the motor power output. Thus, the inverter acts as the brain of the electric car.</p>
+        
+        <amp-img src="Electric-car/battery_pack_motor_inverter.jpg" width="1080" height="609" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:2 Battery pack motor inveter</h5>
+        
+        <h2>The Battery pack – The biggest innovation of Tesla Motors</h2>
+        <p>Now, let’s turn our focus to the battery pack. You will be amazed to find that they are just a collection of common Lithium-ion cells similar to those used in your daily life
+        The cells are connected in a combination of series and parallel to produce the power required to run your electric car.
+        Glycol coolant is passed through metallic inner tubes through the gap between the cells.This is one principal innovation of Tesla. By using many small cells instead of a few big cells, effective cooling is guaranteed. This minimizes thermal hotspots and even temperature distribution is achieved, leading to higher battery pack life. The cells are arranged as detachable modules. There are 16 such modules in the battery pack constituting around 7000 cells.</p>
+        
+        <amp-img src="Electric-car/details_battery_pack.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:3 Details of battery pack</h5>
+        <p><b>The heated glycol is cooled down by passing through a radiator, which is fitted at the front of the vehicle.
+        Moreover, you can see how such a low height battery pack when fitted close to the ground level will lower the vehicle’s center of gravity.</b></p>
+        
+        <amp-img src="Electric-car/Radiator_electric_car.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:4 Radiator is needed in an electric car to cool down the battery pack</h5>
+        
+        <p><b>The lower center of gravity improves the stability of the car considerably. The large battery pack is also spread across the floor, offering structural rigidity against side collisions</b></p>
+        
+         <div class="row">
+            <div class="col-1"> <amp-img  src="Electric-car/battery_pack_as_structural_support.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+           <h5>Fig:5 The heavy battery pack act as a strcural support</h5></div>
+            <div class="col-1"><amp-img src="Electric-car/battery_pack_close_to_ground%20(2).jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:6 Battery pack close to ground</h5></div>
+        </div>
+        
+        <h2>The Simple Drive Train</h2>
+        <p>Now, let’s get back to Tesla’s drivetrain.
+        The power produced by the motor is transferred to the drive wheels via a gear box. As previously discussed, Tesla model S uses a simple, single speed transmission because the motor is efficient in a wide range of operating conditions.You can see that output speed from the motor is reduced in 2 steps. Even achieving the reverse gear is quite easy in an electric car, just change the order of the phases for this. The only purpose of electric car transmission is speed reduction and associated torque multiplication.</p>
+        <amp-img src="Electric-car/single_speed_transmission_Tesla.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:7 An electric car work with a signle speed drive train</h5>
+        
+        <h2>An Open Differential for Such an Advanced Car?</h2>
+        <p>The second component in the gearbox is a differential. The reduced speed drive is passed to it. You can see this is a simple open differential: however, open differentials have a problem of traction control. But, why does such an advanced car use an open differential rather than a limited slip differential? The answer is that the open differential is more rugged and can carry more torque. The traction control problem that occurs in an open differential can effectively be overcome with help of 2 methods,selective braking and cutting the power supply. In an internal combustion engine this power supply cut by cutting the fuel is not so responsive. In an induction motor, however, the power supply cut is quite responsive and an effective means for obtaining traction control. In the Tesla, this can all be accomplished using a state of the art algorithm with help from sensors and controllers. In short, Tesla motors has replaced a complex mechanical hardware system with smart, responsive software</p>
+        <amp-img src="Electric-car/Differential_Tesla.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:8 Tesla model uses an open differntial</h5>
+        
+        <h2>Regenerative Braking : The biggest plus</h2>
+        <p>Did you know an electric car can be driven efficiently with the help of just one pedal? This is due to its powerful regenerative braking system. That means saving the huge kinetic energy of the car in the form of electricity without wasting it as heat, In an electric car, as soon as yobraking to action.
+
+            <b>The interesting thing is that, during the regenerative braking, the same induction motor acts as a generator.</b></p>
+        <amp-img src="Electric-car/regenerative_braking.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:9 Regenerative braking</h5>
+        
+        <p>The inverter plays a crucial role here in adjusting the input power frequency and keeping the RMF speed below the rotor speed. This will generate electricity in the stator coils, which is way higher than the supplied electricity. The generated electricity can then be stored in the battery pack after the conversion. An opposing electromagnetic force acts on the rotor during this process, so the drive wheels and the car will slow down. This way vehicle speed can be accurately controlled during the drive using a single pedal. The brake pedal can be applied for a complete stop.
+          <br>
+        As you might already be aware, electric cars are much safer than internal combustion cars. The cost of maintaining and driving an electric car is much lower than that of an I.C engine car. With the drawbacks of the electric car abated through the advent of improved technology, electric cars promise to become the cars of the future.</p>
+        
+        <h2>Electric car – Pros and Cons</h2>
+        <p>Despite all its advantages, electric cars have disadvantages as well. The following section gives a quick comparison of its pros and cons.</p>
+        
+        
+      
+        
+        <div class="row">
+            <div class="col-6" style="padding:20px;">
+                <h3 style="background-color:#f4a3a3;padding:8px;">Advantages</h3>
+                <p class="prons">HIGH PERFORMANCE VEHICLES</p>
+                <p class="prons">HIGH RESPONSE</p>
+                <p class="prons">NO NOISE</p>
+                <p class="prons">NO POLUTION AT VEHICLE LEVEL</p>
+                <p class="prons">LOWER MAINTAINCE AND DRIVE COST</p>
+                <p class="prons">HIGHLY SAFE</p>
+                <p class="prons">SINGLE SPEED TRANSMISSION</p>
+                <p class="prons">HIGH TORQUE AND POWER</p>
+                <p class="prons">EFFECTIVE TRACTION CONTROL</p>
+            </div>
+            <div class="col-6" style="padding:20px;">
+                <h3 style="background-color:#f4a3a3;padding:8px;">Disadvantages</h3>
+                <p>HUGE WEIGHT PENALITY</p>
+                <p>LOW RANGE</p>
+                <p>HIGH COST</p>
+                <p>HIGH COST</p>
+                <p>LONG CHARGING TIME</p>
+            </div>
+        </div>
+ </center>  
+</div>
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+<div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+      
+</body>
+</html>

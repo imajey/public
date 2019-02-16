@@ -1,0 +1,282 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>How does an inverter work</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+ <link rel="canonical" href="https://learnengineering.org/How-does-an-inverter-work.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}    
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+      <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+      <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+   
+  <header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+    <div class="res">
+    <center>
+    
+    <h1>How does an Inverter Work?</h1>
+       <div class="post-date">February 15, 2018</div>
+       <p>Inverters have taken a prominent role in the modern technological world due to the sudden rise of electric cars and renewable energy technologies.</p>
+       
+        <amp-youtube width="611" height="411" data-videoid="qVeERT4nyz8" layout="responsive"></amp-youtube>
+        <h2>An Integral Part In Modern Technology</h2>
+        <p>Inverters convert DC power to AC power. They are also used in Uninterruptible Power Supplies, Control of Electrical Machines and Active Power filtering.</p>
+      
+     <amp-carousel width="600" height="400" layout="intrinsic" type="slides" autoplay delay="2000">
+      <amp-img src="Inverter/inverter01.jpg" width="400" height="300" layout="intrinsic" alt="a sample image"></amp-img>
+       <amp-img src="Inverter/Inverter-SMA000-1.jpg" width="400" height="300" layout="intrinsic" alt="another sample image"></amp-img>
+       <amp-img src="Inverter/climax.jpg" width="400" height="300" layout="intrinsic" alt="and another sample image"></amp-img>
+       <amp-img src="Inverter/wind%20turbine.jpg" width="400" height="300" layout="intrinsic" alt="and another sample image"></amp-img>
+     </amp-carousel>
+       
+        <h2>What Is An Alternating Current?</h2>
+        <p>An alternating current periodically reverses its direction. For this reason, the average value of an alternating current over a cycle will be zero.</p>
+        <amp-img src="Inverter/Alternating_current.jpg" width="700" height="385" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 Alternating current</h5>
+        <h2>Square Wave A.C</h2>
+        <p>Before proceeding to sine wave production, let’s see how a square wave alternating current is produced. In fact, the old type inverters used to produce simple square wave as their output.</p>
+        <amp-img src="Inverter/Square-Wave.jpg" width="550" height="284" class="img-responsive" layout="intrinsic"></amp-img>   
+        <h5>Fig:2 Square Wave Alternating current</h5>
+        <p>Let’s build an interesting circuit as shown, with 4 switches and one input voltage. This circuit is known as full bridge inverter. The output is drawn between points A and B. To make this circuit analysis easier, let’s replace this actual load with a hypothetical load. Just note the current flow when switches S1 and S4 are ON and S2 and S3 are OFF. Now, just do the reverse and observe the current flow. It is clear that the current flow is the opposite in this case, as is the output voltage across the load. This is the basic technique that produces a square wave alternating current.</p>
+           <div class="row">
+            <div class="col-1"><amp-img src="Inverter/Inverter_on.jpg"  width="600" height="350" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:2A Inverter is on</h5></div>
+            <div class="col-1"><amp-img src="Inverter/Inverter_off.jpg"  width="600" height="350" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:2B Inverter is off</h5></div>
+        </div>   
+        <h2>Introduction Of Semiconductor Switches</h2>
+        <p>We all know that the frequency of the AC supply available in our homes is 50 Hertz .This means that we need to turn the switch ON and OFF 100 times in a second, which is not possible, whether manually or by using mechanical switches. We introduce semiconductor switches such as MOSEFT for this purpose. They can turn on and turn off thousands of times per second. With the help of control signals we can turn transistors ON or OFF very easily.</p>
+        <amp-img src="Inverter/Semiconductor-Switches-MOSEFT.jpg" width="800" height="473" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:3 Introduce semiconductor switches such as MOSEFT </h5> 
+        <p>The square wave output is a high approximation of sine wave output.
+        Old inverters used to produce them.
+        That’s why you hear a humming noise when you run your
+        electric fan or other appliances using square wave power.
+        They also heat up electric equipment.Modern inverters produce pure sinusoidal output.</p>
+          <amp-img src="Inverter/Modern-Inverter.jpg" width="700" height="393" class="img-responsive" layout="intrinsic"></amp-img>
+          <h5>Fig:4 Modern inverters produce pure sinusoidal output</h5>
+        <h2>Pulse Width Modulation-Pure SINE Wave Production</h2>
+        <p>Let’s see how they achieve it. A technique called Pulse width modulation is used for this purpose. The logic of Pulse width modulation is simple. Generate the DC voltage in the form of pulses of different widths. In regions where you need higher amplitudes, it will generate a pulses of larger width. The pulses for the Sine wave look like this.</p>
+            <amp-img src="Inverter/Pulses-Of-sine-wave.jpg" width="600" height="350" class="img-responsive" layout="intrinsic"></amp-img>  
+        <h5>Fig:5 Pulses of sine wave</h5>      
+        <p>Now, here is the tricky part. What will happen if you average these pulses in a small time interval ? You will be surprised to see that the shape of the averaged pulses looks very similar to the Sine curve. The finer the pulses used, the better shape of the Sine curve will be.</p>
+        
+        <amp-img src="Inverter/Simple-Average-Bar.jpg" width="600" height="350" class="img-responsive" layout="intrinsic"></amp-img>  
+         <h5>Fig:6 Simple average bar</h5> 
+        <h2>How To Make Pulse And How Do Average</h2>
+        <p>Now, the real question is how to make these pulses, and how do we average them in a practical way ?. Let’s see how they are implemented in an actual inverter.
+        Two comparators are used for this purpose. Comparators compare a sine wave with triangular waves. One comparator uses a normal sine wave, and the other comparator uses an inverted sine wave
+        The first comparator controls S1 and S2 switches, and the second comparator controls S3 and S4.</p>
+        <amp-img src="Inverter/comparator.jpg" width="600" height="350" class="img-responsive" layout="intrinsic"></amp-img> 
+          <h5>Fig:7 Comparator</h5> 
+        <p>S1 and S2 switge lches determine voltaevel at point A and the other two switches determine voltage level at point B. You can see that the one branch of comparator output is fitted with a logic NOT gate. This will make sure that when S1 is ON, S2 will be OFF and vice-versa. This also means that, we can never turn on S1 and S2 at the same time, which will cause the DC circuit to short circuit. Turning S1 gives cell voltage at point A and turning on S2 gives zero voltage at the same point. Same is the case for point B.</p>
+         <amp-img src="Inverter/Comparator's%20Control.jpg" width="600" height="350" class="img-responsive" layout="intrinsic"></amp-img> 
+        <h5>Fig:8 Comparator's control </h5> 
+        <p>The switching logic of PWM is simple, when the Sine wave value is more than the triangular wave, comparator produces 1 signal, otherwise Zero signal.</p>
+        <h2>COMPARATOR OUTPUT</h2>
+        <h4 style="text-align:justify;">Switching Logic</h4>
+        <p style="font-weight:500;font-size:25px;">V<sub>sine</sub>   >   V<sub>trian</sub></p>
+        <p style="font-weight:500;font-size:25px;">V<sub>sine</sub><span>&#60;</span> V <sub>trian</sub></p>
+        
+         <amp-img src="Inverter/Comparator-output1.jpg" width="600" height="350" class="img-responsive" layout="intrinsic"></amp-img> 
+        <h5>Fig:9 Comparator-output1</h5>
+        <p>Now observe voltage variation at the first comparator according to this logic. Control signal of 1 turns on the MOSEFT. The voltage pulses produced at point A are shown.</p>
+        
+        <p>Apply the same switching logic and observe the voltage pulses generated at point B.
+       Since we are drawing output voltage between point A and B, the net voltage will be the difference between A and B.</p>
+        <amp-img src="Inverter/comparator-Output2.jpg" width="600" height="350" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:10 Comparator-output2</h5>
+        <p>This is the exact pulse train we need to create the Sine wave. The finer the triangular wave, the more accurate the pulse train will be.</p>
+      <amp-img src="Inverter/Pluse-Train.jpg" width="600" height="350" class="img-responsive" layout="intrinsic"></amp-img> 
+        <h5>Fig:11 This is the exact pulse train we need to create the Sine wave.</h5>
+        <h2>Passive Filtering:Averaging</h2>
+        <p>Now, the next question is how do we practically implement the averaging?To make it exactly sinusoidal, energy storage elements such as inductors and capacitors are used to smooth the power flow. They are called passive filters. Inductors are used to smoothen the current, and capacitors are used to smoothen the voltage. All in all, with an inverter bridge, a good PWM technique and a passive filter, you can generate sinusoidal voltage and operate all of your appliances without any fuss.</p>
+        <amp-img src="Inverter/Passive-Filtering.jpg" width="550" height="309" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:12 Passive filtering</h5>
+        <h2>Multilevel Inverter</h2>
+        <p>The inverter technology we have explained so far has only two levels of voltage. What if we introduce one more voltage level ? This will give better approximation of the Sine wave and can reduce instantaneous error. Such multilevel inverter technology is used in high precision applications like wind turbines and electric cars.</p>
+         <amp-img src="Inverter/Multilevel-Inverter.jpg" width="550" height="309" class="img-responsive" layout="intrinsic"></amp-img>
+          <h5>Fig:13 Multilevel Inverter</h5>
+        <p>Inverters used in the electric cars have intelligent frequency and amplitude control. In fact frequency controls the speed of an electric car and amplitude controls the power of it. This way, inverters act as the brain of electric cars by producing electric power ideal for driving conditions.</p>
+        <amp-img src="Inverter/Inverter.jpg" width="550" height="309" class="img-responsive" layout="intrinsic"></amp-img>
+         <h5>Fig:14 Inverter</h5>
+        <br>
+        <h3 style="text-align:justify;">About Author:</h3>
+        <div class="row" style="background-color:#557A95;">
+            <div class="col-1" style="padding:10px;"><amp-img src="Inverter/citations.jpg" style="border-radius:50%;" width="112" height="128" class="img-responsive" layout="intrinsic"></amp-img></div>
+            <div class="col-1" style="text-align:justify;font-style:italic;font-size:18px;color:white;"><br>Name : Nachiketa Deshmukh.<br>
+                              PHD Scholar, Indian Institute of Technology, Kanpur.<br>
+                To know more about the author check <a href="https://scholar.google.co.in/citations?user=7qUSRCYAAAAJ&hl=en&oi=ao" target="_blank">this link</a></div>
+        </div>
+        <br>
+        </center>  
+     </div>
+
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+  
+<div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+</body>
+</html>

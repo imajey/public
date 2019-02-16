@@ -1,0 +1,257 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>working and design details of wind turbines</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+       <link rel="canonical" href="https://learnengineering.org/working-and-design-details-of-wind-turbines.html">
+    <style amp-custom>
+  html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+      <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+      <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+  
+  <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+  
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+     <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<div class="res">
+    <center>
+        <h1>Working and Design detials of Wind Turbines</h1>
+         <div class="post-date">March 14, 2016</div>
+         
+        <p>Windmills have been assisting mankind to convert the energy contained in wind to many other useful forms for the last 2000 years. Today’s wind turbines are capable of converting a great amount of energy in the wind into electricity. This is due to the blades, which are developed using state of the art aerodynamic analysis and the other performance enhancing equipment. In this video, we will explore these different sets of technology in a simple, yet scientific, way.</p>
+     <amp-youtube width="611" height="411" data-videoid="qSWm_nprfqE" layout="responsive"></amp-youtube>
+        <p>A detailed webpage version of the video is given below.</p>
+        
+        <h2>The Basic Working</h2>
+         <p>First, let’s get into its basic working.
+         You might have noticed that even a breezing wind will turn the gigantic wind turbine blades. But how it is possible ? To get answer for this let’s have a close look at the wind turbine blade.</p>
+         
+        <amp-img src="Working-and-Design-details-of-Wind-Turbines/Wind_turbine_blade_shape.jpg" width="500" height="321" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 A wind turbine blade is a collection of different airfoil shapes</h5>
+        <p>The blade has a lot of airfoil cross sections consisting of different sizes and shapes from the root to tip. The simple airfoil technology makes the wind turbine blade turn. That means that a lift force is produced when a fluid moves over an airfoil.</p>
+        <amp-img src="Working-and-Design-details-of-Wind-Turbines/airfoil_technology.jpg" width="450" height="234" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:2 A lift force is generated when flow occurs over an airfoil</h5>
+        <p>You can note from the Fig.1 that at the root, the airfoil shape is super thick. The reason for this is structural rather than the aerodynamics. At the root mechanical strength required is really high due to the high bending moment induced there. This way, the wind turbine achieves the basic rotation we are accustomed to seeing.</p>
+        <h2>Wind Turbine Blade Design</h2>
+        <p>The design of wind turbine blade is a clever art.There are aerodynamic reasons behind the complex 3 dimensional shape of wind turbine blade. We will see these factors in this section.</p>
+        <h2>Blade Tilt</h2>
+        <p>Just as in a moving train, you experience things relatively; the moving wind turbine blade also experiences the wind relatively. For the moving blade, the relative wind velocity shown in first part of Fig 3. To get relative velocity, you have to vectorially subtract blade velocity from the actual wind velocity. You can note a even if the wind velocity is normal relative velocity is always inclined. Therefore, the wind turbine blade is positioned in a tilted manner in order to align with the relative wind speed. This blade tilt is shown in second part of Fig.3.</p>
+        <amp-img src="Working-and-Design-details-of-Wind-Turbines/blade_tilt_relative_velocity.jpg" width="720" height="305" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:3 The concept of relative wind velocity and blade tilting</h5>
+        <h2>Blade Twist</h2>
+        <p>But the problem does not stop here. The blade velocity increases along the length of the blade. So the relative wind speed becomes more inclined towards the tip. To make sure that the relative velocity is aligned at all the cross-sections of the blade a continuous twist is given to the blade from the root to tip.This twist is clearly depicted in Fig.4.</p>
+         <amp-img src="Working-and-Design-details-of-Wind-Turbines/blade_twist.jpg" width="500" height="321" class="img-responsive" layout="intrinsic"></amp-img>    
+        <h5>Fig:4 Wind turbine blades are always twisted as shown</h5>     
+        <h2>Wind Turbine Components</h2> 
+        <p>Now we will see different components and accessories used in a wind turbine to enhance its performance.</p>
+        <h2>Gearbox – Increase the rotational speed</h2>
+        <p>Noise produced by the wind turbines is a huge issue around the globe. Higher the speed of the rotor more the noise is. Due to this reason wind turbine rotor is always designed to turn at very low RPM. However, such a low speed rotation cannot be directly coupled to a generator, it will not produce any meaningful electricity frequency. So, before connecting to the generator, the speed is increased in a gearbox. The gearbox uses a planetary gear set arrangement to achieve the high speed ratio. Usually the speed</p> 
+      <amp-img src="Working-and-Design-details-of-Wind-Turbines/gear_box.jpg" width="500" height="281" class="img-responsive" layout="intrinsic"></amp-img>   
+        <h5>Fig:5 A gearbox based on planetary gear arrangement is used to achieve the high speed ratio</h5>      
+        <h2>Function of Brake</h2>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        <p>Too much of wind speed may be catastrophic for a wind turbine. High wind speed will make the blade speed at excessive speed, much above the designed limit and induce a huge centrifugal force. This will eventually lead to blade failure. To arrest the blade rotation during excessively windy condition a brake is used in the nacelle. Usually a maximum limit of 80 km/hr is set for the cut-off speed.</p>
+       <amp-img src="Working-and-Design-details-of-Wind-Turbines/Windturbine_parts.jpg" width="500" height="309" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:6 Different parts of wind turbine are marked here</h5>         
+        <h2>Step-up Transformer</h2>
+        <p>Consequently, the electricity that is produced is transferred through the cables towards the base, where a step-up transformer is situated. High voltage is always easy to transmit due to the low transmission loss it produces.</p>
+       <amp-img src="Working-and-Design-details-of-Wind-Turbines/step_up_transformer.jpg" width="380" height="312" class="img-responsive" layout="intrinsic"></amp-img>   
+        <h5>Fig:7 A step-up transformer is usually situated at the base of the wind turbine.</h5>     
+        <h2>Keep it Aligned with the Wind</h2>
+                                                                                                                                                                                                                                                                                                          
+        <p>To extract maximum energy from the wind, it is always needed to keep it aligned with the wind. In this section we will see how the wind turbine is aligned with the wind both in nacelle and blade level.</p>
+        <h2>The Yaw Mechanism</h2>
+        <p>The blades should face the wind normally for maximum power extraction. But, the wind direction can change at any time. A velocity sensor fitted on the top of the nacelle measures the wind speed and direction. The deviation in the wind’s direction is sent to an electronic controller, which in turn sends an appropriate signal to the yawing mechanism to correct the error. You can see how the yaw motors turn the nacelle. Thus, the wind turbine will always be aligned with the wind direction.</p>
+          <amp-img src="Working-and-Design-details-of-Wind-Turbines/Yaw_Mechanism.jpg" width="600" height="338" class="img-responsive" layout="intrinsic"></amp-img>        
+        <h5>Fig:8  Yaw motors rotate the nacelle to keep it aligned with the wind</h5>      
+        <h2>Optimizing the Blade Orientation</h2>
+        <p>According to the wind speed, the relative velocity angle of the wind also changes. This is clearly depicted in Fig.9. You can see that with the increase in wind speed, relative wind velocity becomes more normal to the blade.</p>
+        <amp-img src="Working-and-Design-details-of-Wind-Turbines/relative_velocity_change.jpg" width="720" height="257" class="img-responsive" layout="intrinsic"></amp-img>   
+        <h5>Fig:9 A blade tilting mechanism helps to keep the blade aligned with the changing wind relative velocity</h5>   
+        <p>A blade tilting mechanism tilts the blades and guarantees a proper alignment of the blades with the relative velocity. Fig.10 shows details of how the blade are tilted. Thus the blades are always at the optimum angle of attack with the relative wind flow.</p>
+        <amp-img src="Working-and-Design-details-of-Wind-Turbines/Blade_tilting_mechanism.jpg" width="600" height="338" class="img-responsive" layout="intrinsic"></amp-img> 
+        <h5>Fig:10 More details of blade tilting mechanism</h5>
+        <h2>Wind Turbine Efficiency</h2> 
+        <p>Efficiency of a wind turbine is a really interesting topic. Historically many crazy attempts have been made to extract the maximum energy from the wind. But all of these attends were no fruitful. In this section we will see why a wind turbine cannot achieve 100% efficiency in a logical way.</p>
+        <h2>Let’s Measure the Wind Speed</h2>
+                                                                                                                                                                                                                                                                                                                                                                                                                      
+        <p>To gain a good insight into wind turbine efficiency, assume that you are measuring wind speed at upstream and downstream of a wind turbine. You can note that the wind speed at the downstream is much smaller than the upstream. This is because the blades absorb some kinetic energy from the wind. The same amount of energy is converted as mechanical power of the wind turbine.</p>
+        <amp-img src="Working-and-Design-details-of-Wind-Turbines/velocity_measurement_wind_turbine.jpg" width="600" height="338" class="img-responsive" layout="intrinsic"></amp-img>      
+        <h5>Fig:11 If you measure the wind speed across the wind turbine, you can note that wind speed at the upstream is less than the downstream</h5> 
+        <h2>Is Zero downstream speed possible ?</h2>
+        <p>It is interesting to note that a wind turbine absorbs 100% of the available kinetic energy, only if the downstream wind speed becomes zero. However, zero wind speed at downstream is a physically impossible condition. This cartoon animation clearly depicts this fact. Zero downstream speed simply means that the whole flow is stuck.</p>
+       <amp-img src="Working-and-Design-details-of-Wind-Turbines/zero_velocity_situation.jpg" width="600" height="387" class="img-responsive" layout="intrinsic"></amp-img>  
+        <h5>Fig:12 Zero wind speed means the whole flow is stuck</h5>   
+        <p>This leads to an interesting conundrum. You will get maximum energy extraction only when the exit speed is zero, but such a condition means there is no flow through wind turbine. It is clear that wind turbine efficiency is zero, when the outlet wind speed is same as the inlet wind speed. This means there exists an optimum value of outlet wind speed between zero and inlet velocity where the efficiency is maximum.</p>
+        <h2>Betz’s Limit</h2>
+        <p>This physical reality of the flow demands a certain amount of exit wind speed. That means that there is a theoretical maximum efficiency a wind turbine can achieve. This limit is known as Betz’s limit. One can theoretically evaluate value of this maximum efficiency value of a Horizontal Axis Wind Turbine. The value turns out to be 59.3 %. Essentially, it means that no wind turbine in the world can ever cross the efficiency limit of 59.3 %. You can check for the derivation of Betz’s limit in a separate article. However Betz’s limit is possible only when the turbine has an infinite number of blades and and the blades are rotating at a very high speed. About 40% of mechanical efficiency is practically possible in today’s wind turbines.</p>
+        <br>
+        </center>
+        </div>
+        <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+        
+     <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+    </body>
+</html>

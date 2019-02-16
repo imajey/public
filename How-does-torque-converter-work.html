@@ -1,0 +1,271 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>How does a torque converter work</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/how-does-torque-converter-work.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}   
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+   
+    <body style="background-color:rgb(250, 250, 250);">
+    <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+            <!--------Amp ads here-------->
+             <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+             </amp-auto-ads>
+
+  <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+    </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<br>
+ 
+    <div class="res">
+    <center>
+     <h1>How does a Torque conveter work?</h1>
+        <div class="post-date">Augest 1, 2018</div><p></p>
+    <amp-youtube width="611"
+      height="411"
+      layout="responsive"
+      data-videoid="bRcDvCj_JPs">
+    </amp-youtube>
+    
+    <p>Most of us enjoy the smooth and effortless feeling of driving in an automatic transmission car. The driving is effortless because you don’t need to worry about gear changing and you don’t have a clutch pedal to operate. In an automatic transmission car the work, of the clutch pedal, is automatically done by a hidden component, which is truly an engineering marvel, the torque converter. The torque converter can even multiply the torque. Let’s see how this purely mechanical device performs its tasks.</p>
+    
+    <amp-img src="Torque-Converter/Torque-Converter.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> 
+        <h5>Fig:1 Torque Converter</h5> 
+          
+    <h2>Task of a Torque Converter</h2>
+    <p>
+   Assume you are driving along smoothly and you have to apply the brakes. When you press the brake pedal, the vehicle’s drive wheels stop turning. This means that the drive shaft and the associated transmission should also stop spinning; but, here comes the issue, by applying the brakes you are not stopping the engine. So at the time of braking, if the engine and transmission are mechanically connected, this would lead to a serious mechanical failure or the engine will stall.
+    You need a motion isolator for this purpose. This motion isolator is the torque converter.
+    The torque converter is able to efficiently isolate the engine rotation from the transmission at the time of braking. In normal driving conditions, it transfers the engine rotation and power to the transmission. Let’s see how it works.
+    This is a really simplified torque converter. It is basically a pump and a turbine immersed in transmission liquid</p>  
+        <amp-img src="Torque-Converter/Simplified-Torque-Converter.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>  
+         <h5>Fig:2 Simplified torque converter</h5>    
+        <p>The pump is directly connected to the engine, so it always turns at the engine speed. The liquid surrounding the pump will be pushed outwards due to the centrifugal force and its pressure increases. The rotation of the pump adds a swirl to the liquid leaving the pump.</p>
+        <amp-img src="Torque-Converter/Swirling-flow.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+         <h5>Fig:3 Simplified torque converter</h5> 
+         <p>The turbine sits near to the pump and the high energy fluid coming out of the pump turns the turbine. The turbine is connected to the transmission. This way the engine power is transferred to the transmission via the transmission fluid. More specifically this configuration is known as a fluid flywheel.</p>    
+    
+     <div class="row">
+            <div class="col-1"><amp-img src="Torque-Converter/High-energy-fluid-coming-out.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:4A High energy fluid coming out</h5></div>
+            <div class="col-1"><amp-img src="Torque-Converter/Reactor.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:4B Reactor </h5></div>
+        </div>
+        <p>When we introduce a component called a reactor between the turbine and pump, it becomes a torque converter. One of the main duties of the reactor is to send the fluid from the turbine back to the pump efficiently. We will discuss more functions of the reactor later.</p>
+        
+        <p>With this configuration, even if the the transmission comes to a sudden halt, it will not affect the engine rotation. Slippage between the pump and turbine is allowed here, since they are connected by the fluid. During normal operation the pump will be able to transfer motion and power to the turbine. It should be noted that the turbine turns at slightly lower RPM than the pump due to energy loss in the fluid.</p>
+        <div class="row">
+            <div class="col-1"><amp-img src="Torque-Converter/Transmission.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:5A</h5></div>
+            <div class="col-1"><amp-img src="Torque-Converter/Transmission1.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:5B</h5></div>
+        </div>
+        <h2>Configuration in an Actual Torque Converter</h2>
+        <p>This is a simplified torque converter, but, you will never find this kind of configuration in an actual torque converter. The pump and turbine of an actual torque converter is shown here. In an actual torque converter, the pump sits near to the transmission and the turbine sits near to the engine. Let’s give proper colors to the components for better understanding.
+        Rotation from the engine is transmitted to the pump with the help of a cover. The turbine output rotation is transmitted to the transmission using a central shaft. However, why is this arrangement made more complex than the previous case? The answer for this comes from mechanical rather than fluid mechanics.</p>
+        <amp-img src="Torque-Converter/Configuration-in-an-actual-torque-converter.jpg"  width="500" height="500" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:6 Configuration in an Actual Torque Converter</h5>
+        
+        <p>For the efficient operation of a torque converter, the pump and turbine should both rotate inline with the crankshaft centerline. The pump is directly connected to the engine crankshaft,
+        so that will always be centered, however the turbine is independent of this unit. This means that a bearing has to be used between the turbine and the crankshaft, as illustrated, in order to make sure the turbine is also centred to the crankshaft
+        In the current configuration one can achieve this quite easily, however, in the previous configuration this is very difficult, since the turbine is far away from the crankshaft.</p>
+        <div class="row">
+            <div class="col-1"><amp-img src="Torque-Converter/Bearing.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:7A Bearing</h5></div>
+            <div class="col-1"><amp-img src="Torque-Converter/Comparison-of-configuration.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:7B Comparison of configuration</h5></div>
+        </div>
+        <h2>Why reactor is needed?</h2>
+        <p>Now, you might be wondering why this device, which isolates motion, is named as a torque converter. This is because one of the most important functions of this device is to multiply the torque as the vehicle starts to move. Let’s see how the torque converter does it.The reactor is connected to a stationary shaft, via a one-way clutch.This means the reactor will be able to turn in one direction, but not in the opposite.</p>
+        <amp-img src="Torque-Converter/One-way-clutch.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:8  One way clutch</h5>
+        <p>For ease of understanding, let’s increase the spacing between the components. Now, consider the situation as the vehicle starts. Here the pump is spinning at the engine speed, but the turbine speed is lower and is slowly increasing. This means that the fluid, which leaves the turbine, travels almost axially as shown. This fluid, when it hits the reactor blades, will try to spin the reactor as shown, but the one-way clutch in the reactor prevents this motion.
+        So what happens is that the fluid will be diverted in the same direction as the pump’s rotation, due to the stationary reactor as shown.In short, the pump which adds swirl to the flow receives an already swirled fluid. This makes the work of the pump easier and a greater pressure addition happens across the pump. This highly pressurized fluid generates an amplified torque at the turbine, and thus the transmission and the vehicle receives a greater level of torque as the vehicle starts to move</p>
+         <div class="row">
+            <div class="col-1"><amp-img src="Torque-Converter/Spin-the-reactor.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:9A Spin the reactor</h5></div>
+            <div class="col-1"><amp-img src="Torque-Converter/High-pressure-fluid.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:9B High pressure fluid</h5></div>
+        </div>   
+        <p>However, as the turbine speed increases, the fluid leaving the turbine becomes more inclined as shown and at one point of time the inclined flow hits the other side of the reactor blades. The reactor is free to spin in this direction. So the reactor spins in the same direction as the pump and the turbine. You can see that the swirl generation at the pump inlet is lesser than the previous case and the torque multiplication ceases. Here the turbine will be rotating at almost 90% of the pump speed.</p>
+        <amp-img src="Torque-Converter/Swirl-generation.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:10 Swirl generation</h5>
+        <p>This is a brilliant design. As the vehicle starts to move, when the drivers need maximum torque, the torque converter multiplies the torque. When the turbine attains a threshold speed, the torque multiplication automatically ceases.</p>
+        <div class="row">
+            <div class="col-1"><amp-img src="Torque-Converter/High-torque-output.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:11A High torque output</h5></div>
+            <div class="col-1"><amp-img src="Torque-Converter/Normal-torque-output.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:11B High torque output</h5></div>
+        </div>  
+        <h2>Reactor in normal operation</h2>
+        <p>Thus, the reactor plays a crucial role at the vehicle start, but without the reactor the torque converter will not perform well even in normal operation. Let’s see why.<br>
+        You might have noticed that the blades of the turbine are curved. They are curved almost 90 degrees to absorb maximum energy from the fluid. This means the turbine blades will always force the fluid to leave in a direction opposite to the rotation of pump and turbine. Due to this even at high turbine speed, the fluid swirl at the turbine outlet will be minimum.<br>
+        If we do not use a reactor this very low swirl will affect the performance of the pump and the whole torque converter very badly. With the introduction of reactor the flow gets diverted again and the pump receives the fluid with improved swirl.
+        </p>
+         <div class="row">
+            <div class="col-1"><amp-img src="Torque-Converter/Very-low-fluid-swirl.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:12A Very low fluid swirl</h5></div>
+            <div class="col-1"><amp-img src="Torque-Converter/Improved-fluid-swirl.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:12B Improved fluid swirl</h5></div>
+        </div> 
+        <h2>Use of a Lock-up clutch</h2>
+        <p>Even in normal operation you will find that the turbine turns slower than the pump in a torque converter. This is due to energy loss within the coupling fluid. To eliminate such energy losses modern torque converters use a lock up clutch. By activating this clutch during the normal operation, the turbine will be mechanically locked with the pump unit and they will turn at the same speed. This eliminates energy loss due to the fluid friction. Before winding up the video let’s summarise the uses of this brilliant mechanical device.</p>
+        <amp-img src="Torque-Converter/Lock-up-clutch.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:13 Improved fluid swirl</h5>
+       
+</center>  
+</div>
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+ <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div> 
+          
+</body>
+</html>

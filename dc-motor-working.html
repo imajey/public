@@ -1,0 +1,244 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dc motor working</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+       <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+       <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/dc-motor-working.html">
+    <style amp-custom>
+     html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify; margin:15px;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 430;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}   
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+     <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+       </amp-auto-ads>
+ <header class="header">
+    <a href="index.html">
+       <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+    <div class="res">
+    <center>
+    
+    <h1>DC Motor, How it works ?</h1>
+       <div class="post-date">September 23, 2014</div>
+        <p>You can find DC motors in many portable home appliances, automobiles and types of industrial equipment. In this video we will logically understand the operation and construction of a commercial DC motor.</p>
+        
+        <amp-youtube width="611" height="411" data-videoid="LAtPHANEfQo" layout="responsive"></amp-youtube>
+        <p>Detailed description of the video lecture is given following article.</p>
+        
+        <h2>The Working</h2>
+        <p>Let’s first start with the simplest DC motor possible. It looks like as shown in the Fig.1. The stator is a permanent magnet and provides a constant magnetic field. The armature, which is the rotating part, is a simple coil.</p>
+        
+        <amp-img src="DC-Motor/DC_motor_simple.jpg" width="350" height="220" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig.1 A simplified D.C motor, which runs with permanent magnet</h5>
+        
+        <p>The armature is connected to a DC power source through a pair of commutator rings. When the current flows through the coil an electromagnetic force is induced on it according to the Lorentz law, so the coil will start to rotate. The force induced due to the electromagnetic induction is shown using ‘red arrows’ in the Fig.2.</p>
+        
+        <amp-img src="DC-Motor/DC_motor_operation.jpg" width="352" height="230" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:2 The elctromagnetic force induced on the coils make the armature coil rotate</h5>
+        
+        <p>You will notice that as the coil rotates, the commutator rings connect with the power source of opposite polarity. As a result, on the left side of the coil the electricity will always flow ‘away ‘and on the right side , electricity will always flow ‘towards ‘. This ensures that the torque action is also in the same direction throughout the motion, so the coil will continue rotating.</p>
+        
+        <amp-img src="DC-Motor/Half_rotation0165.jpg" width="567" height="221" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig.3 The commutator rings make sure a uni-directional current flows through the left and right part of the coil</h5>
+        <h2>Improving the Torque action</h2>
+        
+        <p>But if you observe the torque action on the coil closely, you will notice that, when the coil is nearly perpendicular to the magnetic flux, the torque action nears zero.</p>
+        <amp-img src="DC-Motor/Zero_torque.jpg" width="358" height="240" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:4 When the coil nears perpendicular to the magnetic flux, the torque produced nears zero</h5>
+        <p>As a result there will be irregular motion of the rotor, if you run such a DC motor.
+            Here is the trick to overcome this problem! Add one more loop to the rotor, with a separate commutator pair for it. In this arrangement when the first loop is in the vertical position, the second loop will be connected to the power source. So a motive force is always present in the system.</p>
+       <amp-img src="DC-Motor/Two_coil_DC_motor.jpg" width="444" height="230" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig.5 For the 2 coil rotor arrangement,</h5>
+        <p>when the first coil is perpendicular to the magnetic flux, second coil is connected to the power source</p>
+        <p>Moreover, the more such loops, the smoother will be the motor rotation.
+        In a practical motor, the armature loops are fitted inside slots of highly permeable steel layers. This will enhance magnetic flux interaction. Spring loaded commutator brushes help to maintain contact with the power source.</p>    
+         <amp-img src="DC-Motor/Practical_DC_motor.jpg" width="716" height="225" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig.6 More the number of the coils, smoother will be motor rotation; to enhance magnetic flux interaction, coils are put between steel layer poles</h5>   
+        <h2>Use of Electromagnet</h2>
+        <p>A permanent magnet stator pole is used only for very small DC motors. Most often an electromagnet is used; the field coil of the electromagnet is powered from the same DC source.</p>
+        <amp-img src="DC-Motor/Electro_magnet.jpg" width="268" height="240" layout="intrinsic" class="img-responsive"></amp-img>      
+        <h5>Fig:7 An electromagnet is used most of the time in D.C motor</h5>        
+                                                                                                                                                                       
+        <h2>Shunt and Series Motors</h2>
+        <p>The field coils can be connected to the rotor windings in 2 different ways; parallel or series. This results into 2 different kinds of DC motor constructions; a shunt and a series motors.</p>
+        <amp-img src="DC-Motor/Series_Motor.jpg"  width="753" height="230" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:8 In a series motor rotor coil and stator coils are connected in series</h5>                                                  <p>The series wound motor has good starting torque, but its speed drops drastically with the load. This nature is shown in the Fig.8
+         The shunt motor has a low starting torque, but it is able to run almost at a constant speed, irrespective of the load acting on the motor. This is an attractive operation characteristic of a shunt wound motor, the nature of the speed-torque variation is shown in the Fig. 10.</p>   
+           <amp-img src="DC-Motor/Shunt_motor.jpg"  width="601" height="230" layout="intrinsic" class="img-responsive"></amp-img>    
+        <h5>Fig:10 Shunt motor has a parallel connection between the field and stator windng</h5>     
+          <amp-img src="DC-Motor/Shunt_Graph.jpg"  width="301" height="200" layout="intrinsic" class="img-responsive"></amp-img>    
+        <h5>Fig:10 A shunt motor provides a constant Speed-Torque charactersitcs</h5>
+        <h2>The concept of Back E.M.F</h2>
+        <p>Unlike the other electrical machines D.C motors exhibit a unique characteristic; the production of back EMF . A rotating loop in magnetic field will produce an EMF according to the principle of electromagnetic induction.</p>
+         <amp-img src="DC-Motor/back_emf.jpg"  width="240" height="196" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:11 The back E.M.F induced greatly reduces current flow through the armature coil</h5>
+        <p>The case of rotating armature loops is also the same. An internal EMF will be induced that opposes the applied input voltage. The back EMF reduces armature current by a large amount. Back EMF is proportional to the speed of the rotor. At the starting of the motor, back EMF is too low, thus the armature current becomes too high , leading to burnout of the rotor. Thus a proper starting mechanism that controls the applied input voltage is necessary in large D.C motors</p>
+        <p>One of the interesting variations of the DC motor is a universal motor, which is capable to run under both A.C and D.C power sources. We will go through its working and operational features in a separate article.</p> <br>
+        </center>  
+       
+     </div>
+  
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+  <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+</body>
+</html>

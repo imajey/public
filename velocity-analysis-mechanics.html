@@ -1,0 +1,239 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Velocity analysis mechanics</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <link rel="icon" href="favicon/fv1.png">
+       <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+         <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+         <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+          <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+          <link rel="canonical" href="https://learnengineering.org/velocity-analysis-mechanics.html">
+    <style amp-custom>
+      html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+
+    <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+
+  <header class="header">
+    <a href="index.html">
+       <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<div class="res">
+    <center>
+        <h1>Velocity Analysis | Mechanics</h1>
+         <div class="post-date">August 25, 2013</div>
+         <p>To execute proper design of a mechanism, velocity analysis is of utmost importance. A designer’s real interest in development of mechanism is variation of outlet link velocity for a specified inlet velocity.</p>
+        <amp-youtube width="611" height="411" data-videoid="jzNik6PEKG8" layout="responsive"></amp-youtube>
+        <p>Check following article for detailed description of video lecture.<br>
+        The interesting thing about velocity analysis is that, you can determine velocity of any link just by understanding 2 simple concepts.</p>
+        <h2>1.Concept of Rigid Body</h2>
+        <p>A rigid body cannot elongate or contract in any direction. That means if you take 2 points in a rigid body, it can have 2 different velocities as shown.</p>
+        <amp-img src="Velocity-analysis/rigid_body.jpg" width="490" height="200" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1  2-points in a rigid body can have different velocities</h5>
+        <p>But since this is rigid body, velocity components parallel to the line connecting the points should be equal. If component velocity of point B is greater than A, then link will start elongating. If the case is opposite link will start contracting. Both these cases are impossible, since this is a rigid body. So velocity components of both points should be equal.</p>
+       <amp-img src="Velocity-analysis/rigid_body_velocity_components.jpg" width="492" height="249" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:2 Velocity components of the points along the connecting line should be equal</h5>
+        <p>This means, if we subtract velocity of A from velocity of B, the relative velocity vector will have no component, parallel to the connecting line. It will get cancelled. So relative velocity vector will be perpendicular to the connecting line. This is shown in following figure.</p>
+        <amp-img src="Velocity-analysis/relative_velocity_perpendicular.jpg"  width="489" height="203" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 In a rigid body relative velocity vector should be perpendicular to line connecting themr</h5>
+        <p>In short, concept 1 can be simplified as, relative velocity between any 2 points in a rigid body should be perpendicular to the line connecting them.</p>
+        <h2>2.No Penetration of Mating Surfaces</h2>
+        <p>Second concept is applicable to mating surfaces. Mating pair of surface will never penetrate. Red point in folloiwng figure shows the common mating point or mating line for both the links. Common normal of the mating surfaces is also shown. The same point can have different velocities on different links.</p>
+        <amp-img src="Velocity-analysis/mating_surfaces.jpg"width="489" height="230" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig.4 Mating point is having different velocities on different links</h5>
+        <p>No penetration means velocity component of both the link velocities along common normal should be equal. If velocity component of 2 is less than velocity component of 1, then surfaces will penetrate. If opposite is the case, surfaces will detach. Both these cases are not possible for mating surfaces. So velocity components along common normal should be equal.</p>
+        
+
+         <amp-img src="Velocity-analysis/mating_surfaces_relative%20velocities.jpg"width="299" height="255" layout="intrinsic" class="img-responsive">
+        </amp-img> 
+        <h5>Fig:5 Relative velocity vector of mating point should be perpendicular to common normal</h5>
+        <p>Since velocity components are equal, if we take a vector difference of V 1 and V 2, it should have no component along the common normal. So the relative velocity should be perpendicular to common normal.</p>
+        <p>Now we will apply these 2 concepts on different mechanisms, to do velocity analysis of them.</p>
+        <h2>4-Bar Linkage Example</h2>
+        <p>Let’s consider 4 bar linkage shown below. We know input angular velocity and we want to find out outlet velocity.</p>
+        <amp-img src="Velocity-analysis/4Bar_linkage.jpg" width="345" height="300" layout="intrinsic" class="img-responsive">
+        </amp-img> 
+        <h5>Fig:6 Example of 4 bar linkage</h5>
+        <p>Here approach is simple. We will say that bar at middle cannot expand or contract. Since we know angular velocity of first link, we can easily find out magnitude and direction of velocity of point 1.But for point 2 we know only direction of velocity. Here first concept we learned comes for help. Since this bar cannot elongate or contract, relative velocity between these points should be perpendicular to this link.</p>
+         <amp-img src="Velocity-analysis/4_bar_linkage_solution.jpg" width="678" height="280" layout="intrinsic" class="img-responsive">
+        </amp-img> 
+        <h5>Fig:7 Procedure of 4 bar linkage</h5>
+        <p>Which will lead to, magnitude of velocity at point 2. From here angular velocity of link can easily be deduced.</p>
+        <h2>Cam-Cam Example</h2>
+        <p>Now consider this mechanism. We know angular velocity of first cam, we want to find out angular velocity of the second cam.</p>
+         <amp-img src="Velocity-analysis/cam_cam_example.jpg" width="436" height="230" layout="intrinsic" class="img-responsive">
+        </amp-img> 
+        <h5>Fig:8 Example of cam cam mechanism</h5>
+        <p>Common normal at the time of mating is marked in figure. Consider the mating point, which lies on both the cams. We know velocity direction and magnitude of this point on first cam. But for second cam we know only direction. The direction is marked in figure.</p>
+         <amp-img src="Velocity-analysis/common_normal_v2_cam_cam.jpg" width="760" height="220" layout="intrinsic" class="img-responsive">
+        </amp-img> 
+        <h5>Fig:9 Mains parts of single phase induction motor : Rotor and Stator</h5>
+        <p>Here 2nd concept we learned comes to help. Since the links cannot penetrate, relative velocity should be perpendicular to common normal. So we can find out magnitude of V2, which will lead to link angular velocity.</p>
+         <amp-img src="Velocity-analysis/solution_cam_cam.jpg" width="760" height="220" layout="intrinsic" class="img-responsive">
+        </amp-img> 
+        <h5>Fig:10 Mains parts of single phase induction motor : Rotor and Stator</h5>
+     </center><br>
+    </div>
+       <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+<div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+    </body>
+</html>

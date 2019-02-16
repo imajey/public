@@ -1,0 +1,233 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>fatigue failure analysis</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+          <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+       <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/fatigue-failure-analysis.html">
+    <style amp-custom>
+   html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+   h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}  
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+       <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+       <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+         </amp-auto-ads>
+  <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<br>
+<div class="res">
+    <center>
+        <h1>Fatigue Failure Analysis</h1>
+         <div class="post-date">March 12, 2013</div>
+         <p>Even if you design mechanical components satisfying mechanical strength criteria it may fail due to a phenomenon called fatigue. Historically many design disasters have happened by neglecting effect of Fatigue.In this video lecture we will learn how to predict and quantify fatigue effect.</p>
+         
+         <amp-youtube width="611" height="411" data-videoid="ywDsB3umK2Y" layout="responsive"></amp-youtube>
+        <p>Detailed description of above video lecture is given below</p>
+        
+        <h2>A Wire Breaking problem</h2>
+        <p>To understand what is fatigue let’s consider this metal wire. You have to break it. So how will you break it? Will you pull it from both ends or will you bend the wire upward and downward repetitively.</p>
+        <amp-img src="Fatigue-failuer-analysis/wire_breaking_methods.gif" width="737" height="173"  class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 Two methods to break metal wire, Either bend it upward and downward repetitively or pull it</h5>
+        <p>Your answer is obviously the second option. Because this method requires less effort compared to the first case. This is a well known example of fatigue failure. So how does material fail due to fatigue? To get answer for this question let us have a close look at stress variation in wire cross section.</p>
+        <h2>Reason Behind Fatigue Failure – Crack Propagation</h2>
+        <p>When you bend it downwards bending stress induced is in the wire cross section. There will be tension at top area and compression at bottom area. When wire is at equilibrium there will not be any stress on wire cross section. When wire is bending upwards there will be compression at top and tension at bottom.</p>
+        <amp-img src="Fatigue-failuer-analysis/1_stress_variation_wire.gif" width="737" height="147"  class="img-responsive" layout="intrinsic"></amp-img>           
+        <h5>Fig:2 Stress variation in wire cross-section, as wire is bent downward and upward</h5>      
+        <p>So if you trace stress induced at a point with respect to time it will vary like this. As a fluctuating stress with time.</p>
+         <amp-img src="Fatigue-failuer-analysis/2_stress_vs_time.gif" width="443" height="235"  class="img-responsive" layout="intrinsic"></amp-img> 
+        <h5>Fig:3 Stress variation at a point is plttod on stress vs time graph</h5>   
+        <p>Initially the point will have positive stress, after that zero, then negative stress. The same cycle repeats again and again. Such fluctuating stress is root cause of fatigue failure.<br>
+        When such fluctuating load act on a material it will initiate something called micro crack. This crack will begin to grow with fluctuating load and over time it will cause an abrupt failure. Unlike failure due to static load failure due to fatigue happens without any warning, it does not make necking. And the failure is unpredictable.</p>
+      
+        <h2>Fatigue Failure in Real Life Engineering Problems</h2>
+        <amp-img src="Fatigue-failuer-analysis/motor_gear_fatigue_failure.gif" width="501" height="211"  class="img-responsive" layout="intrinsic"></amp-img> 
+    <h5>Fig:4 Some practical cases which could result in fatigue failure, if not designed properly</h5>
+       <p>The same phenomenon can happen for axle of this motor where it is undergoing fluctuating stress due to gravity effect of this mass. A rail wheel when it is in contact with with the track produces a high contact stress, but when the wheel rotates stress gets relieved. When it comes back to original position again contact stress arises. So this also is a case of fluctuating stress case. Again will lead to fatigue failure if we do not design it carefully. Same is the case with a gear pair. Here contact stress arised at contact point fluctuates with time.</p>
+    <h2>Effect of Stress Amplitude on Number of Cycles – S N Curve</h2>
+    <p>This is the most important part in fatigue analysis. Relationship between stress amplitude and number of cycles it can execute before it fails. As you can guess as stress amplitude increases number of cycles for failure decreases. We will draw number of cycles in x axis, Stress amplitude in y axis. Both in logarithmic scale.<br>
+    Let’s start with the maximum stress a material can withstand, its ultimate stress. So this will happen, as you increase the stress even before completing one cycle the material will get broken. If you decrease the stress amplitude it will execute more number of cycles before it fails. Decreasing stress further even more number of cycles.</p>
+    <p>So this will follow a trend like this, but not forever. You can see after particular stress amplitude, even with slight decrease in stress number of cycles required to make it fail increases drastically.</p>
+       <amp-img src="Fatigue-failuer-analysis/3_stress_number_of_cycles.gif" width="751" height="151"  class="img-responsive" layout="intrinsic"></amp-img> 
+    <h5>Fig:5 Number of cylces for fatigue failure increases with decrease in stress amplitude</h5>
+    <p>So this will follow a trend like this, but not forever. You can see after particular stress amplitude, even with slight decrease in stress number of cycles required to make it fail increases drastically.</p>
+       <amp-img src="Fatigue-failuer-analysis/4_SN_Curve.gif" width="394" height="246"  class="img-responsive" layout="intrinsic"></amp-img> 
+    <h5>Fig:6 Stress amplitude Vs number of cycles, green region represents safe design area</h5>
+    <p>Or in short if you have stress amplitude below this limit number of cycles to make to fail jumps ton infinity. Or material never fails after this limit. the material never fails. This limit is known as endurance limit; below endurance limit it is safe to operate the material. Engineers always try to design their components by keeping stress amplitude below endurance limit. You can see that endurance limit is way below ultimate stress value.</p>
+    <h2>Fatigue Failure, when there is no Complete Stress Reversal</h2>
+    <p>The case we discussed had complete stress reversal. What will be maximum stress limit for this case ?. When stress reversal does not happen. It has got a mean value and amplitude.
+</p>  
+   <amp-img src="Fatigue-failuer-analysis/Stress_cycle_mean_value.gif" width="362" height="147"  class="img-responsive" layout="intrinsic"></amp-img> 
+    <h5>Fig:7 Fluctuating stress case which is not fully reversed</h5>
+    <p>For this purpose we have to use something called Goodman diagram.
+Where mean value of stress is drawn on x axis. Amplitude of stress is drawn on y axis. When mean value of zero, we know safe stress limit is same as endurance limit. When amplitude of stress is zero, it is same as a static loading condition. So safe limit for tension is ultimate tensile stress at tension and safe limit for compression is ultimate tensile stress for compression. According to Goodman analysis safe stress amplitude limits for other cases lie on straight lines connecting this points. So for a particular stress mean value, we can find what’s the maximum allowable safe stress limit from this diagram. It will be here.</p>
+                                              
+<amp-img src="Fatigue-failuer-analysis/5_Goodman_diagram.gif" width="628" height="235"  class="img-responsive" layout="intrinsic"></amp-img>
+<h5>Fig:8 Use of Goodman diagram to find safe stress amplitude when stresmm mean value is not zero</h5>
+   <p>Similar analysis can be done considering, safe limit of amplitude zero condition as yield strength of material. This is known as Soberberg diagram. Generally Goodman analysis is the most preferred one.</p>
+     </center><br>
+    </div>
+      <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+<div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+        
+        
+    </body>
+</html>

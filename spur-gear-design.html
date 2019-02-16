@@ -1,0 +1,257 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>spur gear design</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+          <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+         <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/spur-gear-design.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}     
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+   <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+
+  <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<div class="res">
+    <center>
+        <h1>Spur-gear-design</h1>
+         <div class="post-date">February 5, 2013</div>
+         <p>Mechanical engineers working in transmission field would often have to decide upon kind of gears they have to use. Although this task has become a matter of selection of gear based on standards, it is also important to know what goes behind this. In this video tutorial you will learn how to design a pair of spur gears for mechanical strength, surface resistance and fluctuating load.</p>
+         
+         
+        <amp-youtube width="611" height="411" data-videoid="8bml2pK6Ra0" layout="responsive"></amp-youtube>
+        <p>The video lecture is described below in detail</p>
+        <h2>AGMA Standard of Gear Design</h2>
+        <h4>A designed gear should meet following design criteria conforming to AGMA standards. It should have</h4>
+        <p>1.Enough mechanical strength to withstand force transmitted</p>
+        <p>2.Enough surface resistance to overcome pitting failure</p>
+        <p>3.Enough dynamic resistance to carry fluctuating loads</p>
+        <h2>Design Inputs and Outputs in Gear Design</h2>
+        <p>Following figure shows design inputs and outputs of a gear design</p>
+        <amp-img src="Spur-gear-design/gear_design_input_output.gif" width="467" height="276" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1 Input and output parameters for a gear design</h5>
+        <amp-img src="Spur-gear-design/spur_gear_parameters.gif" width="300" height="310" layout="intrinsic"class="img-responsive"></amp-img>
+        <h5>Fig:2 A general spur gear nomenclatures</h5>
+        <h2>Design for space constrains</h2>
+        <p>The designed gear system should fit within a space limit. So the designer could say if he sums pitch diameters of the mating gears, it should be less than or equal to allowable space limit as shown in figure below.</p>
+        <amp-img src="Spur-gear-design/2_gear_allowable_width.gif" width="312" height="117" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 Space constrain of gear design</h5>
+        <p>The blue rectangle represents space on which gear should get fit. One can take 80% of width of this space as allowable width for gear design. So following is the relation obtained by this condition.</p>
+        
+      <amp-img src="Spur-gear-design/1.gif" width="170" height="19" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>We also know speed ratio of gears, this will lead to one more relation in terms of pitch circle diameters.</p>
+      <amp-img src="Spur-gear-design/2.gif" width="70" height="36" layout="intrinsic" class="img-responsive"></amp-img>   
+        <p>By solving above 2 equations simultaneously we can obtain pitch circle diameters of both the gears.</p>
+        <h2>Determination of Number of Teeth – Interference</h2>
+        <p>Here we will understand how to determine number of teeth on both the gears. To do this we have to assume number of teeth on one gear(T1), say the smaller gear. Now using the relation given below we can determine number of teeth on other gear,T2.</p>
+        <amp-img src="Spur-gear-design/3.gif" width="74" height="35" layout="intrinsic" class="img-responsive"></amp-img>   
+        <p>So we got number of teeth on both the gears, but one should also check for a phenomenon called interference if gear system has to have a smooth operation. Interference happens when gear teeth has got profile below base circle. This will result high noise and material removal problem. This phenomenon is shown in following figure.</p>
+        <amp-img src="Spur-gear-design/3_gear_interference.gif" width="328" height="223" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:4 A pair of gear teeth under interference</h5>
+        <p>If one has to remove interference , the pinion should have a minimum number of teeth specified by following relation.</p>
+       <amp-img src="Spur-gear-design/4.gif" width="181" height="61" layout="intrinsic" class="img-responsive"></amp-img>   
+        <p>Where aw represents addendum of tooth. For 20 degree pressure angle(which is normally taken by designers) aw = 1 m and bw = 1.2 m. Module m, and pitch circle diameter Pd are defined as follows.
+</p>
+        <amp-img src="Spur-gear-design/10.gif" width="55" height="37" layout="intrinsic" class="img-responsive"></amp-img><br>
+        <amp-img src="Spur-gear-design/11.gif" width="55" height="37" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>If this relation does not hold for a given case, then one has to increase number of teeth T1, and redo the calculation.</p>
+        <p>The algorithm for deciding number of teeth T1 and T2 is shown below.</p>
+          <amp-img src="Spur-gear-design/4_gear_tooth_number_algorithm.gif" width="428" height="356" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig.5 Flow chart to determine number of teeth on each gears</h5>
+        <h2>Design for Mechanical Strength – Lewis Equation</h2>
+        <p>Now the major parameter remaining in gear design is width of the gear teeth, b. This is determined by checking whether maximum bending stress induced by tangential component of transmitted load, Ft at the root of gear is greater than allowable stress. As we know power transmitted,P and pitch line velocity V of the gear Ft can be determined using following relation.</p>
+        <amp-img src="Spur-gear-design/5.gif" width="159" height="23" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Here we consider gear tooth like a cantilever which is under static equilibrium. Gear forces and detailed geometry of the tooth is shown in figure below.</p>
+        <amp-img src="Spur-gear-design/5_gear_design_for_stregth_Lewis.gif" width="300" height="356" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:6 Gear tooth under load</h5>
+        <p>One can easily find out maximum value of bending stress induced if all geometrical parameters shown in above figure are known. But the quantities t and l are not easy to determine, so we use an alternate approach to find out maximum bending stress value using Lewis approach. Maximum bending stress induced is given by Lewis bending equation as follows.</p>
+         <amp-img src="Spur-gear-design/6.gif" width="58" height="34" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Where Y is Lewis form factor, which is a function of pressure angle, number of teeth and addendum and dedendum. Value of Y is available as in form of table or graph. Using above relation one can determine value of b, by substituting maximum allowable stress value of material in LHS of equation. But a gear design obtained so will be so unrealistic, because in this design we are considering gear tooth like a cantilever which is under static equilibrium. But that’s not the actual case. In next session we will incorporate many other parameters which will affect mechanical strength of the gear in order to get more realistic design.</p>
+        <h2>A More Realistic Approach – AGMA Strength Equation</h2>
+        <p>When a pair of gear rotates we often hear noise from this, this is due to collision happening between gear teeth due to small clearance in between them. Such collisions will raise load on the gear more than the previously calculated value. This effect is incorporated in dynamic loading loading factor, Kv value of which is a function of pitch line velocity.
+        At root of the gear there could be fatigue failure due to stress concentration effect. Effect of which is incorporated in a factor called Kf value of which is more than 1.
+        There will be factors to check for overload (Ko) and load distribution on gear tooth (Km). While incorporating all these factors Lewis stregth equation will be modified like this</p>
+         <amp-img src="Spur-gear-design/7.gif" width="119" height="36" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>The above equation can also be represented in an alternating form (AGMA Strength equation) like shown below</p>
+        <amp-img src="Spur-gear-design/8.gif" width="127" height="44" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Where J is</p>
+         <amp-img src="Spur-gear-design/9.gif" width="51" height="47" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Using above equation we can solve for value of b, so we have obtained all the output parameters required for gear design. But such a gear does not guarantee a peacefull operation unless it does not a have enough surface resistance.</p>
+        <h2>Design for surface resistance</h2>
+        <p>Usually failure happens in gears due to lack of surface resistance, this is also known as pitting failure. Here when 2 mating surfaces come in contact under a specified load a contact stress is developed at contact area and surfaces get deformed. A simple case of contact stress development is depicted below, where 2 cylinders come in contact under a load F.</p>
+          <amp-img src="Spur-gear-design/surface_contact_stress.gif" width="418" height="136" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:7 Surface deformation and development of surface stress due to load applied</h5>
+        <p>For a gear tooth problem one can determine contact stress as function of following parameters
+</p>
+       <amp-img src="Spur-gear-design/12.gif" width="237" height="22" layout="intrinsic" class="img-responsive"></amp-img> 
+        <p>If contact stress developed in a gear interface is more than a critical value(specified by AGMA standard), then pitting failure occurs. So designer has to make sure that this condition does not arise.
+
+</p>
+        </center><br>
+    </div>
+       <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+  <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+    </body>
+</html>

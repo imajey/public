@@ -1,0 +1,228 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Steam turbine</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+          <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/working-of-steam-turbine.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+   h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+      <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+ <header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+       
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+<div class="res">
+    <center>
+        <h1>Working of Steam Turbine</h1>
+         <div class="post-date">February 6, 2013</div>
+         <p>Steam turbines are the hearts of the power plants, they are the devices which transform thermal energy in fluid to mechanical energy. In this video lecture working of steam turbine is explained in a logical manner.</p>
+         <amp-youtube width="611" height="411" data-videoid="SPg7hOxFItI" layout="responsive"></amp-youtube>
+        <p>A detailed webpage version of the video is given below.</p>
+        
+        <h2>Energy Absorption from fluid – Role of Rotor Blades</h2>
+        
+         <p>When high energy fluid (high pressure and high temperature) passes through series of rotor blades, it absorbs energy from fluid and starts rotating, thus it transforms thermal energy in fluid to mechanical energy.</p>
+         
+         <amp-img src="Steam-turbine/1_rotating_steam_turbine_with_high_energy_fluid.gif" width="400" height="276" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 Rotating blades of turbine helps in transforming thermal in fluid to mechanical energy</h5>
+        
+        <p>So series of such blade which eventually transform thermal energy are the most vital part of a steam turbine. One of such rotor set is shown in figure below.</p>
+        <amp-img src="Steam-turbine/2_steam_turbine_rotor.gif" width="354" height="369" class="img-responsive" layout="intrinsic"></amp-img>
+        
+        <h5>Fig:2 A typical steam turbie rotor</h5>
+        <p>f you take a close look at one of the blade, it would be clear that a blade is a collection of airfoil cross sections from bottom to top. When flow passes through such airfoils it induces a low pressure on bottom surface and high pressure on top surface of airfoil as shown in figure below.</p>
+         <amp-img src="Steam-turbine/3_steam_turbine_blades.gif" width="474" height="268" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:3 Fluid flow around airfoil cross sectioned blade induces a high pressure (P) and low pressure(P) on blade surfaces</h5>
+        <p>This pressure difference will induce a resultant force in upward direction, thus making the blade rotate. So some part of fluid energy will get transformed to mechanical energy of blade. Before analyzing energy transfer from fluid to blade, we will have a close look at energy associated with a fluid.</p>
+        <h2>Energy Associated with a Fluid</h2>
+        <p>A flowing fluid can have 3 components of energy components</p>
+        <ul style="text-align:justify;">
+            <li style="list-style-type:disc;">Kinetic energy – Virtue of its velocity</li>
+            <li style="list-style-type:disc;">Pressure Energy – Virtue of its pressure</li>
+            <li style="list-style-type:disc;">Internal Energy – Virtue of its temperature</li>
+         
+        </ul>
+        <p>Last 2 components of energy together known as enthalpy. So total energy in a fluid can be represented as sum of kinetic energy and enthalpy.</p>
+        <h2>Energy Transfer to Rotors</h2>
+        <p>When fluid passes through rotor blades it loses some amount of energy to the rotor blades. Due to this both kinetic and enthalpy energy of fluid come down for a typical rotor. As kinetic energy comes down velocity of flow decreases. If we directly pass this stream to next stage of rotor blades it will not transfer much energy because of low velocity of flow stream. So before passing the stream to next rotor stage we have to increase the velocity first. This is achieved with use of a set of stationary nozzle blades, also known as stator. When fluid passes through stator blades velocity of fluid increase due to its special shape thus one part of enthalpy energy will get converted into kinetic energy. Thus enthalpy of stream reduces and kinetic energy of stream increase. It is to be noted that here there is no energy addition or removal from flow, what happens here is conversion of enthaply energy into kinetic energy. Now this steam of fluid can be passed to next rotor blades and process can be repeated. Velocity and enthalpy variation of flow is shown in following figure.</p>
+        <amp-img src="Steam-turbine/4_stator_rotor_arrangement.gif" width="498" height="297" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:4 Velocity and enthalpy variations across rotor and stator stages of a typical steam turbine</h5>
+        <h2>Degree of Energy Transfer</h2>
+        <p>Total energy transfer to the rotor blade is sum of decrease in kinetic energy and decrease in enthalpy. Degree of contribution of each term is an important parameter in axial flow machines. This is represented by a term called of degree of reaction, which is defined as</p>
+        <h3>D.O.R = <span>&#8710;</span>H <span>&#8725;</span> <span>&#8710;</span>K.E + <span>&#8710;</span>H</h3>
+        <p>Where both enthalpy change and kinetic energy changes are defined across the rotor blade.</p>
+        <h2>0 % Reaction – Impulse Turbines</h2>
+        <p>When D.O.R = 0 there will not be any enthalpy change across the rotor, such a turbine is known as impulse turbine. Blades of such a turbine would like as shown below.</p>
+         <amp-img src="Steam-turbine/5_impulse_turbine_blades.gif" width="251" height="247" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig.5 A typical impulse turbine rotor cross section and flow pattern</h5>
+        <p>Here incoming flow stream hits the blade and produces and impulse force on it. Since enthalpy across the blade does not change temperature will also remain same. There will be minor pressure drop across the rotor, but this is almost negligible. Here energy transfer to the blade is purely due to decrease in kinetic energy of fluid.</p>
+        <h2>100 % Reaction Turbines</h2>
+        <p>When D.O.R = 1 kinetic energy change across the rotor will be zero, energy transfer will be purely due to decrease in enthalpy. Since kinetic energy is same across the rotor absolute value of velocities remain same. This is shown in figure below.</p>
+        <amp-img src="Steam-turbine/6_reaction_turbine_blades.gif" width="260" height="210" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig.6 A typical reaction turbine rotor cross section and flow pattern</h5>
+        <p>Usually people use compromise of above two discussed cases,that is 50% D.O.R . Such turbines are known as Parson turbines, where both kinetic and enthalpy energy transfer contribute equally to power transfer to rotor.</p> 
+              
+        </center><br>
+        </div>
+  <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+  <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+      
+</body>
+</html>

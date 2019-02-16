@@ -1,0 +1,268 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Brushless dc motor, how it work</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/Brushless-dc-motor, how it work.html">
+    <style amp-custom>
+    html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}   
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+    <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+</amp-auto-ads>
+<header class="header">
+    <a href="index.html">
+       <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+    
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<br>
+    <div class="res">
+    <center>
+    
+    <h1>Brushless DC Motor, How it works ?</h1>
+       <div class="post-date">August 19, 2013</div>
+        <p>In order to make the operation more reliable, more efficient, and less noisy the recent trend has been to use brushless D.C (BLDC) motors. They are also lighter compared to brushed motors with the same power output. This article gives an illustrative introduction on the working of BLDC motors.</p>
+        
+        <amp-youtube width="611" height="411" data-videoid="bCEiOnuODac" layout="responsive"></amp-youtube>
+        <p>Detailed description of the video lecture is given following article.</p>
+        <h2>Why BLDC motors ?</h2>
+        <p>The brushes in conventional D.C motors wear out over the time and may cause sparking. This is illustrated in the Fig.1. As a result the conventional D.C motors require occasional maintainance. Controlling the brush sparking in them is also a difficult affair.</p>
+        <amp-img src="Brushless-Dc-Motor/DC_mootor_brush_sparking.jpg" width="316" height="260" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:1 DC motor brush sparking</h5>
+        <p>Thus the brushed D.C motor should never be used for operations that demand long life and reliability. Fort this reason and the other reasons listed in the introduction, BLDC motors are used in most of the modern devices. Efficiency of a BLDC motor is typically around 85-90%, whereas the conventional brushed motors are only 75-80% efficient. BLDC motors are also suitable for high speed applications ( 10000 rpm or above). The BLDC motors are also well known for their better speed control.</p>
+        <h2>The Basic working</h2>
+        <p>The rotor and stator of a BLDC motor are shown in the Fig.2. It is clear that, the rotor of a BLDC motor is a permanent magnet.</p>
+        <amp-img src="Brushless-Dc-Motor/Rotor_Stator_BLDC.jpg" width="654" height="240" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:2 The Rotor of a BLDC is a permanent magnet; the stator has a winding arrangment</h5>
+        <p>The stator has a coil arrangement, as illustrated; The internal winding of the rotor is illustrated in the Fig.3 (core of the rotor is hidden here). The rotor has 3 coils, named A, B and C.</p>
+        <amp-img src="Brushless-Dc-Motor/Stator_Colour.jpg" width="235" height="250" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:3 The coil arrangement in a BLDC is shown here, with different color for different coils</h5>
+        <p>Out of these 3 coils, only one coil is illustrated in the Fig.4 :for simplicity. By applying DC power to the coil, the coil will energize and become an electromagnet.</p>
+        <amp-img src="Brushless-Dc-Motor/Coil_A_Energized.jpg" width="241" height="250" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:4 The coil energized by a DC power source becomes an electromagnet</h5>
+        <p>The operation of a BLDC is based on the simple force interaction between the permanent magnet and the electromagnet. In this condition, when the coil A is energized, the opposite poles of the rotor and stator are attracted to each other (The attractive force is shown in green arrow). As a result the rotor poles move near to the energized stator.</p>
+        <amp-img src="Brushless-Dc-Motor/Working_Coil_A.jpg" width="241" height="250" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:5 The rotor moves towards the energized coil, due to the attractive force</h5>
+        <p>As the rotor nears coil A, coil B is energized. As the rotor nears coil B, coil C is energized. After that, coil A is energized with the opposite polarity (compare the last part of Fig.6 with Fig.5).</p>
+         <amp-img src="Brushless-Dc-Motor/BLDC_Working.jpg" width="713" height="250" layout="intrinsic" class="img-responsive">
+        </amp-img>    
+        <h5>Fig.6: In a BLDC, as the rotor nears the energized coil, the next coils is energized;</h5>   
+        <p>this will make the rotor continuously rotate
+<br>
+This process is repeated, and the rotor continues to rotate. The DC current required in the each coil is shown in the following graph.</p>        <amp-img src="Brushless-Dc-Motor/DC_Commutation.png" width="184" height="300" layout="intrinsic" class="img-responsive">
+        </amp-img>     
+        <h5>Fig:7 The DC voltage required in each coil is shown in this graph</h5>   
+        <p>A humorous analogy help to remember it is to think of BLDC operation like the story of the donkey and the carrot, where the rabbit tries hard to reach the carrot, but the carrot keeps moving out of reach.</p>
+        <amp-img src="Brushless-Dc-Motor/donkey-carrot_analogy.png" width="307" height="197" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:8 Just like the donkey runs after the carrot, in a BLDC the rotor runs after the moving magnetic flux</h5>
+        <h2>Further improving the BLDC Performance</h2>
+        <p>Even though this motor works, it has one drawback. You can notice that, at any instant only one coil is energized. The 2 dead coils greatly reduce the power output of the motor. Here is the trick to overcome this problem.
+        When the rotor is in this position, along with the first coil, which pulls the rotor, you can energize the coil behind it such a way that, it will push the rotor.</p>   
+         <amp-img src="Brushless-Dc-Motor/Double_coil_Excited.jpg" width="246" height="260" layout="intrinsic" class="img-responsive">
+        </amp-img>       
+        <h5>Fig:9 One more coil is energized in practical motors;</h5>  
+        <p>this will result in a push force apart from the pull force</p>
+        <p>For this instant, a same polarity current is through the second coil. The combined effect produces more torque and power output from the motor. The combined force also makes sure that a BLDC has a beautiful, constant torque nature. Such torque nature is difficult to achieve in any other type of motors.</p>
+        <amp-img src="Brushless-Dc-Motor/Torque_Nature.png" width="503" height="224" layout="intrinsic" class="img-responsive">
+        </amp-img> 
+        <h5>Fig:10 The BLDC has a constant torque nature as shown.</h5>  
+        <p>The current form required for the complete 360 degree rotation is shown in the graph below.</p>
+       <amp-img src="Brushless-Dc-Motor/DC_Commutation_Double.png" width="221" height="300" layout="intrinsic" class="img-responsive">
+        </amp-img>     
+        <h5>Fig:11 The voltage form required in each of the coil</h5> 
+        <p>With this configuration 2 coils need to be energized separately, but by making a small modification to the stator coil, we can simplify this process. Just connect one free end of the coils together, as shown in the Fig.10.</p>
+        <amp-img src="Brushless-Dc-Motor/Double_coil_Connected.jpg" width="528" height="260" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig.12: Connecting one free ends of the coil together makes the BLDC voltage regulation much simpler</h5>    
+        <p>When the power is applied between coils A and B, let’s note the current flow through the coils. By comparing second part of the Fig13 with Fig.9, it is clear that, the current flow is just like the separately energized state.</p>
+        <amp-img src="Brushless-Dc-Motor/Double_Coil_currentl_flow.jpg" width="506" height="260" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:13 :This connected winding produces exactly same current flow as that of the separately energized state</h5>
+        <h2>Use of an ECU</h2>
+        <p>That’s how a BLDC works. But, you might have some intriguing doubts in your mind. How do I know which stator coils to energize? How do I know when to energize it, so that I will get a continuous rotation from the rotor? In a BLDC we use an electronic controller unit (ECU) for this purpose. A sensor determines the position of the rotor, and based on this information the controller decides, which coils to energize.</p>
+        <amp-img src="Brushless-Dc-Motor/Electronic_Controler_BLDC.jpg" width="310" height="200" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:14 The ECU determines which coil to energize and when to energize it</h5>
+        <p>The schematic figure above shows, how the ECU controls task of energizing the coil. This task is known as commutation. Most often, a Hall-effect sensor is used for this purpose. The Hall-effect sensor is fitted on the back of the motor as shown in the Fig.15.</p>
+         <amp-img src="Brushless-Dc-Motor/ECU_Hall_effect_Senser.jpg" width="384" height="260" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:15 A Hall effect sensor is used to determine the position of the rotor</h5>
+        <h2>Types of BLDC design</h2>
+        <p>The BLDC design we have discussed so far is known as the out-runner type. Here the runner if fitter around the stator. In-runner BLDC design is also available in the market.</p>
+        <amp-img src="Brushless-Dc-Motor/Out_runner_BLDC.jpg" width="359" height="270" layout="intrinsic" class="img-responsive">
+        </amp-img>
+        <h5>Fig:16 In an Out-Runner BLDC, the runner sits around the stator</h5>
+        <p>Out-Runner design has a definite mechanical advantage over the In-Runner design. At higher speeds the runner tends to expand slightly due to the centrifugal force. As a result, in In-Runner designs a good amount of clearance should be given between the rotor and runner to avoid the collision. Such higher clearances increase the magnetic flux leakages and reduce efficiency of the motor. But the Out-Runner design has no such limitation, as the runner at the outside is free to expand.</p>
+        <br>
+        </center>  
+     </div>
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+ <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+</body>
+</html>

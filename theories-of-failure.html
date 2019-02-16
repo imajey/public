@@ -1,0 +1,251 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>theories of failure</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+          <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+       <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/theories-of-failure.html">
+    <style amp-custom>
+   html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+    <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+
+  <header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+     <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<div class="res">
+    <center>
+        <h1>Theories of Failure</h1>
+         <div class="post-date">December 4, 2012</div>
+         <p>A good understanding of theories of failure are imperative in the design of civil structures or types of mechanical equipment. This lecture will give you a conceptual introduction on the theories of failure. So sit back and Enjoy</p>
+         
+         
+         <amp-youtube width="611" height="411" data-videoid="qbv2rOEMyiA" layout="responsive"></amp-youtube>
+         <p>A detailed webpage version of the above lecture along with the industrial application of Failure Theories are given below.</p>
+        <h2>The Weight Lifter Analogy</h2>
+        <p>Consider a weight lifter problem.</p>
+        <amp-img src="Theory-of-failure/Weight_lifter_Analogy.jpg" width="560" height="230" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1 A weight lifter analogy</h5>
+        <p>In the first case he is able to lift maximum up to 50 k.g in a relatively simple fashion. Now consider a second case, here he is lifting the same amount of weight in a different manner.Is it true to say here also his maximum lifting ability is 50 k.g?. Answer to this question could be Yes or No. If you assume that, his lifting ability is same in the second case also , then this can be considered as a failure theory for a weight lifter.</p>
+        <h2>The Backbone of Failure Theories</h2>
+        <p>In materials also we can apply the same concept of weight lifter failure theory.Here material will undergo a simple force test(simple tension test), so one can determine what’s the maximum load capability the material has. Now, we will assume that in a complex loading condition also, the material has the same capability. This assumption forms the backbone of Failure theories.Concepts of Simple tension test and Principal stresses are the main 2 prerequisites to understand the Failure theories effectively.</p>
+        <h2>Simple Tension Test</h2>
+        <p>In Simple tension test material is pulled from both the ends, the elongation of material(strain) with respect to the load is noted. From such an observation one can easily determine maximum strength of the material. For ductile material upper yield point is considered to be maximum strength of material, while for brittle material it is taken as ultimate strength of the material. From the maximum strength value of the material, values of various other parameters can easily be calculated.Simple tension graph and upper yield point value for a ductile material case is shown in the figure below.</p>
+        <amp-img src="Theory-of-failure/simple-tension-test.gif" width="478" height="288" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:2 Simple tension test</h5>
+        <h2>Principal Stress</h2>
+        <p><a href="https://learnengineering.org/principal-stress-plane-mohr-circle/index.html" target="_blank">Principal stress </a>is the maximum normal stress occurring at a given point. In order to find out this value easy way is to do a Mohr circle analysis.<br>
+       Once you know Principal stress values you can go ahead with failure theories.Figure below shows principal stress values induced at point in a 3 dimensional complex loading case.
+      </p>
+        <amp-img src="Theory-of-failure/trans_struc_princi-1024x621.jpg"  width="1024" height="621" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 Principal stresses and planes</h5>
+        <h2>The Failure Theories</h2>
+        <p>The interesting thing in the Failure theories is that, just by looking at the name of the theory you will be able to formulate condition of failure in an actual case. Just make sure that your concept of STT and Principal stresses are clear. The theories along with its usability is given below.</p>
+        <h4>1.Maximum principal stress theory- Good for brittle materials</h4>
+        <p>According to this theory when the maximum principal stress induced in a material under complex load condition exceeds the maximum normal strength in a simple tension test the material fails. So the failure condition can be expressed as</p>
+       <amp-img src="Theory-of-failure/max-normal-stress.gif"  width="96" height="22" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h4>2.Maximum shear stress theory – Good for ductile materials</h4>
+        <p>According to this theory when the maximum shear strength in actual case exceeds maximum allowable shear stress in simple tension test the material case. Maximum shear stress in actual case in represented as</p>
+         <amp-img src="Theory-of-failure/max-shear-actual.gif"  width="138" height="36" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Maximum shear stress in simple tension case occurs at angle 45 with load, so maximum shear strength in a simple tension case can be represented as</p> 
+        <amp-img src="Theory-of-failure/max-shear-simp.gif"  width="141" height="41" layout="intrinsic" class="img-responsive"></amp-img> 
+        <p>Comparing these 2 quantities one can write the failure condition as</p>
+        <amp-img src="Theory-of-failure/max-shear-failure-condition.gif"  width="144" height="40" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h4>3.Maximum normal strain theory – Not recommended</h4>
+        <p>This theory states that, when the maximum normal strain in actual case is more than maximum normal strain occurred in simple tension test case the material fails. The maximum normal strain in actual case is given by</p>
+        <amp-img src="Theory-of-failure/strain-max-actual.gif"  width="226" height="36" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Maximum strain in simple tension test case is given by</p>
+          <amp-img src="Theory-of-failure/strain-max-simple-tension.gif"  width="106" height="39" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>So condition of failure according to this theory is</p>
+          <amp-img src="Theory-of-failure/max-strain-failure-condition.gif"  width="166" height="36" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Where E is Youngs modulus of the material</p>
+        <h4>4.Total strain energy theory – Good for ductile material</h4>
+        <p>According to this theory when the total strain energy in actual case exceeds the total strain energy in simple tension test at the time of failure, the material fails. The total strain energy in actual case is given by</p>
+       <amp-img src="Theory-of-failure/TSE-act.gif"  width="385" height="40" layout="intrinsic" class="img-responsive"></amp-img> 
+        <p>The total strain energy in simple tension test at time of failure is given by</p>
+        
+        <amp-img src="Theory-of-failure/total-strain-energy-simple.gif"  width="113" height="45" layout="intrinsic" class="img-responsive"></amp-img> 
+        <p>So failure condition can be simplified as</p>
+        <amp-img src="Theory-of-failure/TSE-failure.gif"  width="358" height="40" layout="intrinsic" class="img-responsive"></amp-img>
+        <h4>5.Shear strain energy theory – Highly recommended</h4>
+        <p>According to this theory when the shear strain energy in the actual case exceeds shear strain energy in simple tension test at the time of failure the material fails. Shear strain energy in the actual case is given by</p>
+        <amp-img src="Theory-of-failure/SSE-act.gif"  width="352" height="35" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Shear strain energy in simple tension test at the time of failure is given by</p>
+           <amp-img src="Theory-of-failure/SSE-simp.gif"  width="113" height="43" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>So the failure condition can be deduced as</p>
+         <amp-img src="Theory-of-failure/SSE-condition.gif"  width="330" height="43" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Where G is shear modulus of the material</p>
+        <p>Out of the 5 theories discussed, the Shear strain energy theory or Von-mises theory is the most valuable one.
+        *Since brittle materials does not have yield point, you can use ultimate tensile stress as failure criterion.</p>
+        <h2>Industrial Applications of Failure Theories</h2>
+        <p>Nowadays FEA based solvers are well integrated to use failure theories. User can specify kind of failure criterion in his solution method. Shear strain energy theory is the most commonly used method. These softwares can produce Von-mises stress along material,which is based on Shear strain energy theory.<br>
+
+        So user can check whether maximum Von-mises stress induced in the body crosses maximum allowable stress value. It is a common practice to introduce Factor of Safety(F.S) while designing, in order to take care of worst loading scenario. So the engineer can say his design is safe if following condition satisfies.</p>
+          <amp-img src="Theory-of-failure/designer_eqn.gif"  width="155" height="41" layout="intrinsic" class="img-responsive"></amp-img>
+        </center><br>
+    </div>
+       <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+    <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+    </body>
+</html>

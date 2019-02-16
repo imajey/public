@@ -1,0 +1,228 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>what is von mises stress</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/what-is-von-mises-stress.html">
+    <style amp-custom>
+      html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+
+   <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+<header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+    <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<div class="res">
+    <center>
+        <h1>What is Von Mises Stress ?</h1>
+         <div class="post-date">December 29, 2012</div>
+         <p>Von Mises stress is widely used by designers to check whether their design will withstand a given load condition. In this lecture we will understand Von Mises stress in a logical way.</p>
+        <amp-youtube width="611" height="411" data-videoid="Smj_F7MN3S4" layout="responsive"></amp-youtube>
+        
+        <p>A detailed webpage version of the video lecture along with the industrial applications of Von Mises stress are listed below.</p>
+        <h2>Use of Von Mises stress</h2>
+        <p>Von Mises stress is considered to be a safe haven for design engineers.Using this information an engineer can say his design will fail, if the maximum value of Von Mises stress induced in the material is more than strength of the material. It works well for most cases, especially when the material is ductile in nature. In the folowing sections we will have a logical understanding of Von Mises stress and why it is used.</p>
+        <h2>When does a material fail?</h2>
+        <p>One of the most easy way to check when a material fails is a simple tension test. Here the material is pulled from both ends. When the material reaches the yield point (for ductile material) the material can be considered as failed. The simple tension test is a unidirectional test, this is shown in the first part of Fig:1.</p>
+        <amp-img src="Von-Mises-Stress/Simple_tension_Actual_case.jpg" width="416" height="220"></amp-img>
+        <h5>Fig:1 A simple tension test and a real life loading condition</h5>
+        <p>Now consider the situation in second part of Fig.1, an actual engineering problem with a complex loading condition. Can we say here also, that the material fails when the maximum normal stress value induced in the material is more than the yield point value ?. If you use such an assumption, you would be using a failure theory called ‘normal stress theory’. Many years of engineering experience has shown that normal stress theory doesn’t work in most of the cases. The most preferred failure theory used in industry is ‘Von Mises stress’ based. We will explore what Von Mises stress is in the coming section.</p>
+        <h2>Distortion energy theory</h2>
+        <p>The concept of Von mises stress arises from the distortion energy failure theory. Distortion energy failure theory is comparison between 2 kinds of energies, 1) Distortion energy in the actual case 2) Distortion energy in a simple tension case at the time of failure. According to this theory, failure occurs when the distortion energy in actual case is more than the distortion energy in a simple tension case at the time of failure.</p>
+        <h2>Distortion energy</h2>
+        <p>It is the energy required for shape deformation of a material. During pure distortion, the shape of the material changes, but volume does not change. This is illustrated in Fig.2.</p>
+        <amp-img src="Von-Mises-Stress/distortion.gif" width="540" height="177" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:2 Representation of a pure distortion case</h5>
+        <p>Distortion energy required per unit volume, ud for a general 3 dimensional case is given in terms of<a href="https://learnengineering.org/principal-stress-plane-mohr-circle/index.html"> principal stress values as:</a></p>
+        
+        <amp-img src="Von-Mises-Stress/dist_eqn.gif" width="411" height="60" layout="intrinsic" class="img-responsive"></amp-img> 
+        <p>Distortion energy for simple tension case at the time of failure is given as:</p>
+         <amp-img src="Von-Mises-Stress/dist_simp.gif" width="148" height="53" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h2>Expression for Von Mises stress</h2>
+        <p>The above 2 quantities can be connected using distortion energy failure theory, so the condition of failure will be as follows.</p>
+     <amp-img src="Von-Mises-Stress/dist_cond.gif" width="389" height="74" layout="intrinsic" class="img-responsive"></amp-img> 
+        <p>The left hand side of the above equation is denoted as Von Mises stress.</p>
+        
+        <amp-img src="Von-Mises-Stress/von_stress.gif" width="386" height="65" layout="intrinsic" class="img-responsive"></amp-img> 
+        <p>So as a failure criterion, the engineer can check whether Von Mises stress induced in the material exceeds yield strength (for ductile material) of the material.So the failure condition can be simplified as</p>
+         <amp-img src="Von-Mises-Stress/fina_condn.gif" width="70" height="27" layout="intrinsic" class="img-responsive"></amp-img>
+        <h2>Industrial Application of Von Mises Stress</h2>
+        <p>Distortion energy theory is the most preferred failure theory used in industry. It is clear from above discussions that whenever an engineer resorts to distortion energy theory he can use Von Mises stress as a failure criterion.Let’s see one example:<br>
+        Suppose an engineer has to design a cantilever beam using mild steel as the material, with a load capacity of 10000 N. The materials properties of mild steel are also shown in the figure. The yield stress value of mild steel is 2.5×108 Pa. He wants to check whether his design will withstand the design load.</p>  
+        <amp-img src="Von-Mises-Stress/von-mises-problem.jpg" width="705" height="240" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 A design problem, the cantilever should be able to withstand design load</h5> 
+        <p>The following figure shows the Von Mises stress distribution obtained by FEA analysis of the beam.</p>
+        
+         <amp-img src="Von-Mises-Stress/von_mises_stress.jpg" width="720" height="247" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig.4 Distribution of Von Mises stress in the beam obtained from FEA analysis</h5>
+        <p>One can note that Von Mises stress is at maximum towards the fixed end of the beam, and the value is 1.32×108 Pa. This is less than the yield point value of mild steel. So the design is safe.<br>
+        In short an engineer’s duty is to keep the maximum value of Von Mises stress induced in the material less than its strength.</p>
+        </center><br>
+    </div>
+        <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+        <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+    </body>
+</html>

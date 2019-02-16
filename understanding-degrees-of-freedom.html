@@ -1,0 +1,237 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>understanding degree of freedom</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/understanding-degree-of-freedom.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}   
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+    <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+        <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+ <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+     <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+<div class="res">
+    <center>
+        <h1>Understanding Degrees of Freedom</h1>
+         <div class="post-date">April 18, 2013</div>
+         <p>Degrees of freedom is the one of the most important concept in mechanics. This concept is widely used in robotics and kinematics. D.O.F means how many variables are required to determine position of a mechanism in space. In this video lecture we will understand how to predict degrees of freedom of a mechanism.</p>
+         
+         <amp-youtube width="611" height="411" data-videoid="vOFM8eG8kVc" layout="responsive"></amp-youtube>
+        <p>Detailed description of the video lecture is given below.</p>
+        <h2>Degrees of Freedom – Examples</h2>
+        <p>Consider the mechanism shown in first figure of Fig.4. Position of this 4 bar mechanism can be completely determined just by knowing angle or position of any one of the member. So degree of freedom is one. Similarly degree of freedom of the cam and follower mechanism is also one. But to determine position of the slider crank mechanism shown, we should know angle or displacement of at least 2 members. So here degrees of freedom is 2.</p>
+        <amp-img src="Degree-of-freedom/cmparing-Degrees-of-freedom.jpg"  width="811" height="255" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:1 Examples of degrees of freedom of different mechanisms</h5>
+        <p>You have predicted D.O.F of some simple mechanisms from your intuition. But for a complex mechanism, such an approach may not work. So in coming sections we will see how we can predict D.O.F of a mechanism.</p>
+        <h2>Degrees of Freedom of a Rigid Body</h2>
+        <p>Consider the rigid body shown below, which is situated in space. It could have 3 translatory motions as shown. Also it could have 3 rotary motions as shown.In total we need 6 inputs to determine its position. So degree of freedom of rigid body in space is 6.</p>
+        
+        <amp-img src="Degree-of-freedom/3-dimensional-mobility.jpg"  width="596" height="184" layout="intrinsic" class="img-responsive"></amp-img>  
+        <h5>Fig:2 A rigid body in space can have total 6 degrees of freedom</h5>
+        <p>If the body is in a plane it can have only 3 motions. 2 translational and 1 rotational. So degree of freedom of a rigid body in a plane is 3.</p>
+        <amp-img src="Degree-of-freedom/planar-mobility.jpg"  width="339" height="204" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 A rigid body on plane can have total 3 degrees of freedom</h5>  
+        <h2>Degrees of Freedom of a Mechanism</h2>
+        <p>A mechanism is a collection of rigid bodies or links, connected through pairs, provided one link is grounded. Consider the mechanism shown below.</p>
+          <amp-img src="Degree-of-freedom/planar_mechanism.jpg"  width="374" height="194" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:4 An example of mechanism, it is necessary that one link should be groudnded</h5>
+        <p>If this system were not connected like this, then each link except the ground would have 3 degrees of freedom.</p>
+        <amp-img src="Degree-of-freedom/dis-assembled-mechanism.jpg"  width="393" height="212" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:5 If links were not connected each link would have 3 D.O.F, except the ground</h5>
+        <p>So total degrees of freedom, or mobility is 3(N-1). N represents total number of links. In this case N is 3. But when we connect it together through pairs, links will not have the same 3 degrees of freedom.
+        If joint between 2 links is having surface contact as shown below, then both the links will have same translatory motion, in X and Y directions.So for each such pairs, there will be a deduction of 2 mobility from total mobility. Where LP represents number of pairs with surface contacts. Such pairs are called lower pairs. In this case we have 2 lower pairs.<br>
+        Now consider the joint which is having a line contact. If joint between 2 links is having line or point contact, both the link should have same translational motion along the common normal. However it could have different motion, in tangential direction. So for each such pairs, there will be deduction of 1 mobility from total mobility. This kind of pair is called higher pair. Here we have got 1 higher pair.</p>
+        <amp-img src="Degree-of-freedom/pairs_in-mechanism.jpg"  width="914" height="215" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:6 Lower pairs and higher pairs in a mechanism, a lower pair arrests 2 D.O.F, while a higher pair arrests one D.O.F</h5>
+        <p>So this mechanism has got 1 degree of freedom. Means, by knowing position of only one cam, we can completely determine this mechanism.
+        The general equation to find out degrees of freedom of a planar mechanism is given below. This equation is also known as Kuthbach equation.</p>
+        <h4>D.O.F = 3(N - 1) -2L <sub>P</sub> - H<sub>P</sub></h4>
+        <p>Here N represent total number of links in the mechanism. LP and HP represent number of lower pairs and higher pairs respectively.</p>
+        <h2>4 Bar Linkage</h2>
+        <p>Back to same old planar mechanisms.This mechanism is having 4 links, and 4 lower pairs. So you can predict from Kuthbach equation that mobility of the mechanism is 1.</p>
+          <amp-img src="Degree-of-freedom/4-bar-linkage.jpg"  width="259" height="235" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:7 4 bar linkage, it is having 4 links and 4 lower pairs</h5>
+        <h2>Cam and Follower</h2>
+        <p>Cam and follower is having 3 links, 2 lower pairs, and one higher pair.So mobility is again one.</p>
+          <amp-img src="Degree-of-freedom/Cam-and-Follower.jpg"  width="192" height="222" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:8 Cam and follower, 3 links, 2 lower pairs, 1 higher pair</h5>
+        <h2>5 bar linkage</h2>
+        <p>This mechanism is having 5 links and 5 lower pairs. So mobility is 2.</p>
+        <amp-img src="Degree-of-freedom/5-bar-linkage.jpg"  width="424" height="198" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:9 5-bar linkage, 5 links, 5 lower pairs</h5>
+        <h2>A 3 Dimensional Mechanism</h2>
+        <p>If the mechanism is 3 dimensional in nature, you could easily derive an equation for mobility using the same concept. So equation for degree of freedom would be as follows</p>
+        <h4>D.O.F = 6(N - 1) -5P <sub>5</sub> - 4P<sub>4</sub> - 3P<sub>3</sub> - 2P<sub>2</sub> - 1P<sub>1</sub></h4>
+        <p>Where Pn represents number of pairs which block ‘n’ degrees of freedom. The main thing here will be determination of nature of pair. You can use this equation to predict D.O.F following 3 dimensional mechanism.</p>
+       <amp-img src="Degree-of-freedom/3-dimensional-mobility.jpg"  width="596" height="184" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:10 A 3 dimensional mechansim</h5>
+     </center><br>
+    </div>
+      <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+      <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+    </body>
+</html>

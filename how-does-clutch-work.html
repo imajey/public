@@ -1,0 +1,263 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>how does clutch work</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+      <link rel="canonical" href="https://learnengineering.org/how-does-clutch-work.html">
+    <style amp-custom>
+   html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}   
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body>
+      <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+
+      <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+  <header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+    <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+ <div class="res">
+    <center>
+    <br>
+    
+    <h1>How does a clutch work?</h1>
+          <div class="post-date">March 29, 2018</div>
+    <amp-youtube width="611"
+      height="411"
+      layout="responsive"
+      data-videoid="devo3kdSPQY">
+    </amp-youtube>
+           
+        <p>Have you ever wondered what is happening inside a car when you press the clutch pedal? Or why do you need to press the clutch pedal before you shift gears in a manual transmission car? This video gives you logical answers to these questions. At the end of the video, we will also understand the crucial role played by the clutch in an uphill start.</p>
+        <amp-img src="Clutch/Role-Of-Clutch.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 Role-Of-Clutch</h5>
+        <p>To understand the need for a clutch, let’s first understand the anatomy of an internal combustion engine car. Internal combustion engines have a very limited torque band, and due to this reason, in order to efficiently vary the speed of the drive wheels, internal combustion engine cars need a transmission system. The use of this transmission makes sure that the engine is working within its optimum rpm range and by changing gear according to the driving conditions, the transmission helps to control the drive wheel speeds.</p>
+        <amp-img src="Clutch/IC-Engine-Torque-Variation.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:2 IC-Engine Torque Variation</h5>
+        <h2>Why clutch is needed</h2>
+        <p>In a manual transmission car making these gear changes is not an easy task.To have a smooth gear change with a manual transmission, the engine power flow to the transmission has to be discontinued. However, it is not practical to turn off the engine just for this gear change. The clutch is used for this purpose. In short, the clutch is a mechanism to disconnect the flow of power to the transmission, without turning the engine off. Let’s understand how it works.</p>
+        <amp-img src="Clutch/Clutch%20And%20Transmission.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"> </amp-img>
+        <h5>Fig:3 Clutch And Transmission</h5>
+        <h2>Working of clutch</h2>
+        <p>The main part of the clutch consists of a disc coated with high friction material on both sides. A simplified clutch disc is shown here.</p>
+        <amp-img src="Clutch/Simplified-Clutch-Disc.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:4 Simplified-Clutch-Disc</h5>
+        <p>This disc sits on the flywheel; if an external force presses against the clutch disc, the clutch disc also will turn with the flywheel due to the frictional force. The input shaft of the transmission is connected to the disc. So, that when an external force is applied to the disc, the engine power will get transmitted to the transmission system.
+        This external force is provided by a pressure plate: spring system; cover of this system is attached firmly to the flywheel. So the pressure plate will firmly press on to the friction clutch disc and the engine power will be transmitted to the transmission system. But, this is the case in normal driving</p>
+         <div class="row">
+            <div class="col-1"><amp-img src="Clutch/Cover-and-Pressure-Plate-Mechanism.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:5A Cover and Pressure Plate Mechanism.</h5></div>
+            <div class="col-1"><amp-img src="Clutch/Clutch-Disc-Needs-External-Force.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:5B Clutch Disc Needs External Force </h5></div>
+        </div>
+        
+        
+        <p>So, how is the power disengagement done with a clutch? For the disengagement purpose, a special kind of spring is introduced in the pressure plate assembly. This spring is known as a diaphragm spring. To understand this diaphragm spring better, assume that the diaphragm spring motion is fixed around this circle. In this case, if you press the centre portion of the spring as shown, the outer portion should move in the opposite direction. The diaphragm spring sits between pressure plate and cover.</p>
+        <amp-img src="Clutch/Diaphragm-Spring.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:6-Diaphragm-Spring</h5>
+        
+        <p>To understand this configuration better let’s take a cross section of the assembly. The outer portion of the diaphragm spring is connected to the pressure disc.This means, if you press the inner portion as shown, the pressure disc will move away from the friction disc. Thus the power flow will discontinue to the transmission.</p>
+         <div class="row">
+            <div class="col-1"><amp-img src="Clutch/Clutch-Disc-Before-Applying-Clutch-Pedal.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:7A Clutch Disc Before Applying Clutch Pedal</h5></div>
+            <div class="col-1"><amp-img src="Clutch/Clutch-Disc-After-Applying-Clutch-Pedal.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:7B Clutch Disc Needs External Force </h5></div>
+        </div>
+        
+        <p>This is exactly what happens when you press the clutch pedal. A hydraulic system transfers the clutch motion to the center of the diaphragm spring; when the diaphragm spring is pressed, the power flow is discontinued. During this time you can make a gear change; the clutch pedal is released after the gear change and the power flow continues again.</p>
+        <div class="row">
+            <div class="col-1"><amp-img src="Clutch/Discontinue-Power-Flow.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:8A Discontinue-Power-Flow</h5></div>
+            <div class="col-1"><amp-img src="Clutch/Continue-Power-Flow.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:8B Continue-Power-Flow </h5></div>
+        </div>
+        
+        
+        <h2>Usage of coil spring</h2>
+        <p>in an actual clutch you can see a few coil springs on the clutch disc. What’s the purpose of these springs? These are used to smooth out the fluctuations and vibrations from the engine power output. It is clear that the hub and disc are not directly connected. The engine power first reaches the disc, then it transfers to the springs and finally to the output hub. This means that the springs will dampen out most of the power flow fluctuations from the engine and the motion transfer to the vehicle will be much smoother.</p>
+        <amp-img src="Clutch/Details-Of-Clutch-Disc.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:9 Details-Of-Clutch-Disc</h5>
+       
+        <h2>Uphills start</h2>
+        <amp-img src="Clutch/Three-Pedals-In-Car.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:10 Three pedals in car</h5>
+        <p>Now, let’s explore an extremely important and difficult task in driving cars with manual transmission; starting from uphill. Even in a car without a handbrake you can use this clutch technique to start while pointing uphill. In an uphill start, initially both the brake and clutch pedal are pressed while the engine is running. Now, release the clutch pedal partially until you feel the clutch ‘bite’. The clutch bite can be experienced at your foot; it may feel like engine is shivering. At this point, even if you release the brake pedal, you can see the vehicle will not roll. The partially released clutch acts like a brake. Now you can press the gas pedal and the car will move forward. The big question here is how does the partially released clutch act like a brake?</p>
+        
+        <p>This brake phenomenon is nothing but a game of force balance. In a perfectly force balanced condition the vehicle wheels will not be able to roll, and the gravitational pull will be same as static frictional force at the wheels.</p>
+        <amp-img src="Clutch/Uphill-Start-Force-Balance.jpg" width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:11 Uphill Start Force Balance</h5>
+         <div class="row">
+            <div class="col-1"><amp-img src="Clutch/Torque-Balance-In-Vehicle.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:12A Torque-Balance-In-Vehicle</h5></div>
+            <div class="col-1"><amp-img src="Clutch/Stationary-Clutch-Disc.jpg"  width="640" height="360" class="img-responsive" layout="intrinsic"></amp-img> <h5>Fig:12B Stationary-Clutch-Disc</h5></div>
+        </div>
+        
+        
+        
+        <p>The vehicle wheels are prevented from rolling by an another force balance; force balance between the engine forward force and the same static frictional force. When you partially release the clutch and it balances for the clutch bite, you are unknowingly doing all these force balances.
+        
+        When these forces are in perfect balance, the wheels, the transmission system and the clutch disc will not be able to spin. This is how the clutch ‘bite’ acts as a brake; but remember, the frictional force between the rubbing surfaces produces the engine forward force in this case. This will result in wear and tear of the friction material on the clutch disc.
+        </p>
+       
+        <p>We hope this video will enable you to be a better engineer and a better driver. Please support our educational activities at Patreon.com, and don’t forget to subscribe. Thank you!</p>
+        <br>
+</center>  
+</div>
+
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+
+ <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+      
+</body>
+</html>

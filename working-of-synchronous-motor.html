@@ -1,0 +1,234 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Synchronous motor</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+       <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+       
+       <link rel="canonical" href="https://learnengineering.org/working-of-synchronous-motor.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+ <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+
+ <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+  
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+     <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<div class="res">
+    <center>
+    
+    <h1>Working of Synchronous Motor</h1>
+       <div class="post-date">April 10, 2014</div>
+        <p>Synchronous motors are widely used in the industry for high precision applications. This video gives illustrative and logical explanation on its working.</p>
+        
+        <amp-youtube width="611" height="411" data-videoid="Vk2jDXxZIhs" layout="responsive"></amp-youtube>
+        <p>Detailed description of the video lecture is given following article.</p>
+         <h2>Introduction</h2>
+        <p>As the name suggests Synchronous motors are capable of running at constant speed irrespective of the load acting on them. Unlike induction motors where speed of the motor depends upon the torque acting on them, synchronous motors have got constant speed-torque characteristics.
+        Synchronous motors have got higher efficiency (electrical to mechanical power conversion ratio) than its counterparts. Its efficiency ranges from 90 – 92%</p>
+        <amp-img src="Synchronus-motor/synchronous_motor.jpg" width="280" height="210" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1 Synchronous motors are high efficiency and high accuracy machines</h5>
+        <h2>The Working Principle: RMF – Constant Magnetic field interaction</h2>
+        <p>The constant speed characteristic is achieved by interaction between a constant and rotating magnetic field. Rotor of synchronous motor produces a constant magnetic field and Stator produces a Rotating magnetic field.</p>
+      <amp-img src="Synchronus-motor/rmf_constant_magnetic_field_synchronous_motor.jpg" width="437" height="223" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:2 Interaction between a revolving and constant magnetic field helps in achieving constant speed characteristic</h5> 
+        <h2>Stator: Revolving Magnetic Field</h2>
+        <p>The field coil of stator is excited by a 3 phase AC supply. This will produce a revolving magnetic field (RMF), which rotates at synchronous speed. The way RMF is produced with 3 phase AC excitation is explained in a separate article. RMF produced in a synchronous motor and its direction is marked in Fig.2</p>      
+                                                                                                                                                                                                                                                                                                                                                                                                     
+        <h2>Rotor: Constant Magnetic field</h2>
+        <p>Rotor is excited by a D.C power supply, magnetic field produced around the rotor coil by DC excitation is shown below. It is clear that the rotor acts like a permanent magnet due to such magnetic field. Alternatively rotor can also be made of permanent magnet.
+        Interaction of Rotor and RMF is interesting. Assume you are giving an initial rotation to the rotor, with same direction of RMF. You can see that opposite poles of RMF and Rotor will attract each other and they will get locked magnetically. This means that rotor will rotate at the same speed of RMF, or rotor will rotate at synchronous speed.</p>
+       <amp-img src="Synchronus-motor/working_synchronous_motor.jpg" width="721" height="220" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:3 In first figure opposite poles of RMF and Rotor pole get attracted, rotor already rotating: In second figure poles are magnetically locked</h5>
+        <h2>Synchronous Speed</h2>
+        <p>Speed at which RMF rotates or Synchronous speed can easily be derived as follows.</p>
+        <p>N<sub>s</sub> =  120<span>&#402;</span> <span>&#8725;</span>P</p> 
+        <p>It is clear from the relationship that speed of synchronous motor,Ns(rpm) is directly proportional to frequency of the electricity,f(Hz).P represents number of poles of the rotor. This means that if one has got control over frequency of the electricity, speed of synchronous motor can be very accurately controlled. This is the reason why they are suitable for high precision applications.</p>
+        <h2>Why Synchronous motors are not self starting ?</h2>
+        <p>But if the rotor has got no initial rotation, situation is quite different. North Pole of the Rotor will obviously get attracted by South Pole of RMF, and will start to move in the same direction. But since the rotor has got some inertia, this starting speed will be very low. By this time South pole of RMF will be replaced by a North pole. So it will give repulsive force. This will make the rotor move backward. As a net effect the rotor won’t be able to start.</p>
+        <amp-img src="Synchronus-motor/zero_intial_rotation.jpg" width="700" height="217" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig.4 In first figure opposite poles of RMF and rotor get attracted, when the rotor has no initial rotation: In 2nd figure this becomes a repulsive force</h5>
+        <p>So it can be summarized that synchronous motors are not inherently self starting.</p>
+        <h2>Making Synchronous Motor Self Start – Use of Damper winding</h2>
+        <p>To make synchronous motor self start, a squirrel cage arrangement is cleverly fitted through pole tips. They are also called as damper windings.</p>
+        <amp-img src="Synchronus-motor/damper_winding.jpg" width="396" height="210" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:5 Damper winding (squirrel cage) is fitted through poles of the rotor</h5>
+        <p>At the starting rotor field coils are not energized. So with revolving magnetic field, electricity is induced in squirrel cage bars and rotor starts rotating just like an induction motor starts.</p>
+        <amp-img src="Synchronus-motor/rotor_starting.jpg" width="260" height="225" layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:6 Damper winding helps synchronous motor start just like an induction motor starts</h5>
+        <p>When the rotor has achieved its maximum speed, rotor field coils are energized. So as discussed earlier poles of rotor gets locked with poles of RMF and will start rotating at synchronous speed. When rotor rotates at synchronous speed, relative motion between squirrel cage and RMF is zero. This means zero current and force on squirrel cage bars, thus it will not affect synchronized operation of the motor.</p>
+        <h2>Synchronous motor out of Synchronism</h2>
+        <p>Synchronous motors will produce constant speed irrespective of motor load only if the load is within the capability of motor. If external torque load is more than torque produced by the motor, it will slip out of synchronism and will come to rest. Low supply voltage and excitation voltage are other reasons of going out of synchronism.<br>
+        It is interesting to note that synchronous motor has got the same constructional features of an alternator.</p>
+        <h2>Synchronous Condenser</h2>
+        <p>Synchronous motors can also be used to improve overall power factor of the system. When the sole purpose of application is power factor improvement synchronous motors are referred as synchronous condenser. In such situation shaft of the motor is not connected to any mechanical load and it spins freely.</p>
+     </center>  <br>
+     </div>
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+   <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+      
+</body>
+</html>

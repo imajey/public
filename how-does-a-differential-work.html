@@ -1,0 +1,249 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>how does a diffrential work</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+          <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/how-does-a-diffrential-work.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}   
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+    <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+
+     <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+ <header class="header">
+    <a href="index.html">
+      <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+    <div class="res">
+    <center>
+    
+    <h1>How does a Differential work ?</h1>
+        <div class="post-date">May 7, 2014 </div>
+        <p>The differential is an integral part of all four wheelers. Differential technology was invented centuries ago and is considered to be one of the most ingenious inventions human thinking has ever produced. In this video, we will learn, in a logical manner, why a differential is needed in an automobile and its inner workings.
+       </p>
+       
+        <amp-youtube width="611" height="411" data-videoid="SOgoejxzF8c" layout="responsive"></amp-youtube>
+        <p>Detailed webpage version of the video is given below.</p>
+        <h2>Why the Differential gear is used?</h2>
+        <p>Wheels receive power from the engine via a drive shaft. The wheels that receive power and make the vehicle move forward are called the drive wheels. The main function of the differential gear is to allow the drive wheels to turn at different rpms while both receiving power from the engine.</p>
+        
+         <amp-img src="Differntial/power_flow_automobile.jpg"  width="370" height="220" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 Power from the engine is flowed to the wheels via a drive shaft</h5>
+        <p>Consider these wheels, which are negotiating a turn. It is clear that the left wheel has to travel a greater distance compared to the right wheel.</p>
+        <amp-img src="Differntial/wheels_taking_turn.jpg"  width="585" height="233" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:2 While taking a right turn the left wheel has to travel more distance; this means more speed to left wheel</h5>
+        <p>This means that the left wheel has to rotate at a higher speed compared to the right wheel. If these wheels were connected using a solid shaft, the wheels would have to slip to accomplish the turn. This is exactly where a differential comes in handy. The ingenious mechanism in a differential allows the left and right wheels to turn at different rpms, while transferring power to both wheels.</p>
+        <h2>Parts of a Differential</h2>
+        <p>We will now learn how the differential achieves this in a step-by-step manner using the simplest configuration. Power from the engine is transferred to the ring gear through a pinion gear. The ring gear is connected to a spider gear.</p>
+         <amp-img src="Differntial/spider_gear_ring0300.jpg"  width="399" height="220" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:3 Motion from the pinion gear is transferred to the spider gear</h5>
+        <p>The spider gear lies at the heart of the differential, and special mention should be made about its rotation. The spider gear is free to make 2 kinds of rotations: one along with the ring gear (rotation) and the second on its own axis (spin).</p>
+        <amp-img src="Differntial/spider_gear_motion.jpg"  width="319" height="237" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:4 Spider gear is free to make 2 kinds of rotations</h5>
+        <p>The spider gear is meshed with 2 side gears. You can see that both the spider and side gears are bevel gears. Power flow from the drive shaft to the drive wheels follows the following pattern. From the drive shaft power is transferred to the pinion gear first, and since the pinion and ring gear are meshed, power flows to the ring gear. As the spider gear is connected with the ring gear, power flows to it. Finally from the spider gear, power gets transferred to both the side gears.</p>
+        <amp-img src="Differntial/full_differential.jpg"  width="421" height="240" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:5 The basic components of a standard differential</h5>
+        <h2>Differential Operation</h2>
+        <p>Now let’s see how the differential manages to rotate the side gears (drive wheels) at different speeds as demanded by different driving scenarios.</p>
+        <h2>The vehicle moves straight</h2>
+        <p>In this case, the spider gear rotates along with the ring gear but does not rotate on its own axis. So the spider gear will push and make both the side gears turn, and both will turn at the same speed. In short, when the vehicle moves straight, the spider-side gear assembly will move as a single solid unit.</p>
+        <amp-img src="Differntial/vehicle_moves_straight.jpg"  width="347" height="235" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:6 While the vehicle moves straight, the spider gear does not spin; it pushes and rotate the side gears</h5>
+        <h2>The vehicle takes a right turn</h2>
+        <p>Now consider the case when the vehicle is taking a right turn. The spider gear plays a pivotal role in this case. Along with the rotation of the ring gear it rotates on its own axis. So, the spider gear is has a combined rotation. The effect of the combined rotation on the side gear is interesting.</p>
+         <amp-img src="Differntial/Vehicle_takes_right_turn.jpg"  width="735" height="231" class="img-responsive" layout="intrinsic">
+        </amp-img>
+        <h5>Fig:7 To get peripheral velocity at left and right side of spider gear we have to consider both rotation and spin of it</h5>  
+        <p>When properly meshed, the side gear has to have the same peripheral velocity as the spider gear. Technically speaking, both gears should have the same pitch line velocity. When the spider gear is spinning as well as rotating, peripheral velocity on the left side of spider gear is the sum of the spinning and rotational velocities. But on the right side, it is the difference of the two, since the spin velocity is in the opposite direction on this side. This fact is clearly depicted in Fig.7. This means the left side gear will have higher speed compared to the right side gear. This is the way the differential manages to turn left and right wheels at different speeds.</p>
+        
+        <h2>The vehicle takes a left turn</h2>
+        <p>While taking a left turn, the right wheel should rotate at a higher speed. By comparing with the previous case, it is clear that, if the spider gear spins in the opposite direction, the right side gear will have a higher speed.</p> 
+         <amp-img src="Differntial/opposite_spider.jpg"  width="439" height="230" class="img-responsive" layout="intrinsic">
+        </amp-img>
+        <h5>Fig:8 While taking left turn the spider gear spins in opposite direction</h5>
+        <h2>Use of more Spider gears</h2>
+        <p>In order to carry a greater load, one more spider gear is usually added. Note that the spider gears should spin in opposite directions to have the proper gear motion. A four-spider-gear arrangement is also used for vehicles with heavy loads. In such cases, the spider gears are connected to ends of a cross bar, and the spider gears are free to spin independently.</p>
+        <amp-img src="Differntial/double_spider_differential.jpg"  width="407" height="235" class="img-responsive" layout="intrinsic">
+        </amp-img>
+        <h5>Fig:9 Double spider gear arrangement is usually used to carry more loads</h5>
+        <h2>Other functions of the Differential</h2>
+        <p>Apart from allowing the wheels to rotate at different rpm differential has 2 more functions. First is speed reduction at the pinion-ring gear assembly. This is achieved by using a ring gear which is having almost 4 to 5 times number of teeth as that of the pinion gear. Such huge gear ratio will bring down the speed of the ring gear in the same ratio. Since the power flow at the pinion and ring gear are the same, such a speed reduction will result in a high torque multiplication.<br>
+        You can also note one specialty of the ring gear, they are hypoid gears. The hypoid gears have more contact area compared to the other gear pairs and will make sure that the gear operation is smooth.<br>
+        The other function of the differential is to turn the power flow direction by 90 degree.</p>
+        <h2>Drawback of a Standard Differential</h2>
+        <p>The differential we have gone through so far is known as open or standard differential. It is capable of turning the wheels at different rpm, but it has got one major drawback. Consider a situation where one wheel of the vehicle is on a surface with good traction and the other wheel on a slippery track.</p>
+        <amp-img src="Differntial/tranction_difference_differential.jpg"  width="459" height="235" class="img-responsive" layout="intrinsic">
+        </amp-img>
+        <h5>Fig:10 A standard differential vehicle on different traction surfaces will not be able to move</h5>
+        <p>In this case a standard differential will send the majority of the power to the slippery wheel, so the vehicle won’t be able to move.
+        To overcome this problem, Limited Slip Differentials are introduced. We will learn more about them in a separate article.</p>
+        <br>
+        </center>  
+     </div>
+     
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+<div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div> 
+</body>
+</html>

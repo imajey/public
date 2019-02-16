@@ -1,0 +1,242 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>fundamentals-of-turbomachinery</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+       <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/fundamentals-of-turbomachinery.html">
+    <style amp-custom>
+  html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify; margin:15px;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}    
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+           <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+<amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+
+  <header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+   
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<br>
+<div class="res">
+    <center>
+        <h1>Fundamentals of Turbomachinery</h1>
+         <div class="post-date">August 29, 2013 </div>
+         <p>Turbomachinery devices inject life into fluids. Principles of turbomachinery form the preliminary design tools in design of them.</p>
+         <amp-youtube width="611" height="411" data-videoid="473XQrJjDZE" layout="responsive"></amp-youtube>
+         <p>A detailed webpage version of the video is given below.</p>
+        <h2>Turbomachinery Principles</h2>
+        <p>Consider following turbo machines. An axial turbine, a centrifugal machine or a pelton wheel, you can predict performance of all of these from same turbo machinery fundamentals.</p>
+        <amp-img src="Fundamental-of-turbomachinery/steam_turbine_centrifugal_pelton.jpg" width="768" height="250" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 Impeller of axial turbine, centrifugal machine and Pelton wheel</h5>
+        
+        <h2>Euler Turbomachine Equation</h2>
+        <p>To develop turbo machinery fundamentals consider fluid flow through channel shown below. The inlet velocity, V1 gets changed to outlet velocity V2. Velocity of fluid can be split into tangential and radial components. This is shown in following figure.</p>
+        
+        <amp-img src="Fundamental-of-turbomachinery/turbo_machine.jpg" width="720" height="245" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:2 Velocities at inlet and outlet can be split into tangential and radial components</h5>
+        <p>To make the fluid flow there should be an external torque acting on it. This torque can be derived from Newton’s 2nd law of motion, which acts as fundamental equation of turbo machinery. The torque is given by following equation, which is also called as Euler turbomachine equation.</p>
+        <amp-img src="Fundamental-of-turbomachinery/eqn1.jpg" width="197" height="21" class="img-responsive" layout="intrinsic"></amp-img>
+        <p>This is the most important equation in turbo machinery.</p>
+        <h2>Pump or Turbine?</h2>
+        <p>If the channel is rotating at an angular velocity omega, power required to maintain the fluid flow will be torque multiplied by angular velocity.</p>
+        <amp-img src="Fundamental-of-turbomachinery/eqn2.jpg" width="254" height="17" class="img-responsive" layout="intrinsic"></amp-img>
+        <p>ω times radius becomes channel velocity or blade velocity. So power required for this fluid motion can be taken as difference in product of blade velocity times tangential fluid velocity.</p>
+         <amp-img src="Fundamental-of-turbomachinery/eqn3.jpg" width="254" height="17" class="img-responsive" layout="intrinsic"></amp-img>
+        <p>Vθ is positive, if it is in same direction of blade velocity. Otherwise it is negative.</p>
+        <amp-img src="Fundamental-of-turbomachinery/U_Vtheta_turbo.jpg" width="344" height="245" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:3 Blade and tangential velocity of flow are shown at inlet and outlet</h5>
+        <p>If we divide power by weight of fluid flowing, we will get what’s the energy head required to maintain this flow.</p>
+        <amp-img src="Fundamental-of-turbomachinery/eqn6.jpg" width="158" height="38" class="img-responsive" layout="intrinsic"></amp-img>
+        <p>If power required by the fluid is positive, that means fluid is absorbing energy. Or the device is acting as a compressor. Otherwise fluid is losing energy, so the device acts as a turbine.<br>
+        Vθ more precisely means, component of fluid velocity which is parallel to blade velocity.</p>
+        <amp-img src="Fundamental-of-turbomachinery/U_Vtheta.jpg" width="242" height="140" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:4 is the component which is parallel to blade velocity</h5>
+        <p>But determination of fluid velocity is a tricky affair in turbo machinery, since we are dealing with rotating components. For this purpose we should understand concept of velocity triangles.</p>
+        <h2>Concept of Relative Velocity & Velocity Triangle</h2>
+        <p>The key idea in turbo machinery is concept of relative velocity. Suppose you are standing on this rotating turbo machine. The velocity of fluid you experience while moving with it is called as relative velocity.<br>
+        If fluid is having an absolute velocity V, and the blade is moving with a velocity U, then relative velocity experienced by you will be as follows.</p>
+         <amp-img src="Fundamental-of-turbomachinery/eqn4.jpg" width="83" height="22" class="img-responsive" layout="intrinsic"></amp-img>
+        <p>For a stationary device in order to have smooth operation, flow should be tangential to the blade. Similarly in a moving device relative velocity should be tangential to blade profile. With knowledge of direction of relative velocity and the vectorial representation of relative velocity, these 3 velocities could be drawn as shown below. This is known as a velocity triangle.</p>
+        <amp-img src="Fundamental-of-turbomachinery/Relative_Velocity.jpg" width="348" height="250" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:5 Velocity triangle in a turbmachine</h5>
+        <p>Similar velocity triangle can be made on inlet of turbo machine. The beauty of turbo machinery is that using relatively simple analysis of inlet and outlet velocities you can predict performance of any turbo machine.</p>
+        <h2>Performance of Centrifugal Pump</h2>
+        <p>We will see, how to predict performance of a centrifugal pump using the concepts we developed. Here we have shown impeller of a centrifugal pump. If you know the blade geometry, you can find out blade angle at inlet and outlet. Blade angle is defined as angle opposite of blade velocity. So we can easily fix direction of relative velocity. This is shown in Fig. 6(b).Radial component of flow velocity determines how much the volume flow rate is leaving the impeller. So you can determine Vr at outlet from this equation. Here b2 means width of the impeller.</p>
+        <amp-img src="Fundamental-of-turbomachinery/eqn7.jpg" width="103" height="20" class="img-responsive" layout="intrinsic"></amp-img>
+        <p>Now construction of velocity triangle is easy. You can draw lines parallel to these velocity components. These lines are drawn in grey color in Fig. 6(b). From parallelogram constructed in Fig. 6(b)absolute velocity of flow can be easily drawn. This is shown in Fig. 6(c). From this we can find out tangential component of flow velocity, this is marked as Vθ2 in Fig. 6(c).</p>
+        <amp-img src="Fundamental-of-turbomachinery/centrifugal_pump_velocity_triangles.jpg" width="782" height="270" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:6 Development of inlet at outlet velocity triangles in a centrifugal pump</h5>
+        <p>At inlet of centrifugal pump flow velocity will be radial. So tangential component of velocity is zero.</p>
+        <h4>V<sub>01</sub>=0</h4>
+        <p>So energy head developed by the pump simplifies like this.</p>
+        <h4>h = 1 <span>&#8725</span> g U<sub>2</sub>V<sub>02</sub></h4>
+        <p>From Fig.6(c) outlet blade angle can be easily represented as follows.</p>
+        <amp-img src="Fundamental-of-turbomachinery/eqn9.jpg" width="125" height="43" class="img-responsive" layout="intrinsic"></amp-img>
+        <p>You can substitute values of Vθ2 from this equation, into head equation. After substituting value of Vr2 also in that, we get most important performance equation of centrifugal pump. How energy head is varied with flow rate.</p>
+        </center><br>
+        </div>
+       <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+
+  <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div> 
+       
+    </body>
+</html>

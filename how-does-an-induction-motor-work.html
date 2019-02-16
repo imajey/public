@@ -1,0 +1,244 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>how does an induction motor work</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+       <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/how-does-an-induction-motor-work.html">
+    <style amp-custom>
+    html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}   
+    
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     
+ <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+
+      <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+  
+        <header class="header">
+    <a href="index.html">
+       <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+    <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+    <div class="res">
+    <center>
+    
+    <h1>How does an Induction Motor Work ?</h1>
+       <div class="post-date">August 18, 2013</div>
+        <p>Induction motors are the most commonly used electrical machines. They are cheaper, more rugged and easier to maintain compared to other alternatives. In this video we will learn the working of a 3 phase squirrel-cage induction motor.</p>
+        <amp-youtube width="611" height="411" data-videoid="LtJoJBUSe28" layout="responsive"></amp-youtube>
+        <h2>Parts of an Induction Motor</h2>
+        <p>An induction motor has 2 main parts; the Stator and Rotor. The Stator is the stationary part and the rotor is the rotating part. The Rotor sits inside the Stator. There will be a small gap between rotor and stator, known as air-gap. The value of the radial air-gap may vary from 0.5 to 2 mm.</p>
+        <amp-img src="InductionMotor/Rotor_Stator_Induction_Motor.jpg" width="617" height="300" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1 Stator and Rotor of an induction motor</h5>
+        <h2>Construction details of a Stator</h2>
+        <p>A Stator is made by stacking thin-slotted highly permeable steel laminations inside a steel or cast iron frame. The way the steel laminations are arranged inside the frame is shown in the following figure. Here only few of the steel laminations are shown. Winding passes through slots of the stator.</p>
+        <amp-img src="InductionMotor/motor_frame_steel_laminations.jpg" width="694" height="250" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:2 Construction details of stator</h5>
+        <h2>Effect of 3 Phase Current Passing Through a Stator Winding</h2>
+        <p>When a 3 phase AC current passes through the winding something very interesting happens. It produces a rotating magnetic field (RMF). As shown in the figure below a magnetic field is produced which is rotating in nature. RMF is an important concept in electrical machines. We will see how this is produced in the next section.</p>
+         <amp-img src="InductionMotor/Rotating_Magnetic_filed.jpg" width="693" height="211" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 Rotating magnetic field produced in an induction motor</h5>
+        <h2>The Concept of a Rotating Magnetic Field</h2>
+        <p>To understand the phenomenon of a rotating magnetic field, it is much better to consider a simplified 3 phase winding with just 3 coils. A wire carrying current produces a magnetic field around it. Now for this special arrangement, the magnetic field produced by 3 phase A.C current will be as shown at a particular instant.</p>
+        <amp-img src="InductionMotor/simple_wind_magnetic_filed_around_conductor.jpg" width="431" height="210" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:4 Magnetic field produced around the simplified winding and a single wire</h5>
+        <p>The components of A.C current will vary with time. Two more instances are shown in the following figure, where due to the variation in the A.C current, the magnetic field also varies. It is clear that the magnetic field just takes a different orientation, but its magnitude remains the same. From these 3 positions it’s clear that it is like a magnetic field of uniform strength rotating. The speed of rotation of the magnetic field is known as synchronous speed.</p>
+        <amp-img src="InductionMotor/Rotating_Magnetic_filed.jpg" width="693" height="211" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig.5 Rotating magnetic field produced over simplified winding</h5>
+        <h2>The Effect of RMF on a Closed Conductor</h2>
+        <p>Assume you are putting a closed conductor inside such a rotating magnetic field. Since the magnetic field is fluctuating an E.M.F will be induced in the loop according to Faraday’s law. The E.M.F will produce a current through the loop. So the situation has become as if a current carrying loop is situated in a magnetic field. This will produce a magnetic force in the loop according to Lorentz law, So the loop will start to rotate.</p>
+        <amp-img src="InductionMotor/simple_coil_rotating_induced_current.jpg" width="431" height="210" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:6 Effect of RMF on a closed conductor</h5>
+        <h2>The Working of an Induction Motor</h2>
+        <p>A similar phenomenon also happens inside an induction motor. Here instead of a simple loop, something very similar to a squirrel cage is used. A squirrel cage has got bars which are shorted by end rings.</p>
+        <amp-img src="InductionMotor/Squirrel_cage_rotor.jpg" width="375" height="250" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:7 Squirrel cage rotor which is the most commonly used one in induction motors.</h5>
+        <p>A 3 phase AC current passing through a Stator winding produces a rotating magnetic field. So as in the previous case, current will be induced in the bars of the squirrel cage and it will start to rotate. You can note variation of the induced current in squirrel cage bars. This is due to the rate of change of magnetic flux in one squirrel bar pair which is different from another, due to its different orientation. This variation of current in the bar will change over time.</p>
+         <amp-img src="InductionMotor/force_on_rotor.jpg" width="245" height="320" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:8 RMF produces a torque on rotor as in the simple winding case</h5>
+        <p>That’s why the name induction motor is used, electricity is induced in rotor by magnetic induction rather than direct electric connection. To aid such electromagnetic induction, insulated iron core lamina are packed inside the rotor.</p>
+         <amp-img src="InductionMotor/Rotor_construction.jpg" width="743" height="229" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:9 Thin layers of iron lamina which are packed in rotor</h5>
+        <p>Such small slices of iron layers make sure that eddy current losses are at a minimum. You can note one big advantage of 3 phase induction motors, as it is inherently self starting.<br>
+        You can also note that the bars of a squirrel cage are inclined to the axis of rotation, or it has got a skew. This is to prevent torque fluctuation. If the bars were straight there would have been a small time gap for the torque in the rotor bar pair to get transferred to the next pair. This will cause torque fluctuation and vibration in the rotor. By providing a skew in the rotor bars, before the torque in one bar pair dies out, the next pair comes into action. Thus it avoids torque fluctuation.</p>
+        <h2>The Speed of Rotation of a Rotor & the Concept of Slip</h2>
+        <p>You can notice here that the both the magnetic field and rotor are rotating. But at what speed will the rotor rotate?.To obtain an answer for this let’s consider different cases.</p>
+        <p>Consider a case where the rotor speed is same as the magnetic field speed. The rotor experiences a magnetic field in a relative reference frame. Since both the magnetic field and the rotor are rotating at same speed, relative to the rotor, the magnetic field is stationary. The rotor will experience a constant magnetic field, so there won’t be any induced e.m.f and current. This means zero force on the rotor bars, so the rotor will gradually slow down. But as it slows down, the rotor loops will experience a varying magnetic field, so induced current and force will rise again and the rotor will speed up. In short, the rotor will never be able to catch up with the speed of the magnetic field. It rotates at a specific speed which is slightly less than synchronous speed. The difference in synchronous and rotor speed is known as slip.</p>
+        <h2>Energy Transfer in the Motor</h2>
+        <p>The rotational mechanical power obtained from the rotor is transferred through a power shaft.
+        In short in an induction motor, electrical energy is enters via the Stator and output from the motor,the mechanical rotation is received from the rotor.</p>
+         <amp-img src="InductionMotor/power_out.jpg" width="447" height="260" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:10 Power transfer in a motor</h5>
+        <p>But between the power input and output, there will be numerous energy losses associated with the motor. Various components of these losses are friction loss, copper loss, eddy current and hysteresis loss. Such energy loss during the motor operation is dissipated as heat, so a fan at the other end helps in cooling down the motor.</p>
+        <amp-img src="InductionMotor/cooling_fan.jpg" width="394" height="260" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:11 A cooling fan is used to remove heat liberated by motor</h5>
+        
+       <br>
+        </center>  
+     </div>
+
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+<div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>wind turbine design</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <link rel="icon" href="favicon/fv1.png">
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/wind-turbine-design.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+   h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;}  
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+   <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+  <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<br>
+<div class="res">
+    <center>
+        <h1>Wind Turbine Design</h1>
+         <div class="post-date">April 24, 2014</div>
+        <p>Primary objective in wind turbine design is to maximize the aerodynamic efficiency, or power extracted from the wind. But this objective should be met by well satisfying mechanical strength criteria and economical aspects. In this video we will see impact of number of blades, blade shape, blade length and tower height on wind turbine design.</p>
+        <amp-youtube width="611" height="411" data-videoid="p5k2LhKBSgQ" layout="responsive"></amp-youtube>
+        <p>Check following article to know more on wind turbine design aspects.</p>
+        <h2>Effect of Number of Blades</h2>
+         <p>As the number of blades in the wind turbine increases aerodynamic efficiency increases, but in a diminishing manner. When we move from 2 blades to 3 blades design efficiency gain is about 3%. But as we move from 3 blades to 4 blades design, efficiency gain is marginal.</p>
+        <amp-img src="Wind-turbine-design/effect_of_number_of_blades.jpg" width="617" height="300" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:1 :Efficiency gain as number of blades in wind turbine is increased</h5>
+        <p>As we increase number of blades, cost of the system increases drastically. Along with that mechanical design of blades also becomes a difficult affair. With more number of blades, blades should be thinner to be aerodynamically efficient. But blades with thinner portion at the root may not withstand bending stress induced due to axial wind load. So generally wind turbines with 3 blades which can accommodate a thicker root cross-section are used.</p>
+         <amp-img src="Wind-turbine-design/thicker_root_blade.jpg" width="365" height="250" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:2:Thicker_root_blade</h5>
+        <h2>Wind Turbine Blade Design</h2>
+        <p>The next big factor which is affecting performance of wind turbine is shape and orientation of blade cross section.
+         A moving machine experiences fluid flow at a different velocity than the actual velocity. It is called as relative or apparent velocity. Apparent velocity of flow is difference between actual flow and blade velocity. Absolute velocity of the flow is shown in first figure, while apparent velocity in the second figure. It is clear that apparent velocity of flow is vectorial difference between actual and blade velocity. The vector difference is shown in the first figure at a particular cross section. A rotating blade will experience an apparent velocity of flow.</p>
+         <amp-img src="Wind-turbine-design/absolute_apparent_velocity.jpg" width="700" height="250" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:3 Absolute  and apparent velocity of wind</h5>
+        <p>A close look at wind turbine blade will reveal that, it is having airfoil cross sections from root to tip. The driving force of wind turbine is, lift force generated, when wind flows over such airfoils. Lift force will be perpendicular to apparent velocity. Generally lift force increases with angle of attack. Along with that undesirable drag force also increases. While tangential component of lift force supports blade rotation, drag force opposes it. So a wind turbine can give maximum performance, when lift to drag ratio is maximum. This is called as, optimum angle of attack. Airfoil cross sections are aligned in a way to operate at this optimum angle of attack.</p>
+        <amp-img src="Wind-turbine-design/lift_force_wind_turbine_blade.jpg" width="547" height="250" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:4 Lift_force_wind_turbine_blade</h5>
+        <p>Even though flow velocity is uniform along the length of the blade, blade velocity increases linearly as we move to the tip. So angle and magnitude of relative velocity (apparent velocity) of wind varies along the length of the blade. Apparent velocity becomes more aligned to chord direction as we move to the tip.</p>
+        <amp-img src="Wind-turbine-design/change_apparent_velocity.jpg" width="326" height="300" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:5 Change_apparent_velocity</h5>
+        <p>So there should be a continuous twist in the blade, so that at every airfoil cross section angle of attack is optimum.</p>
+        <h2>Pitching of Blades</h2>
+        <p>Wind condition can change at any time. So it is also possible to rotate wind turbine blades in its own axis, in order to achieve optimum angle of attack with varying wind condition. This is known as pitching of blades. A clever algorithm which uses wind condition and characteristics of wind turbine as input, governs the pitch angle for the maximum power production.</p>
+         <amp-img src="Wind-turbine-design/pitch_control.jpg" width="252" height="260" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:6 Schematic of algorithm which governs blade pitching</h5>
+        <h2>Blade Length</h2>
+        <p>Next big factor affecting performance of wind turbine is length of the blade. As we discussed in first video lecture, power extracted by the wind turbine varies according to this equation. So it is clear that, a longer blade will favor the power extraction. But, with increase in blade length, deflection of blade tip due to axial wind force also increases. So blind increase in length of the blade may lead to dangerous situation of collision of blade and tower.</p>
+         <amp-img src="Wind-turbine-design/bending_of_blade.jpg" width="166" height="300" class="img-responsive" layout="intrinsic"></amp-img>
+        <h5>Fig:7 Blade bending due to wind load acting on it</h5>
+        <p>With increase in blade length tip velocity increases. Noise produced by the turbine is a strong function of tip velocity. So, it is not permissible to increase blade length after a limit. Other factor which goes against long blades is requirement of huge mechanical structures which leads to heavy investment.</p>
+        <h2>Determination of Tower Height</h2>
+        <p>Most critical factor of wind turbine design is determination of proper tower height. Power input available for wind turbine varies as cube of wind speed. So a small change in wind speed will have huge effect on power production. A typical wind speed increase from ground level is shown in figure. So from power extraction point of view, it is desired to have tower height as high as possible. But difficulty in road transportation and structural design problems put a limit on maximum tower height possible.</p>
+         <amp-img src="Wind-turbine-design/tower_height_altitude.jpg" width="297" height="250" class="img-responsive" layout="intrinsic"></amp-img>   
+        <h5>Fig:8 Tower_height_altitude</h5>     
+                     
+                <br>
+        </center>
+        </div>
+        
+        <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+    <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+    </body>
+</html>

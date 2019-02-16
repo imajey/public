@@ -1,0 +1,247 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>theory of vibration</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+          <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+         <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+        <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/theory-of-vibration.html">
+    <style amp-custom>
+ html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+     <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+    <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+  <header class="header">
+    <a href="index.html">
+         <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+       
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+    <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+<div class="res">
+    <center>
+        <h1>Theory of Vibration</h1>
+         <div class="post-date">December 4, 2012 </div>
+         <p>The way material vibrates under given condition is an important aspect of design of civil structures or mechanical equipment. Historically unexpected failures of bridges and columns have happened because designers did not consider effect of vibration. In this tutorial you will understand fundamentals of vibration and will learn how to apply it in mechanical / civil design you undertake.</p>
+         
+         
+         <amp-youtube width="611" height="411" data-videoid="DMlLEZMXOmc" layout="responsive"></amp-youtube>
+         
+        <p>Summary of above lecture along with industrial application and career opportunities in the field of vibration are given below.</p>
+        <h2>A Simple Experiment to Understand Nature of Vibration</h2>
+        <p>Consider following spring-mass system. First spring is given a small initial stretch second spring is given more stretch. If you measure time period of oscillation for both the cases you can find it is same! Both are having a time period of 6.28 s.</p>
+        <amp-img src="Theory-of-vibration/spring-mass-system.gif" width="314" height="264"  layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1 Different initial stretch is given to the same spring-mass system and time period is measured</h5>
+        <p>This is one big characteristic of vibrating systems, time period of oscillation does not depend upon initial stretch you give, it is a property of the system. More commonly used term used in vibrating world is frequency, which is defined as follows.</p>
+     <amp-img src="Theory-of-vibration/naturarl_frequency.gif" width="61" height="34"  layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Where T is time period of oscillation. Or one could say frequency of oscillation is a property of the system. More precise term is natural frequency, since the system is made up of only stiffness and inertial components. This is true even for a complicated system, say a bridge, chimney or an electronic circuit. All of them has got a property called natural frequency</p>
+        <h2>Mathematical Analysis</h2>
+        <p>One can do mathematical analysis of any vibrating system with help of Newton’s 2nd law of motion. Newton’s second law motion when applied on mass lead to following differential equation.</p>
+        <amp-img src="Theory-of-vibration/1_vibrating_eqn.gif" width="76" height="31"  layout="intrinsic" class="img-responsive"></amp-img>
+        <p>This equation has got many solutions, solution of highest significance is given below.</p>
+        <amp-img src="Theory-of-vibration/2_general_solution.gif" width="135" height="52"  layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Where A is initial stretch given to the spring. Graphically it is represented as shown in below.</p>
+        
+       <amp-img src="Theory-of-vibration/3_graphical_repres.gif" width="289" height="175"  layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:2 Graphical representation of motion of spring-mass system</h5>
+        <p>Where Y is measured downward from equilibrium line, a line where at which gravitational force and spring force are balanced (represented by blue dotted line). Time period of oscillation and angular frequency can be derived from equation above as</p>
+        
+        <amp-img src="Theory-of-vibration/4_time_period.gif" width="81" height="35"  layout="intrinsic" class="img-responsive"></amp-img>
+        <p>So for a simple spring-mass system frequency of vibration is a function of mass and spring constant.If you substitute values of spring constant and mass of previous experiment in above equation time period of vibration can be obtained as 6.28s.</p>
+        <h2>Effect of Damping on Vibration</h2>
+        <p>You can notice that vibration of mass continues forever in previous case, it never dies out. But this is not a practical case, what do you see in practice is something like this.
+        Amplitude of oscillation decreases with time and it finally dies out. Here we have to consider effect of air viscous force on mass in order to simulate this problem more accurately. Damping causes continuous energy loss to the system, as system loses its energy amplitude of oscillation decreases.</p>
+        <amp-img src="Theory-of-vibration/5_damping.gif" width="379" height="253"  layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig.3 Amplitude vibration decreases in an actual case due to effect of air viscous force</h5>
+        <p>Forces acting on mass in this case shown in figure below in blue arrows. Here spring force and viscous(damping) forces are acting on the mass, damping force is proportional velocity of mass with opposite sign of velocity. Effect of air viscous force can be represented as a single viscous dash port as shown.</p>
+          <amp-img src="Theory-of-vibration/9_viscous_representation.gif" width="195" height="288"  layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:4 Forces acting on a damped vibration case</h5>
+        <p>Mathematical solution of this problem can be obtained by applying Newton’s 2nd law of motion to the system. The differential equation so obtained will be</p>
+         <amp-img src="Theory-of-vibration/8_damping_equation.gif" width="30" height="35"  layout="intrinsic" class="img-responsive"></amp-img>
+        <p>It has got one more term compared to simple spring-mass system case, a term to incorporate viscous force on mass.</p>
+        <h2>Critical and Over Damping</h2>
+        <p>Now let us use a highly viscous fluid around the mass instead of air. Here you can find that vibration dies out much faster and tendency of oscillation has decreased. As you increase viscosity of fluid further tendency for oscillation further decreases. So there will be a limiting viscosity where oscillatory behavior of mass completely disappears. This phenomenon is known as critical damping, where the mass goes back to its equilibrium position without any oscillation.</p>
+         <amp-img src="Theory-of-vibration/6_damping_high_viscous.gif" width="939" height="162"  layout="intrinsic" class="img-responsive"></amp-img> 
+        <h5>Fig:5 As viscosity of surrounding fluid is increased tendency for oscillation decreases and finally a case with no oscillation is reached</h5>
+        <p>Coefficient of viscosity required for achieving critical damping is given by</p>
+          <amp-img src="Theory-of-vibration/7_critical_damping.gif" width="83" height="19"  layout="intrinsic" class="img-responsive"></amp-img>
+        <p>You can further increase viscosity of surrounding, even above critical damping limit and notice that here also mass goes to equilibrium position without any oscillation. This condition is known as overdamped.</p>
+        <h2>Effect of External Force – Resonance</h2>
+        <p>When an oscillating external force is applied on mass nature of vibration will change dramatically. Here oscillating frequency will be same external force frequency, it is not related natural frequency of the system. Amplitude of the oscillation is not the initial stretch given by the user, but it will be strong function of external frequency and natural frequency. Amplitude of oscillation will become very high when external frequency and natural frequency values are very close.If external force frequency is same as natural frequency of material it will result in a phenomenon called resonance, where amplitude of oscillations become so high and it will eventually result in damage of material.</p>
+        <h2>Industrial Applications</h2>
+        <h3 style="text-align:justify;">1.The Intriguing problem of Chimney Collapse</h3>
+        <p>Have you ever noticed rings at top of a chimney? What does it signify? We will go through an incident which happened almost 100 years back. A chimney which conforms to mechanical strength requirement was erected in England in 1900s. But surprising engineers who built it,the structure collapsed one day. An enquiry was launched to investigate what went wrong in design of the chimney. After a detailed research the enquiry commission came up with a startling report. Their conclusion was like this.The collapse happened because designers did not consider effect of vibration / resonance of chimney. When wind blows across chimney during a particular wind speed range a phenomenon called Vortex shedding happens behind the chimney, here flow vortexes appear and disappear at a particular frequency. This will induce fluctuating force of same frequency on chimney. If frequency of vortex shedding is same as natural frequency of material of construction this will lead to resonance. At resonance amplitude of oscillation becomes so large that structure finally collapses. That exactly what happened for the chimney.So what could be a solution for this danger. The obvious answer is prevent Vortex shedding phenomenon, so that the chimney will not vibrate. And the rings you see on chimney are vortex breakers, which will distract the flow and spoil vortex formation behind chimney.</p>
+        <h3 style="text-align:justify;">2.Why do they spend lot of time on mass balancing?</h3>
+        <p>Even if you fabricate a rotating component at high precision level there will be mass imbalance in the rotor. Centrifugal force generated by this mass imbalance is equivalent to a forced vibration case. If you do not balance this imbalance by a counter mass, it will result in vibration and damage of rotor.</p>
+        <h2>How to build a career in field of Vibration?</h2>
+        <p>Excited about field of vibration? Do you want a build career in this filed ? If answers to these questions are Yes, then an exciting world of NVH (Noice,Vibration & Harshness) is awaiting you. There are 2 different career streams available according to your interest</p>
+        <h4 style="text-align:justify;">1.Experimental analysis and Development</h4>
+        <ul style="text-align:justify;">
+            <li style="list-style-type:disc;">Balancing of rotating components</li>
+            <li style="list-style-type:disc;">Noise testing</li>
+        </ul>
+        <h4 style="text-align:justify;">2.FEA based simulation and Development</h4>
+        <p>You can simulate almost all the things you do experimentally in computers using FEA. So it is obvious that you have to have a strong knowledge in Finite Element Analysis in order to enter this job domain. Anyway before you start dreaming on this careers first thing you have to do is gain more in-depth knowledge on vibration. Hope from this website you got a good introduction to this filed. Now its time to go through some standard text books and learn more on this field.</p>
+        
+     </center><br>
+    </div>
+        <amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+    <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+    </body>
+</html>

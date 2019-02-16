@@ -1,0 +1,226 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>principal stress plane mohr circle</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+       <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+        <link rel="canonical" href="https://learnengineering.org/principal-stress-plane-mohr-circle.html">
+    <style amp-custom>
+   html p{font-family:Open Sans;line-height: 30px;text-align: justify;}
+        
+    h1, h2, h3, h4{font-family: Dosis;text-align:justify;}
+        
+    h5{font-family: Lato; color:#58595b;margin-top:10px;}
+        
+    .post-date{font-family:Lato;color:deepskyblue;text-align:justify;}
+        
+    li {list-style-type: none;}
+        
+    li a{color: white;text-decoration: none;}
+        
+    header{background-color:#333333;height:85px;width:100%;}  
+        
+    header h3{color:white;}
+        
+    .header a{text-decoration: none;}
+        
+    header amp-img{margin-left:-15px;margin-top:7px;}
+        
+    button.collapse{margin-top:-75px;margin-right:0px;padding: 15px;background-color:transparent;border: none;float:right;outline:none;}
+        
+    ul li a{font-family:Open sans;font-weight: 500;color: white;font-size: 15px;}
+        
+   .res{max-width: auto;margin-left:6%;margin-right: 6%;display: block;} 
+        
+   .img-responsive{max-width: 100%;margin: 0 auto;}
+        
+    .img-responsive amp-img{object-fit:contain;}
+        
+    amp-youtube{margin-left:25%;margin-right:25%;display: block;object-fit:contain;}
+        
+    .row{display:flex;}
+        
+    .row .col-1{margin-left: 5%;margin-right: 5%;} 
+    
+        /****MEDIA QUERY****/    
+        
+    @media only screen and (max-width:650px){
+    .row{display:block;}
+    h2{font-size: 20px;font-weight: 400;}
+    h1{font-size: 24px;font-weight: 450;}
+    html p{line-height:24px;font-size: 14.7px;} 
+    .res{margin-left:4%;margin-right:4%;}
+    header{height: 69px;} 
+   header amp-img{margin-top: 8px;width:250px;height:50px;margin-left:-10px;}    
+    button.collapse{margin-top: -65px;}}
+        
+    @media only screen and (max-width:900px){
+        amp-youtube{margin-left:5%;margin-right:5%;display: block;object-fit:contain;}}
+        
+    /*****SCROLL TO TOP****/    
+    :root {
+     /* --color-primary:grey;*/
+      --color-secondary: #00DCC0;
+      --color-text-light: #fff;
+      --space-2: 1rem;  
+      --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+    .scrollToTop {font-size: 1.5em;width: 50px;height: 50px;border:none;outline:none;background: var(--color-primary);z-index: 9999;  bottom: var(--space-2);right: var(--space-2);position: fixed;opacity: 0;visibility: hidden;}
+    .target {position: absolute;}
+    .target-anchor {position: absolute;top: -72px;left: 0;} 
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body style="background-color:rgb(250, 250, 250);">
+        <h3 class="target">
+    <a class="target-anchor" id="top"></a>
+    <amp-position-observer
+      on="enter:hideAnim.start; exit:showAnim.start"
+      layout="nodisplay">
+    </amp-position-observer>
+  </h3>
+        <amp-auto-ads type="adsense"
+              data-ad-client="ca-pub-2737347269754935">
+        </amp-auto-ads>
+ <header class="header">
+    <a href="index.html">
+        <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+        </a>
+     </header>
+ <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2"><h3 style="color:white;font-size:20px;margin-top:-2px;">&#x2630;</h3></button>
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+      <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50"></amp-img></a></li>
+  </ul>
+</amp-sidebar>
+<!---->
+
+<div class="res">
+    <center>
+        <h1>Principal stress, Principal plane & Mohr’s circle analysis</h1>
+         <div class="post-date">January 2, 2013</div>
+         <p>Concepts of principal stress and plane form backbone of material stress analysis. Purpose of this video lecture is to give you a good introduction to concept of Principal stress, Principal plane and Mohr’s circle analysis.</p>
+         
+        <amp-youtube width="611" height="411" data-videoid="Yf59PPHM-eA" layout="responsive"></amp-youtube>
+        <p>Summary of the video lecture is given below</p>
+        <h2>Summary of Lecture</h2>
+        <p>1.Engineers most often wants to determine maximum normal stress induced at a given point for their design purpose. But there can be infinite number of planes passing through a point, and normal stress on each plane will be different from one another.</p>
+        <p>2.There will be one plane on which normal stress value is maximum, this plane is known as Principal plane ( more precisely maximum principal plane) and normal stress on this plane is known as principal stress (more precisely maximum principal stress).</p>
+        <p>3.Similarly there will be one more plane on which normal stress value is minimum, this is also a principal plane (minimum principal plane) and normal stress on this plane is known as Principal stress (minimum principal stress).</p>
+        <p>4. 2-Dimensional Stress Analysis – Stress acting on a 2D element is shown in figure below</p>
+        <amp-img src="Principal-stress-Principal-plane/2Dstress.gif"  width="434" height="311" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:1 Stress boundary conditions on a 2 dimensional element</h5>
+        <p>1.Mohr’s circle method is the most easy and convenient way to do stress analysis</p>
+        <p>2.The procedure to draw Mohr’s circle for above case is explained below</p>
+        <p>Step1 – Draw normal and shear axes with positive axes as shown</p>
+        <amp-img src="Principal-stress-Principal-plane/axes.gif"  width="451" height="271" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:2 Normal and shear axes of a Mohr circle</h5>
+        <p>Step2 – Mark normal stress values with sign convention, tensile stress is positive and compression stress is negative</p>
+         <amp-img src="Principal-stress-Principal-plane/normal_stress.gif"  width="450" height="269" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:3 Marking normal stress values on normal axis</h5>
+        <p>Step3 – Draw shear stress values starting from already marked normal stress points.</p>
+         <amp-img src="Principal-stress-Principal-plane/shear_stress.gif"  width="447" height="265" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:4 Drawing shear stress values</h5>
+        <p>Step4 – Connect end of shear stress lines</p>
+        <amp-img src="Principal-stress-Principal-plane/diagon.gif"  width="447" height="265" layout="intrinsic" class="img-responsive"></amp-img>
+        <p>Step5 – Draw Mohr’s circle assuming the connection line as diameter of the circle</p>
+         <amp-img src="Principal-stress-Principal-plane/mohr_circ.gif"  width="442" height="269" layout="intrinsic" class="img-responsive"></amp-img>
+        
+        <p>Step6 – Stress Analysis on Mohr circle – To get normal and shear stress values at any plane theta, take angle 2theta in Mohr circle starting from diagonal of the circle and locate a peripheral point as as shown. Shear stress value will be Y axis value and normal stress value will be X axis value.</p>
+         <amp-img src="Principal-stress-Principal-plane/mohr_circ_anal.gif"  width="453" height="271" layout="intrinsic" class="img-responsive"></amp-img>
+        <h5>Fig:7 Stress boundary conditions in a 3 dimensional  body and normal stress values induced in it</h5>
+        
+        <p>3-Dimensional Stress Analysis – Stress boundary condition of a 3 dimensional case is shown in left side of Fig.7. There will be 3 normal stress values induced in a 3 dimensional case, this is shown in right size of the figure.</p>
+        <p>There is no graphical method for 3 Dimensional stress analysis, instead we have to use analytical method for this. Values of Principal stress in a 3 dimensional systems are given by solution of following equation.</p>
+     <amp-img src="Principal-stress-Principal-plane/3d-principal-stress-equation.gif"  width="201" height="23" layout="intrinsic" class="img-responsive"></amp-img> 
+        <p>Where values of stress invariants I1,I2 and I3 are given by</p>
+       <amp-img src="Principal-stress-Principal-plane/stress_invariants.gif"  width="409" height="91" layout="intrinsic" class="img-responsive"></amp-img>   
+        <h2>Application of Principal Stresses</h2>
+        <p>Values of principal stresses at a given point is vital design information. Material failure theories extensively use this data to predict whether the design will withstand given load at a specified location.</p>
+     </center><br>
+    </div>
+     
+<amp-animation id="showAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+        "duration": "1000ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "1", "visibility": "visible" }
+             ]
+           }
+         ]
+      }
+    </script>
+  </amp-animation>
+<amp-animation id="hideAnim" layout="nodisplay">
+    <script type="application/json">
+      {
+       "duration": "200ms",
+         "fill": "both",
+         "iterations": "1",
+         "direction": "alternate",
+         "animations": [
+           {
+             "selector": "#scrollToTopButton",
+             "keyframes": [
+               { "opacity": "0", "visibility": "hidden" }
+             ]
+           }
+         ]
+     }
+    </script>
+  </amp-animation>
+ <button id="scrollToTopButton" on="tap:top.scrollTo(duration=600)" class="scrollToTop" style="color:white;background-color:grey;">⌃</button>
+  <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div>
+        
+    </body>
+</html>
