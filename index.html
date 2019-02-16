@@ -1,0 +1,744 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <link rel="icon" href="favicon/fv1.png">
+        <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+        <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+        <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+        <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org">
+    <style amp-custom>
+   /*html p{
+        font-family:Open Sans;
+        line-height: 30px;  
+        font-size: 16px;
+        text-align: justify;
+        }*/
+    h1, h2, h3, h4, h5{
+        font-family: Dosis;}
+        
+    h6{
+       font-weight: 510;
+        font-size: 15px;
+        font-family:Open sans;
+        }
+    body{
+        padding:0;
+        margin:0;
+    }    
+    .ampTabContainer {
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .tabButton[selected]{
+        outline: none;
+        color: black;
+        background-color: none;
+    }
+    .tabButton{
+        font-family:Open Sans;
+        font-size: 17px;
+        font-weight:520;
+        outline: none;
+        list-style: none;
+        flex-grow:1;
+        text-align: center;
+        cursor:pointer;
+        color:gray;
+        }
+    .tabButton:hover{
+        color: black;
+        }
+    .tabContent{
+        z-index: 0;
+        display: none;
+        width: 100%;
+       -webkit-transition: all 350ms ease;
+        transition: all 350ms ease;
+        order: 1;/* must be greater than the order of the tab buttons to flex to the next line */
+    }
+    .tabContent.tc{
+        margin: 0;
+        margin-top:3%;
+        margin-left:13%;
+        margin-right:13%;
+        margin-bottom:3%;
+    }   
+    .tabButton[selected]+.tabContent{
+        display:inline-block;
+    }  
+    amp-selector [option][selected] {
+       cursor: auto;
+       outline:none;
+       font-weight: 500;
+    }
+   .tabContent.tc figure{
+        max-width: 100%;
+        width: 100%;
+        height:auto;    
+        }
+   
+    li {
+        list-style-type: none;
+    }
+    li a{
+        font-family:Open sans;
+        color: white;
+        text-decoration: none;
+    }
+    header h3{
+        color:white;
+    }
+    .header a{
+        text-decoration: none;
+    }  
+    header{
+        background-color:#333333;height:85px;width:100%;    
+        } 
+    header amp-img{
+    margin-left:-15px;margin-top:8px;        
+        }
+    ul li a{font-family:Open sans;color:white;font-size: 15.2px; font-weight: 540;font-style: bold;}
+    .tabContent{
+        column-count:3;
+        column-gap: 0.2rem;
+        margin: 1rem 0;
+    }
+        
+/*media query*/
+   @media only screen and (max-width:1220px){
+   .tabContent{
+        column-count: 2;
+        column-gap: 0.2rem;
+        margin: 1rem 0;
+    }
+    .tabContent.tc{
+           margin-left: 7%;
+           margin-right: 7%;
+    }
+    }
+    @media only screen and (max-width:650px){
+    .tabContent{
+        column-count: 1;
+        column-gap: 0.2rem;
+        margin: 1rem 0;
+        }
+    .tabContent .tc{
+        margin-left: 7%;
+        margin-right:7%;
+       }
+    .tabButton{
+        padding: 0px 25px 11px 13px;
+        font-weight: 400px;
+        }
+    header{
+        height: 65px;
+        }  
+    header amp-img{
+        margin-top: 7px;
+        width:250px;
+        height:50px;
+        margin-left: -10px;
+        }    
+    }
+   @media only screen and (max-width:480px){
+    .tabContent{
+        column-count: 1;
+        column-gap: 0.2rem;
+        margin: 1rem 0;
+    }
+    .tabContent.tc{
+        margin-left: 7%;
+        margin-right: 7%;
+       }
+    }  
+    @media only screen and (max-width:320px){
+    .tabContent{
+        column-count: 1;
+        column-gap: 0.2rem;
+        margin: 1rem 0 ;
+        }
+    .tabContent.tc{
+        margin-left: 6%;
+        margin-right:6%;}
+    }  
+    h6{
+       position: absolute;
+        opacity: 0;
+        transition: opacity;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+       }
+        .tabContent.tc a.link-1{
+         position: relative;   
+        } 
+        
+    .tabContent.tc a.link-1:hover h6{
+        opacity: 1;
+        bottom: 30px;
+        transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+        .tabContent.tc a.link-1:hover .img-responsive{
+        opacity: 0.5;
+        transition-delay: 0.5s; transition-duration: 0.6s;
+        transition: all 350ms ease;
+        }
+      
+        
+      :root {
+    --color-primary: #005AF0;
+    --color-secondary: #00DCC0;
+    --color-text-light: #fff;
+
+    --space-2: 1rem;   /* 16px */
+
+    --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  }
+  .scrollToTop {
+    color: var(--color-text-light);
+    font-size: 1.4em;
+    box-shadow: var(--box-shadow-1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: var(--color-primary);
+    z-index: 9999;
+    bottom: var(--space-2);
+    right: var(--space-2);
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .spacer {
+    width: 100vw;
+    max-width: 700px;
+    height: 200vh;
+    background-color: var(--color-secondary);
+  }
+  /* we move the anchor down to componsate the fixed header */
+  .target {
+    position: relative;
+  }
+  .target-anchor {
+    position: absolute;
+    top: -72px;
+    left: 0;
+  }   
+    h5{
+    display:none;
+    font-family: Lato;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;}   
+  
+@media only screen and (max-width:650px){
+     h6.Link-2{
+       display: none;
+    }     
+     
+    h5.Link-3{
+       display: block;
+        font-weight: normal;
+    } }    
+        
+
+
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+<body>
+
+
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:30px; width:250px;">
+  <amp-img class="amp-close-image"
+    src="https://png.pngtree.com/svg/20170808/close_button_199715.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550;"></amp-img>
+  <ul style="padding-left:0;">
+    <li style="color:white"> <a href="Be-our-dubbing-partner.html" style="line-height:35px;">Be our dubbing partner</a></li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white;display:none;">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text  width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="display:none;">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+    <li style="color:white;"><a href="get-your-project-done.html" style="line-height:35px;">Get your project done</a></li>
+    <li style="color:white;"><a href="About-us.html" style="line-height:35px;">About us</a></li>
+      <li style="color:white;"> <a href="Contact-us.html" style="line-height:35px;">Contact us</a></li>
+     <li style="color:white;margin-left:-16px;"><a href="https://www.youtube.com/LearnEngineering" target="_blank"><amp-img src="Logo/youtube_logo_2.png" width="128" height="50" layout="intrinsic"></amp-img></a></li>
+     </ul>
+   </amp-sidebar>
+
+
+
+
+<header class="header">
+    <a href="#">
+      <amp-img src="Logo/final-logo-02.png" width="320" height="64" layout="intrinsic" class="home"></amp-img>
+    </a>
+      
+    <button class="collapse" on="tap:sidebar.toggle"class="ampstart-btn caps m2" style="float:right;
+    margin-top:5px;
+    margin-right:-10px;
+    padding: 20px;
+    background-color:transparent;
+    border:none;outline:none;"><h3 style="color:white;font-size:20px;margin-top: -5px;">&#x2630;</h3></button>
+    </header>
+
+<br>
+<br>
+<center>
+<amp-selector role="tablist"
+  layout="container"
+  class="ampTabContainer">
+    <div role="tab"
+    class="tabButton"
+    selected
+    option="a">Automobile Engineering<sup>8</sup></div>
+    <div role="tabpanel"
+    class="tabContent tc">
+    
+        <a href="how-does-an-electric-car-work.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Electric-car/Electric-Car-new585.png" alt="Helicopter"  width="584" height="585" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;" class="Link-2">How does an electric car work</h6>
+             <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="2000ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" data-margin-start="20%" data-margin-end="30%">How does an electric car work</h5>
+        </a>
+        
+         <a href="manual-transmission-how-it-works.html" target="_blank"  class="link-1" style="text-decoration:none;">
+            <amp-img src="Manual-Transmission/mannual-transmission01.png"  alt="Electric-Car-new" width="585" height="732" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;" class="Link-2">Manual transmission how it works</h6>
+            <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="2200ms" data-margin-start="25%" data-margin-end="30%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Manual transmission how it works</h5>
+            </a>
+         <a href="working-of-a-limited-slip-differential.html" target="_blank"  class="link-1" style="text-decoration:none;">
+            <amp-img src="LSD/Working-LSD.png" alt="Transformer" width="585" height="726" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;" class="Link-2">Working of a limited slip differential</h6>
+            <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="2600ms" data-margin-start="30%" data-margin-end="40%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Working of a limited slip differential</h5>
+        </a>
+
+       <a href="How-does-torque-converter-work.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Torque-Converter/Torque-converter.png" alt="Torque-converter" width="585" height="711" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;" class="Link-2">How does torque converter work</h6>
+            
+            <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="2500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)"  data-margin-start="40%" data-margin-end="50%" class="Link-3">How does torque converter work</h5>
+        </a>
+         
+      <a href="torsen-differential-how-does-it-work.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Torsen-Differntial/Toresen-Differential.png" alt="Toresen-Differential" width="585" height="710" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;"class="Link-2">Torsen differential how does it work</h6>
+            
+            <h5 style="font-size:18px;color:black;"class="Link-3" amp-fx="fade-in" data-duration="2800ms" data-margin-start="18%" data-margin-end="30%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">Torsen differential how does it work</h5>
+        </a>
+            
+      
+      
+      <a href="how-does-a-differential-work.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Differntial/differntial.png" alt="Working-LSD" width="585" height="712" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;"class="Link-2">How does a differential work</h6>
+            
+             <h5 style="font-size:18px;color:black;"class="Link-3" amp-fx="fade-in" data-duration="2800ms" data-margin-start="15%" data-margin-end="27%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">How does a differential work</h5>
+        </a>
+     
+          <a href="how-does-clutch-work.html" class="link-1" style="text-decoration:none;">
+            <amp-img src="Clutch/Clutch.png" alt="Clutch" width="585" height="842" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;"class="Link-2">How does an clutch work</h6>
+            
+            <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="2800ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)"  data-margin-start="16%" data-margin-end="28%">How does an clutch work</h5>
+        </a>
+     
+       <!--<a href="how-does-a-transformer-work.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Transformer/Transformer.png" alt="Toresen-Differential" width="585" height="710" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;"class="Link-2">How does a transformer work</h6>
+            
+            <h5 style="font-size:18px;color:black;"class="Link-3" amp-fx="fade-in" data-duration="2800ms" data-margin-start="18%" data-margin-end="30%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">How does a transformer work</h5>
+        </a>-->
+    <div hidden id="seedata" style="display:none;">
+     
+     <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb.jpg" width="584" height="585" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work3_thumb_masonry.jpg" width="585" height="711" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3> </amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work10_thumb_masonry.jpg" width="585" height="842" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work11_thumb_masonry.jpg" width="585" height="732" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb_masonry.jpg" width="585" height="973" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work7_thumb_masonry.jpg" width="585" height="710" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work6_thumb_masonry.jpg" width="585" height="726" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb_masonry.jpg" width="585" height="712" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb.jpg" width="585" height="584" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+    </div>
+     <div role="button" tabindex="" on="tap:seedata.toggleVisibility" style="bottom:0;left:0;position:absolute;font-size:16px;color:black;display:none;">
+     SEE-MORE/LESS</div>
+    </div>
+      
+       <!--CAT-2----> 
+    <div role="tab"
+    class="tabButton"option="b">Electronic Engineering<sup>1</sup></div>
+     <div role="tabpanel"class="tabContent tc">
+   <a href="how-does-an-inverter-work.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Inverter/inverter.png" alt="inverter" width="584" height="585" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;" class="Link-2">How does an inverter work</h6>
+            <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="1000ms" data-margin-start="10%" data-margin-end="20%" class="Link-3">How does an inverter work</h5>
+        </a>
+        
+     <amp-img src="Torque-Converter/711.png" width="585" height="732" layout="intrinsic" style="display:none"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3> </amp-img>
+      <amp-img src="Torque-Converter/711.png" width="585" height="726" layout="intrinsic" style="display:none"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="Torque-Converter/711.png" width="585" height="711" layout="intrinsic" style="display:none"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="Torque-Converter/711.png" width="585" height="973"layout="intrinsic" style="display:none"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="Torque-Converter/711.png" width="585" height="712"layout="intrinsic" style="display:none"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="Torque-Converter/842.png" width="585" height="842"layout="intrinsic" style="display:none"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="Torque-Converter/711.png" width="585" height="710"layout="intrinsic" style="display:none"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="Torque-Converter/711.png" width="585" height="584"layout="intrinsic" style="display:none"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      
+    <div hidden id="seedata1" style="display:none;">
+     <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb.jpg" width="584" height="585" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work3_thumb_masonry.jpg" width="585" height="711" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3> </amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work10_thumb_masonry.jpg" width="585" height="842" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work11_thumb_masonry.jpg" width="585" height="732" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb_masonry.jpg" width="585" height="973" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work7_thumb_masonry.jpg" width="585" height="710" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work6_thumb_masonry.jpg" width="585" height="726" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb_masonry.jpg" width="585" height="712" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb.jpg" width="585" height="584" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+    </div>
+     <div role="button"tabindex="" on="tap:seedata1.toggleVisibility" style="bottom:0;left:0;position:absolute;font-size:16px;color:black;display:none;">SEE-MORE/HIDE
+     </div>     
+  </div>
+   
+    
+     <!--CAT-3---->
+    <div role="tab" class="tabButton" option="c">Electrical Machines<sup>8</sup></div>
+      <div role="tabpanel" class="tabContent tc">
+     <a href="understanding-rotating-magnetic-field-synchronous-speed.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Rotating-magnetic-field/3phase-winding-1.png" alt="3phase-winding-1" width="584" height="585" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;" class="Link-2">Understanding rotating-magnetic-field-synchronous-speedfly</h6>
+            
+            <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" data-margin-start="10%" data-margin-end="20%" class="Link-3">Understanding rotating-magnetic-field-synchronous-speedfly</h5>
+        </a>
+        
+    <a href="how-does-an-induction-motor-work.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="InductionMotor/induction-motor-1.png" alt="induction-motor-1" width="584" height="732" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;"class="Link-2">How does an induction motor work</h6>
+            
+            <h5 style="font-size:18px;color:black;"class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="15%" data-margin-end="25%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">How does an induction motor work</h5>
+        </a> 
+      
+          <a href="working-of-synchronous-motor.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Synchronus-motor/Synchronous-motor.png" alt="Synchronous-motor" width="584" height="726" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;"class="Link-2">Working of Synchronous Motor</h6>
+            
+             <h5 style="font-size:18px;color:black;"class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="20%" data-margin-end="30%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">Working of Synchronous Motor</h5>
+        </a> 
+       
+         <a href="brushless-dc-motor.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Brushless-Dc-Motor/DC-motor-brush-sparking-1.png" alt="DC-motor-brush-sparking-1" width="585" height="711" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;"class="Link-2">Brushless Dc Motor</h6>
+            
+             <h5 style="font-size:18px;color:black;"class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="25%" data-margin-end="35%"  data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">Brushless Dc Motor</h5>
+        </a> 
+       
+       <a href="rotating-magnetic-field-synchronous-speed-motor-single-phase.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Rotating-magnetic-field-single-phase/magnetic-field-rotate.png" alt="magnetic-field-rotate" width="585" height="973" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;"class="Link-2">Rotating Magnetic Field and Synchronous Speed | Single Phase Motors</h6>
+            
+             <h5 style="font-size:18px;color:black;"class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="25%" data-margin-end="35%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">Rotating Magnetic Field and Synchronous Speed | Single Phase Motors</h5>
+        </a>
+     
+       <a href="#" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Clutch/1-A-712.png" width="585" height="712" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:20px;color:black;" class="Link-2">Working of a LSD</h6>
+            
+             <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="35%" data-margin-end="45%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">Working of a LSD</h5>
+        </a>
+     
+       <a href="dc-motor-working.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="DC-Motor/DC-Motor-2.png" alt="DC-Motor-2" width="585" height="842" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;" class="Link-2">DC Motor, How it works ?</h6>
+            
+             <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="40%" data-margin-end="50%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">DC Motor, How it works ?</h5>
+        </a>
+     
+        <a href="working-of-single-phase-induction-motors.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Single-phase-induction-motor/1phase-induction-motor.png" alt="1phase-induction-motor" width="585" height="710" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;" class="Link-2">Single phase induction motor</h6>
+            
+            <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="45%" data-margin-end="55%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)"class="Link-3">Single phase induction motor</h5>
+        </a>
+       <a href="how-does-a-transformer-work.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Transformer/Transformer01.png" width="584" height="584" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;" class="Link-2">How does transformer work</h6>
+            
+            <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="50%" data-margin-end="60%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">How does transformer work</h5>
+        </a>
+     
+    <div hidden id="seedata2" style="display:none;">
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb.jpg" width="584" height="585" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work3_thumb_masonry.jpg" width="585" height="711" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3> </amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work10_thumb_masonry.jpg" width="585" height="842" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work11_thumb_masonry.jpg" width="585" height="732" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb_masonry.jpg" width="585" height="973" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work7_thumb_masonry.jpg" width="585" height="710" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work6_thumb_masonry.jpg" width="585" height="726" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb_masonry.jpg" width="585" height="712" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb.jpg" width="585" height="584" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+     </div>
+      <div role="button" tabindex="" on="tap:seedata2.toggleVisibility" style="bottom:0;left:0;position:absolute;font-size:16px;color:black;display:none;">SEE-MORE/HIDE</div>
+    </div>
+    
+    
+     <!--CAT-4---->
+    <div role="tab"
+    class="tabButton" option="d">Thermal And Fluid<sup>8</sup></div>
+    <div role="tabpanel" class="tabContent tc">
+    <a href="diesel-engine-vs-petrol-engine.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Diesel-engine-vs-patrol-egine/diesel-engine.png" alt="diesel-engine" width="585" height="584" layout="intrinsic" class="img-responsive"></amp-img>
+            <h6 style="font-size:18px;color:black;"class="Link-2">Diesel engine Vs Patrol engine</h6>
+            
+            <h5 style="font-size:18px;color:black;"class="Link-3" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">Diesel engine Vs Patrol engine</h5>
+            </a>
+            
+            
+     
+     
+      <a href="Working%20of%20Centrifugal%20Pumps.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Centrifugal-pump/centrifugal-pump.png" alt="centrifugal-pump" width="585" height="732" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Working of centrifugal pump</h6>
+      
+      <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="10%" data-margin-end="30%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">Working of centrifugal pump</h5>
+      </a>
+      
+      
+       <a href="how-does-a-thermal-power-plant-work.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Thermal-power-plant/thermal-power-plant.png" alt="thermal-power-plant" width="585" height="726" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">How does a Thermal power plant</h6>
+      
+       <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="20%" data-margin-end="40%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">How does a Thermal power plant</h5>
+      
+      </a>
+     
+     
+     <a href="wind-turbine-design.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Wind-turbine-design/wind-turbine.png" alt="wind-turbine" width="585" height="711" layout="intrinsic" class="img-responsive"></amp-img>
+       <h6 style="font-size:18px;color:black;" class="Link-2">Wind turbine design</h6>
+       
+        <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">Wind turbine design</h5>
+       
+       </a>
+      
+       <a href="working-of-steam-turbine.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Steam-turbine/steam-turbine.png" alt="steam-turbine" width="585" height="973" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Working of a Steam turbine</h6>
+      
+       <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="500ms" data-margin-start="15%" data-margin-end="27%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)">Working of a Steam turbine</h5>
+      
+      </a>
+      
+     <a href="power-plant-technology.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Power-plant-technology/power-plant-technology.png" alt="power-plant-technology" width="585" height="712" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Power plant technology</h6>
+      
+      <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="15%" data-margin-end="20%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Power plant technology</h5>
+      
+      </a>
+      
+       <a href="working-and-design-detials-of-wind-turbines.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Working-and-Design-details-of-Wind-Turbines/blade.png" alt="Wind-Turbine's blade" width="585" height="842" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;">Working and Design details of Wind Turbines</h6>
+      
+      <h5 style="font-size:18px;color:black;" class="Link-3" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)"data-margin-start="15%" data-margin-end="20%">Working and Design details of Wind Turbines</h5>
+      </a>  
+      
+     <a href="fundamentals-of-turbomachinery.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Fundamental-of-turbomachinery/Turbomachinery.png" alt="Turbomachinery" width="585" height="710" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Fundamental of turbomachinery</h6>
+      
+      <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="20%" data-margin-end="35%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Fundamental of turbomachinery</h5>
+      
+      </a>  
+      
+      <a href="#" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Clutch/A584.png" width="584" height="584" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2"></h6>
+      
+      <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="25%" data-margin-end="50%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3"></h5>
+      </a>  
+      <!---See more>---->
+    <div hidden id="seedata3" style="display:none;">
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb.jpg" width="584" height="585" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work3_thumb_masonry.jpg" width="585" height="711" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3> </amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work10_thumb_masonry.jpg" width="585" height="842" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work11_thumb_masonry.jpg" width="585" height="732" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb_masonry.jpg" width="585" height="973" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work7_thumb_masonry.jpg" width="585" height="710" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work6_thumb_masonry.jpg" width="585" height="726" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb_masonry.jpg" width="585" height="712" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb.jpg" width="585" height="584" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+     </div>
+      <div role="button" tabindex="" on="tap:seedata3.toggleVisibility" style="bottom:0;left:0;position:absolute;font-size:16px;color:black;display:none;">SEE-MORE/HIDE</div>
+      </div>
+    
+    <!--CAT-5---->
+    <div role="tab" class="tabButton" option="e">Mechanical Equipement Design<sup>10</sup></div>
+    <div role="tabpanel" class="tabContent tc">
+    
+     <a href="fatigue-failure-analyis.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Fatigue-failuer-analysis/Fatigue-failuer.png" alt="Fatigue-failuer" width="584" height="585" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Fatigue Failure Analysis</h6>
+      
+      <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)"  class="Link-3">Fatigue Failure Analysis</h5>
+      </a> 
+      
+      <a href="velocity-analysis-mechanics.html" target="_blank" class="link-1" style="text-decoration:none;">
+            <amp-img src="Velocity-analysis/Bar-linkage.png" alt="Bar-linkage" width="585" height="732" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="10%" data-margin-end="30%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-2">Velocity analysis mechanics</h6>
+      
+       <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="10%" data-margin-end="30%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Velocity analysis mechanics</h5>
+      
+      </a> 
+      
+      
+      <a href="spur-gear-design.html" target="_blank" class="link-1" style="text-decoration:none;">
+        <amp-img src="Spur-gear-design/spur-gear.png" alt="spur-gear" width="585" height="726" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Spur gear design</h6>
+      <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="20%" data-margin-end="40%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Spur gear design</h5>
+      </a> 
+    
+    
+      <a href="understanding-degrees-of-freedom.html" target="_blank" class="link-1" style="text-decoration:none;">
+        <amp-img src="Degree-of-freedom/degree-of-freedom.png" alt="degree-of-freedom" width="585" height="711" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Understanding Degree of freedom</h6>
+      
+       <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Understanding Degree of freedom</h5>
+      </a> 
+      
+      
+      
+      <a href="what-is-von-mises-stress.html" target="_blank" class="link-1" style="text-decoration:none;">
+        <amp-img src="Von-Mises-Stress/von-mises-stress.png" alt="von-mises-stress" width="585" height="973" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">What is von mises stress</h6>
+      
+      <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="15%" data-margin-end="27%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">What is von mises stress</h5>
+      </a> 
+    
+    
+    <a href="understanding-universal-joint.html" target="_blank" class="link-1" style="text-decoration:none;">
+        <amp-img src="Understanding-Universal-Joint/universal-joint-new.png" alt="universal-joint-new" width="585" height="712" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Understanding-universal-joint</h6>
+      
+      <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="15%" data-margin-end="20%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Understanding-universal-joint</h5>
+      </a> 
+    
+ 
+     <a href="theory-of-vibration.html" target="_blank" class="link-1" style="text-decoration:none;">
+        <amp-img src="Theory-of-vibration/theory-of-vibration.png" alt="theory-of-vibration" width="585" height="842" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Theory of vibration</h6>
+      
+       <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Theory of vibration</h5>
+      
+      </a> 
+     
+     
+     <a href="principal-stress-plane-mohr-circle.html" target="_blank" class="link-1" style="text-decoration:none;">
+        <amp-img src="Principal-stress-Principal-plane/2Dstress-new.png" alt="2Dstress-new" width="585" height="710" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;" class="Link-2">Principal stress Principal plane and Mohr’s circle analysis</h6>
+      
+      <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="20%" data-margin-end="35%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Principal stress Principal plane and Mohr’s circle analysis</h5>
+      </a> 
+      
+   <a href="Understanding-cutting-tool-geometry.html" target="_blank" class="link-1" style="text-decoration:none;">
+        <amp-img src="Understanding-Cutting-Tool-Geometry/cutting-tool.png" alt="cutting-tool" width="584" height="584" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;"class="Link-2">Understanding-Cutting-Tool-Geometry</h6>
+      
+      <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-margin-start="25%" data-margin-end="40%" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)"class="Link-3">Understanding-Cutting-Tool-Geometry</h5>
+      </a> 
+     
+      <div hidden id="seedata4" style="display:none;">
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb.jpg" width="584" height="585" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work3_thumb_masonry.jpg" width="585" height="711" layout="intrinsic"> <h3 class="imgheading"><a href="#">Working of a LSD</a></h3> </amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work10_thumb_masonry.jpg" width="585" height="842" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work11_thumb_masonry.jpg" width="585" height="732" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work12_thumb_masonry.jpg" width="585" height="973" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work7_thumb_masonry.jpg" width="585" height="710" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work6_thumb_masonry.jpg" width="585" height="726" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb_masonry.jpg" width="585" height="712" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+      <amp-img src="https://ncdn.pixeldima.com/wp-content/uploads/2017/04/work5_thumb.jpg" width="585" height="584" layout="intrinsic"><h3 class="imgheading"><a href="#">Working of a LSD</a></h3></amp-img>
+     </div>
+      <div role="button" tabindex="" on="tap:seedata4.toggleVisibility" style="bottom:0;left:0;position:absolute;font-size:16px;color:black; display:none;">SEE-MORE/LESS</div>
+      </div>
+      
+    <div role="tab" class="tabButton" option="f">Aerospace<sup>2</sup></div>
+    <div role="tabpanel" class="tabContent tc">
+     <a href="jet-engine-how-it-works.html" target="_blank" class="link-1" style="text-decoration:none;">
+        <amp-img src="Jet-Engine/jet-engine.png" alt="jet-engine" width="584" height="585" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;"class="Link-2">Jet engine, how its work</h6>
+       
+       <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Jet engine, how its work</h5>
+       
+       </a> 
+      <a href="jet-engine-how-it-works.html" target="_blank" class="link-1" style="text-decoration:none;display:none;">
+        <amp-img src="Helicopter/helicopter711.png" alt="jet-engine" width="585" height="711" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;"class="Link-2">Jet engine, how its work</h6>
+       
+       <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Jet engine, how its work</h5>
+       
+       </a> 
+       
+        <a href="jet-engine-how-it-works.html" target="_blank" class="link-1" style="text-decoration:none;visibility:hidden">
+        <amp-img src="Helicopter/helicopter711.png" alt="jet-engine" width="585" height="711" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;"class="Link-2">Jet engine, how its work</h6>
+       
+       <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Jet engine, how its work</h5>
+       
+       </a> 
+       
+       <a href="jet-engine-how-it-works.html" target="_blank" class="link-1" style="text-decoration:none;display:none;">
+        <amp-img src="Helicopter/helicopter711.png" alt="jet-engine" width="585" height="711" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;"class="Link-2">Jet engine, how its work</h6>
+       
+       <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">Jet engine, how its work</h5>
+       
+       </a> 
+       
+       
+        <a href="how-does-helicopter-fly.html" target="_blank" class="link-1" style="text-decoration:none;">
+        <amp-img src="Helicopter/helicopter711.png" alt="jet-engine" width="585" height="711" layout="intrinsic" class="img-responsive"></amp-img>
+      <h6 style="font-size:18px;color:black;"class="Link-2">How does helicopter fly</h6>
+       
+       <h5 style="font-size:18px;color:black;" amp-fx="fade-in" data-duration="500ms" data-easing="cubic-bezier(0.39, 0.575, 0.565, 1)" class="Link-3">How does helicopter fly</h5>
+       
+       </a> 
+       </div>
+     </amp-selector>
+      </center>
+     <!--FOOTER----->
+    <div class="footer" style="width:100%;height:100px;background-color:#333333;">
+        <center><p style="color:white;text-align:center;padding:10px;font-family:Open sans;">Copyright@2018</p>
+<div style="font-size:20px;font-weight:520;letter-spacing:2px;color:grey;margin-top: -11px;"><a href="http://www.imajey.com/" style="color:grey;text-decoration:none;font-family:Open sans;font-size:17px;font-weight:545;padding-bottom:10px;" target="_blank">imajey Consulting Engineers Pvt Ltd</a></div>
+    </center>
+    </div> 
+
+</body>
+</html>
