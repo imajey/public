@@ -1,0 +1,159 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/manual-transmission-how-it-works.html">
+    <style amp-custom>
+    html{
+        
+        font-family:Lato;
+        /*font-family:Poppins,Helvetica,Arial,sans-serif;*/
+        font-weight: normal;
+        font-size: 16px;
+        color: black;
+        }
+    html p{
+        text-align: justify;
+        color: black;
+        }
+            
+    li {
+        list-style-type: none;
+        }
+    li a{
+        color: white;
+        text-decoration: none;
+        }
+    header h3{
+        color:white;
+        }
+    .header a{
+        text-decoration: none;
+        }  
+    ul li a{
+        padding: 10px;
+        font-weight: 500;
+        color: white;
+        }
+    .res{
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        }    
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body>
+  <header class="header" style="background-color:#333333;height:65px;width:100%;padding:10px;">
+    <a href="index.html">
+      <h3 class="home" style="color:white">LearnEngineering</h3>
+  </a>
+  </header>
+   
+<button on="tap:sidebar.toggle"
+class="ampstart-btn caps m2" style="float:right;margin-top:-60px; margin-right:8px; padding:8px;">☰</button> 
+       
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:40px;">
+  <amp-img class="amp-close-image"
+    src="https://cdn0.iconfinder.com/data/icons/web/512/e52-128.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550"></amp-img>
+  <ul>
+    <li style="color:white"> Nav item 1</li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+    
+    <li style="color:white"> Nav item 5</li>
+    <li style="color:white"> Nav item 6</li>
+  </ul>
+</amp-sidebar>
+<!---->
+<br>
+<div class="res">
+    <center>
+        <h2>Torsen differential, how does it work</h2>
+        <div class="post-date">November 19, 2014</div><br>
+        <p>Torsen is a trade mark of the JTEKT Corporation. The Torsen differential has many patented components and, is the most unique and ingenious method of providing differential action while overcoming the traction difference problem. This article gives a logical introduction to the working of Torsen differential.</p>
+        <amp-youtube width="611" height="411"  data-videoid=""></amp-youtube>
+        
+        <p>A detailed webpage version of the video is given below.</p>
+        <h2>The internal components</h2>
+        <p>The internal components of a Torsen are quite different from that of a conventional differential. An exploded view of the Torsen is given in Fig.1.</p>
+        <amp-img src="Torsen_componets.jpg" width="368" height="240" layout="responsive"></amp-img>
+        <h6>Fig.1 : An exploded view of Torsen differential</h6>
+        <p>At the heart of the system lies a specially shaped gear pair assembly. Let’s see the cross sectional shape of these gears at the mating point. As can be seen, one gear is a spur gear, and the other one is a worm gear.</p>  
+        <amp-img src="Worm_gear_Worm_wheel.jpg" width="461" height="227" layout="responsive"></amp-img>  
+        <h6>Fig.2: A worm gear-worm wheel mesh lies at the heart of the Toresn</h6> 
+        <p>Cross sectional shape of the figure is shown in the second part</p>
+        <p>A Torsen works on the simple principle of worm gear- worm wheel; that is a spinning worm gear can rotate the wheel, but the rotating wheel cannot spin the worm gear.</p>
+        <amp-img src="Principle_Torsen.jpg" width="418" height="210" layout="responsive"></amp-img>      
+        <h6>Fig.3 :The worm gear- worm wheel principle lies at the heart of the Torsen operation</h6>      
+        <p>Throughout this discussion, just keep this principle in mind.
+          A pair of such worm wheels are fitted with the case, so the engine power received by the case is transferred to the worm wheels. Each end of the wheels is fitted with a spur gear. As a result, a simplified Torsen differential will look as shown in the Fig.4
+        </p>      
+        <amp-img src="BasicComponents.jpg" width="410" height="270" layout="responsive"></amp-img>   
+        <h6>Fig.4 : The complete Torsen differential</h6>
+        <p>Now we will go through different driving scenarios and understand how the Torsen manages to operate the vehicle well.</p>
+        <h2>The Vehicle Moves Straight</h2>
+        <p>When the vehicle moves straight, the worm wheels will push and turn the worm gears. So both the drive wheels will rotate at the same speed. Please note here that, in this condition the worm wheels do not spin on its own axis. In this condition, the whole mechanism moves as a single solid unit.</p>
+        <amp-img src="Vehicle_moves_straight.jpg" width="496" height="240" layout="responsive"></amp-img>
+        <h6>Fig.5 : When the vehicle moves straight, worm wheels just push and turn the worm gears at the same speeds.</h6>
+        <h2>The vehicle takes a right turn</h2>
+        <p>When the vehicle is negotiating a right turn, the left wheel needs to rotate at a higher speed than the right wheel. This fact is clear from the Fig.6.</p>
+        <amp-img src="Right_Turn.png" width="165" height="242" layout="responsive"></amp-img>
+        <h6>Fig.6 :During a right turn the left wheel has to travel more distance</h6>
+        
+        <p>This speed differential is perfectly supported in a Torsen. Please note that the worm wheel is subjected to relative motion not the absolute motion. The worm wheel is fitted between the case and worm gear, so the relative motion between the case and worm gear is what makes the worm gear turn. The worm gear of the faster left axle will make the corresponding worm wheel spin on its own axis. On the other side, relative to the case the slow right axle is turning in the opposite direction; thus the right worm wheel will spin in the opposite direction. The meshing spur gears at the ends of worm wheel will make sure that, the worm wheels are spinning at the same speed. Thus it guarantees a perfect differential action. Perfect differential action implies equal amount of speed loss and speed gain to the right and left wheels. With the perfect differential the vehiclce will be able to negotiate a smooth turn.</p>
+        <amp-img src="right-turn-Torsen.jpg" width="792" height="270" layout="responsive"></amp-img>
+        <h6>Fig.7:The right worm wheel will spin opposite to the right worm wheel</h6>
+        <p>this is due to the opposite relative motion left worm wheel is experiencing</p>
+        <h2>Overcoming the Traction difference problem</h2>
+        <p>Now let’s try to understand how the Torsen overcomes the drive wheel traction difference problem. As you might be aware, when your vehicle encounters a situation as shown, the slippery wheel starts to spin very rapidly and will draw the majority of the engine’s power. As a result, the vehicle will get stuck.</p>
+        <amp-img src="traction_difference_problem.jpg" width="415" height="247" layout="responsive"></amp-img>
+        <h6>Fig.8: A typical traction difference problem a vehicle is experiencing</h6>
+        
+        <p>But, if a Torsen differential is used in this case, as soon as the slippery wheel starts to spin excessively, the speed change will be transferred to the corresponding worm wheel. The right worm wheel transfers the speed change to the left worm wheel, since they are connected through spur gears. Here comes the tricky part! The left side worm wheel will not be able to turn the corresponding worm gear, because, as we said, a worm wheel cannot drive a worm gear! As a result, the whole mechanism gets locked, and the left and right wheels turn together.</p>
+        <amp-img src="Torsen_Locking_action.jpg" width="677" height="260" layout="responsive"></amp-img>
+        <h6>Fig.9:The excessive speed of slipping wheel make the system locked due to the ‘basic principle of worm gear-worm wheel</h6>
+        <p>This allows a large amount of power to be transferred to the high-traction wheel, and the vehicle can thereby overcome the traction difference problem.
+        To carry the load 2 more worm wheel pairs are added.</p>
+        <h2>Pros and Cons of Torsen</h2>
+        <p>If you are familiar with the other common technologies used to overcome the traction difference problem, you might have noticed a great advantage of the Torsen. While the other technologies allow the drive wheel to slip for a limited amount of time before it gets locked, in Torsen the locking action is instantaneous. That means as soon as the vehicle encounters a traction difference track the wheels will get locked. They are also compact compared to their counter parts.
+        Following are the some disadvantages of the Toresn type (T1) explained here.</p>
+        <ul>
+            <li>Noisy</li>
+            <li>Costly</li>
+            <li>More difficult to assemble</li>
+        </ul>
+    </center>
+</div>
+   <div class="footer" style="width:100%;height:100px;background-color:#333333;"></div> 
+    </body>
+</html>
