@@ -1,0 +1,113 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/manual-transmission-how-it-works.html">
+    <style amp-custom>
+    html{
+        
+        font-family:Lato;
+        /*font-family:Poppins,Helvetica,Arial,sans-serif;*/
+        font-weight: normal;
+        font-size: 16px;
+        color: black;
+        }
+    html p{
+        text-align: justify;
+        color: black;
+        }
+            
+    li {
+        list-style-type: none;
+        }
+    li a{
+        color: white;
+        text-decoration: none;
+        }
+    header h3{
+        color:white;
+        }
+    .header a{
+        text-decoration: none;
+        }  
+    ul li a{
+        padding: 10px;
+        font-weight: 500;
+        color: white;
+        }
+    .res{
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        }    
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body>
+  <header class="header" style="background-color:#333333;height:65px;width:100%;padding:10px;">
+    <a href="index.html">
+      <h3 class="home" style="color:white">LearnEngineering</h3>
+  </a>
+  </header>
+   
+<button on="tap:sidebar.toggle"
+class="ampstart-btn caps m2" style="float:right;margin-top:-60px; margin-right:8px; padding:8px;">☰</button> 
+       
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:40px;">
+  <amp-img class="amp-close-image"
+    src="https://cdn0.iconfinder.com/data/icons/web/512/e52-128.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550"></amp-img>
+  <ul>
+    <li style="color:white"> Nav item 1</li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+    
+    <li style="color:white"> Nav item 5</li>
+    <li style="color:white"> Nav item 6</li>
+  </ul>
+</amp-sidebar>
+<!---->
+<br>
+<div class="res">
+    <center>
+        <h2>Wind Turbine Design</h2>
+         <div class="post-date">April 24, 2014</div>
+        <p>Primary objective in wind turbine design is to maximize the aerodynamic efficiency, or power extracted from the wind. But this objective should be met by well satisfying mechanical strength criteria and economical aspects. In this video we will see impact of number of blades, blade shape, blade length and tower height on wind turbine design.</p>
+        <amp-youtube width="611" height="411" video-data-id=""></amp-youtube>
+        <p>Check following article to know more on wind turbine design aspects.</p>
+        
+        <h2>Effect of Number of Blades</h2>
+        <p>As the number of blades in the wind turbine increases aerodynamic efficiency increases, but in a diminishing manner. When we move from 2 blades to 3 blades design efficiency gain is about 3%. But as we move from 3 blades to 4 blades design, efficiency gain is marginal.</p>
+            
+    </center>
+        </div>
+    </body>
+</html>
