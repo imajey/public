@@ -1,0 +1,157 @@
+<!doctype html>
+<html amp lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+         <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+         <link rel="canonical" href="https://learnengineering.org/manual-transmission-how-it-works.html">
+    <style amp-custom>
+    html{
+        
+        font-family:Lato;
+        /*font-family:Poppins,Helvetica,Arial,sans-serif;*/
+        font-weight: normal;
+        font-size: 16px;
+        color: black;
+        }
+    html p{
+        text-align: justify;
+        color: black;
+        }
+            
+    li {
+        list-style-type: none;
+        }
+    li a{
+        color: white;
+        text-decoration: none;
+        }
+    header h3{
+        color:white;
+        }
+    .header a{
+        text-decoration: none;
+        }  
+    ul li a{
+        padding: 10px;
+        font-weight: 500;
+        color: white;
+        }
+    .res{
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        }    
+    </style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+    <body>
+  <header class="header" style="background-color:#333333;height:65px;width:100%;padding:10px;">
+    <a href="index.html">
+      <h3 class="home" style="color:white">LearnEngineering</h3>
+  </a>
+  </header>
+   
+<button on="tap:sidebar.toggle"
+class="ampstart-btn caps m2" style="float:right;margin-top:-60px; margin-right:8px; padding:8px;">☰</button> 
+       
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right"style="background-color:#333333; padding:40px;">
+  <amp-img class="amp-close-image"
+    src="https://cdn0.iconfinder.com/data/icons/web/512/e52-128.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0" style="color:white;font-weight:550"></amp-img>
+  <ul>
+    <li style="color:white"> Nav item 1</li>
+    <li>
+      <amp-fit-text 
+        width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24" style="color:white">
+        Nav item 2 - &lt;amp-fit-text&gt;
+      </amp-fit-text>
+    </li>
+    <li style="color:white">
+      <amp-fit-text width="220"
+        height="20"
+        layout="responsive"
+        max-font-size="24">
+        Nav item 3 - &lt;amp-fit-text&gt; longer text
+      </amp-fit-text>
+    </li>
+    
+    <li style="color:white"> Nav item 5</li>
+    <li style="color:white"> Nav item 6</li>
+  </ul>
+</amp-sidebar>
+<!---->
+<br>
+<div class="res">
+    <center>
+        <h2>Working of a Limited Slip Differential</h2>
+         <div class="post-date">May 22, 2014</div>
+        <p>Limited slip differentials(LSD) are used in automobile to overcome the traction difference problem of drive wheels. In this article working of LSD is explained in a logical manner.
+        </p>
+        <amp-youtube width="611" height="411" data-video-id="">
+            
+        </amp-youtube>
+        <p>A detailed webpage version of the video is given below.</p>
+        
+        <h2>Problem with the Standard Differential</h2>
+        <p>Consider a situation where a vehicle fitted with a standard differential moves straight, and one drive wheel is on a surface with good traction and the other wheel is on a slippery track. In a standard differential the left and right axle rotations are completely independent. Since one wheel is on a slippery track, the standard differential will make that wheel spin in excessive speed, while the good traction wheel will remain almost dead. This means high power supply to the slippery wheel and low power flow to the good traction wheel. So the vehicle won’t be able to move.</p>
+        
+        <amp-img src="traction-difference-problem.jpg" width="422" height="215" layout="responsive"></amp-img>
+        <h6>Fig.1 In a standard differential power from the engine is transferred to the wheel with low traction</h6>
+        <p>One way to overcome this problem is to limit the independency or relative motion between the left and right axles. Limited slip differentials are introduced for this purpose. One of the most commonly used LSD technology is clutch-pack based.</p>
+        
+        <h2>Constructional Features of LSD</h2>
+        <p>First we will go through constructional features of LSD.
+         The basic components of a standard differential are shown below. It has got pinion gear, ring gear, case, spider gears and side gears.</p>
+        <amp-img src="differential-components.jpg" width="379" height="217" layout="responsive"></amp-img>
+        <h6> Fig.1 In a standard differential power from the engine is transferred to the wheel with low traction</h6>
+        <p>To understand working of a standard differential please check this link . Apart from its basic components a Limited slip differential has got a series of friction and steel plates packed between the side gear and the casing. Friction discs are having internal teeth and they are locked with the splines of the side gear. So the friction discs and the side gear will always move together.</p>
+        <amp-img src="LSD_friction_steel-plates.jpg" width="700" height="220" layout="responsive"></amp-img>
+        <h6>Fig.3 It is clear from the figure that steel plates are locked with the case and friction disc with the side gear</h6>
+        <p>Steels plates are having external tabs and are made to fit in the case groove. So they can rotate with the case.
+        If any of the clutch pack assembly is well pressed, the frictional force within them will make it move as a single solid unit. Since steel plates are locked with the case and friction discs with the side gear, in a well pressed clutch pack casing and the clutch pack will move together. Or motion from the casing is directly passed to the corresponding axle.
+        Space between the side gears is fitted with a pre-load spring. Pre load spring will always give a thrust force and will press clutch pack together.</p>
+        <amp-img src="pre-load-spring-LSD.jpg" width="389" hight="220" layout="responsive"></amp-img>
+        <h6>Fig.4 Pre-load spring in an LSD will always give a thrust force; The blue arrow represents thrust force</h6>
+        <h2>Separating action of Bevel gears</h2>
+        <p>You can note that spider and side gear are bevel gears. It has got one specialty. When torque is transmitted through a bevel gear system axial forces are also induced apart from the tangential force. The axial force tries to separate out the gears.</p>
+        <amp-img src="bevel-gear-action.jpg" width="435" height="220" layout="responsive"></amp-img>
+        <p>You can note that side gear and axle are 2 separate units. The side gear has got a small allowance for axial movement.</p>
+        <amp-img src="side_spider_gear-axle.jpg" width="480" height="199" layout="responsive"></amp-img>
+        <h6>Fig.6 Side gear and axle are two separate units as shown; So the side gear can have small axial movement</h6>
+        <p>So during high torque transmission through spider-side gear arrangement, a high separating thrust force is also transmitted to the clutch pack. This force presses and locks the clutch pack assembly against wall of the casing.</p>
+        <h2>Working of Limited Slip Differential</h2>
+        <p>Now back to the initial problem. Since one wheel is on a high traction surface, the torque transmitted to it will be higher. So the thrust force developed due to the bevel gear separation action also will be high at that side. Thus clutch pack at high traction wheel side will be pressed firmly and clutch pack will be locked. So power from the differential casing will flow directly to high traction axle via clutch pack assembly.</p>
+        <amp-img src="high-traction-power-flow.jpg" width="427" height="220" layout="responsive"></amp-img>
+        <h6>Fig.7 Thrust force induced due to the bevel gear separation action is high for the high traction wheel</h6>
+        <p>On the other hand clutch pack on the low traction wheel side is not engaged yet, so power flow will be limited to that side. So the vehicle will be able to overcome the traction difference problem.</p>
+        <amp-img src="right_clutch.jpg" width="355" height="220" layout="responsive"></amp-img>
+        <h6>Fig.8 Low thrust force at low traction wheel will allow steel plate and friction disc to slip</h6>
+        <p>However while taking a turn the LSD can act like a normal differential. In this case thrust force developed due to bevel gear separation action won’t be that high. So the plates in clutch pack will easily overcome frictional resistance and will be able to slip against each other. Thus the right and left wheel can have different speed just like an open differential.<br>
+        Following are the other commonly used technologies used to overcome the drive wheel traction difference problem.</p>
+        <ul>
+            <li>Clutch pack – Pressure disk type</li>    
+            <li>Torsen®</li>    
+            <li>Cone Differential</li>    
+            <li>Hydraulic Locking Type</li>    
+        </ul>
+        
+    </center>
+        </div>
+        <div class="footer" style="width:100%;height:100px;background-color:#333333;"></div> 
+    </body>
+</html>
